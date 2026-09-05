@@ -98,7 +98,9 @@ def clean_json_content(raw: str) -> str:
     content = raw.strip()
     fenced_match = re.fullmatch(r"```(?:json|JSON)?\s*(.*?)\s*```", content, re.DOTALL)
     if fenced_match:
-        return fenced_match.group(1).strip()
+        content = fenced_match.group(1).strip()
+    content = re.sub(r"(?is)<think>.*?</think>", "", content).strip()
+    content = re.sub(r"(?is)</?think>", "", content).strip()
     return content
 
 

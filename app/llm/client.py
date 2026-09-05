@@ -7,6 +7,8 @@ from dataclasses import dataclass
 from typing import Any
 
 import httpx
+import openai
+from groq import Groq
 
 from app.core.config import settings
 
@@ -15,10 +17,18 @@ logger = logging.getLogger(__name__)
 DEFAULT_TIMEOUT_SECONDS = 60.0
 DEFAULT_TEMPERATURE = 0.2
 DEFAULT_RESPONSE_FORMAT = {"type": "json_object"}
-REQUEST_ERROR_DETAIL = "LLM 请求失败，请检查模型服务地址、模型名称、API Key 或服务商返回信息。"
-RESPONSE_FORMAT_ERROR_DETAIL = "LLM 返回的结构化结果格式不正确，请重试或调整模型配置。"
-EMPTY_RESPONSE_DETAIL = "LLM 返回内容为空，无法生成结构化结果。"
-CONFIGURATION_ERROR_DETAIL = "LLM 服务未配置，请检查 LLM_API_KEY、LLM_BASE_URL 和 LLM_MODEL。"
+REQUEST_ERROR_DETAIL = (
+    "LLM request failed. Please check the model service URL, model name, API key,"
+    " or provider response."
+)
+RESPONSE_FORMAT_ERROR_DETAIL = (
+    "The structured response from the LLM is invalid. Please retry or adjust the"
+    " model configuration."
+)
+EMPTY_RESPONSE_DETAIL = "The LLM returned an empty response and cannot produce structured output."
+CONFIGURATION_ERROR_DETAIL = (
+    "The LLM service is not configured. Please check LLM_API_KEY, LLM_BASE_URL, and LLM_MODEL."
+)
 
 
 class LLMConfigurationError(RuntimeError):
@@ -60,7 +70,8 @@ class OpenAICompatibleLLMClient:
         provider: str | None = None,
         use_response_format: bool | None = None,
     ) -> None:
-        self.provider = (provider if provider is not None else settings.llm_provider).strip()
+        resolved_provider = provider if provider is not None else settings.llm_provider
+        self.provider = resolved_provider.strip().lower()
         configured_base_url = base_url if base_url is not None else settings.llm_base_url
         self.base_url = (configured_base_url or "").strip()
         self.api_key = ((api_key if api_key is not None else settings.llm_api_key) or "").strip()
@@ -82,7 +93,7 @@ class OpenAICompatibleLLMClient:
         return LLMRequestMetadata(
             provider=self.provider,
             base_url=self.base_url,
-            request_url=build_chat_completions_url(self.base_url),
+            request_url=self._request_url(),
             model=self.model,
             timeout=self.timeout,
             stream_read_timeout=self.stream_read_timeout,
@@ -97,13 +108,7 @@ class OpenAICompatibleLLMClient:
         extra_params: dict[str, Any] | None = None,
     ) -> str:
         self._validate_configuration()
-        request_url = build_chat_completions_url(self.base_url)
         request_body = self._build_request_body(system_prompt, user_payload, extra_params)
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-        }
-
         logger.info(
             "llm.request.start provider=%s base_url=%s model=%s timeout=%s use_response_format=%s",
             self.provider,
@@ -113,43 +118,16 @@ class OpenAICompatibleLLMClient:
             self.use_response_format,
         )
         try:
-            response = httpx.post(
-                request_url,
-                headers=headers,
-                json=request_body,
-                timeout=self.timeout,
-            )
-        except httpx.HTTPError as exc:
-            logger.warning(
-                "llm.request.failed status_code=None error_type=%s message=%s",
-                type(exc).__name__,
-                _excerpt(str(exc), 500),
-            )
-            raise LLMRequestError("LLM API request failed before receiving a response.") from exc
-
-        if response.status_code < 200 or response.status_code >= 300:
-            response_excerpt = _excerpt(response.text, 1000)
-            if response.status_code == 400 and _mentions_response_format(response.text):
-                logger.warning(
-                    "llm.request.failed status_code=%s reason=response_format_unsupported "
-                    "response_excerpt=%s",
-                    response.status_code,
-                    response_excerpt,
-                )
-            else:
-                logger.warning(
-                    "llm.request.failed status_code=%s response_excerpt=%s",
-                    response.status_code,
-                    response_excerpt,
-                )
-            raise LLMRequestError(f"LLM API returned HTTP {response.status_code}.")
-
+            response = self._create_chat_completion(request_body, stream=False)
+        except Exception as exc:
+            self._raise_request_error(exc)
+        content = extract_chat_completion_content(response)
         logger.info(
-            "llm.request.success status_code=%s content_length=%s",
-            response.status_code,
-            len(response.text or ""),
+            "llm.request.success provider=%s content_length=%s",
+            self.provider,
+            len(content),
         )
-        return extract_chat_completion_content(response)
+        return content
 
     def stream(
         self,
@@ -158,14 +136,7 @@ class OpenAICompatibleLLMClient:
         extra_params: dict[str, Any] | None = None,
     ) -> Iterator[str]:
         self._validate_configuration()
-        request_url = build_chat_completions_url(self.base_url)
         request_body = self._build_request_body(system_prompt, user_payload, extra_params)
-        request_body["stream"] = True
-        headers = {
-            "Authorization": f"Bearer {self.api_key}",
-            "Content-Type": "application/json",
-        }
-
         logger.info(
             "llm.stream.start provider=%s base_url=%s model=%s timeout=%s "
             "stream_read_timeout=%s use_response_format=%s",
@@ -177,49 +148,85 @@ class OpenAICompatibleLLMClient:
             self.use_response_format,
         )
         try:
-            with httpx.Client(timeout=self._stream_timeout()) as client:
-                with client.stream(
-                    "POST",
-                    request_url,
-                    headers=headers,
-                    json=request_body,
-                ) as response:
-                    if response.status_code < 200 or response.status_code >= 300:
-                        response_text = response.read().decode("utf-8", errors="replace")
-                        logger.warning(
-                            "llm.stream.failed status_code=%s response_excerpt=%s",
-                            response.status_code,
-                            _excerpt(response_text, 1000),
-                        )
-                        raise LLMRequestError(f"LLM API returned HTTP {response.status_code}.")
-
-                    for line in response.iter_lines():
-                        delta = extract_chat_completion_stream_delta(line)
-                        if delta is None:
-                            continue
-                        yield delta
+            stream = self._create_chat_completion(request_body, stream=True)
+            for chunk in stream:
+                delta = self._extract_stream_delta(chunk)
+                if delta is None:
+                    continue
+                yield delta
         except LLMRequestError:
             raise
-        except httpx.HTTPError as exc:
+        except Exception as exc:
+            self._raise_request_error(exc)
+        logger.info("llm.stream.success provider=%s model=%s", self.provider, self.model)
+
+    def _request_url(self) -> str:
+        if self.provider == "groq":
+            return "https://api.groq.com/openai/v1/chat/completions"
+        return build_chat_completions_url(self.base_url)
+
+    def _create_chat_completion(self, request_body: dict[str, Any], *, stream: bool) -> Any:
+        if self.provider == "groq":
+            client = Groq(api_key=self.api_key)
+            return client.chat.completions.create(
+                **request_body,
+                stream=stream,
+            )
+
+        client = openai.OpenAI(
+            base_url=self.base_url,
+            api_key=self.api_key,
+            timeout=self.timeout,
+        )
+        return client.chat.completions.create(
+            **request_body,
+            stream=stream,
+        )
+
+    def _extract_stream_delta(self, chunk: Any) -> str | None:
+        if self.provider == "groq":
+            try:
+                choices = getattr(chunk, "choices", None)
+                if not choices:
+                    return None
+                first_choice = choices[0]
+                delta = getattr(first_choice, "delta", None)
+                if delta is None:
+                    return None
+                content = getattr(delta, "content", None)
+                if content is None:
+                    return None
+                if not isinstance(content, str):
+                    raise LLMResponseFormatError("LLM stream delta content must be a string.")
+                return content
+            except LLMResponseFormatError:
+                raise
+            except Exception as exc:
+                raise LLMResponseFormatError("LLM stream chunk is invalid.") from exc
+        return extract_chat_completion_stream_delta(chunk)
+
+    def _raise_request_error(self, exc: Exception) -> None:
+        if isinstance(exc, httpx.HTTPError):
             logger.warning(
-                "llm.stream.failed status_code=None error_type=%s message=%s",
+                "llm.request.failed provider=%s error_type=%s message=%s",
+                self.provider,
                 type(exc).__name__,
                 _excerpt(str(exc), 500),
             )
-            raise LLMRequestError("LLM API stream request failed.") from exc
-        logger.info("llm.stream.success provider=%s model=%s", self.provider, self.model)
-
-    def _stream_timeout(self) -> httpx.Timeout:
-        return httpx.Timeout(
-            timeout=self.timeout,
-            read=self.stream_read_timeout,
+            raise LLMRequestError("LLM API request failed before receiving a response.") from exc
+        logger.warning(
+            "llm.request.failed provider=%s error_type=%s message=%s",
+            self.provider,
+            type(exc).__name__,
+            _excerpt(str(exc), 500),
         )
+        raise LLMRequestError("LLM API request failed.") from exc
 
     def _validate_configuration(self) -> None:
         missing = []
         if not self.api_key:
             missing.append("LLM_API_KEY")
-        if not self.base_url:
+        if self.provider != "groq" and not self.base_url:
             missing.append("LLM_BASE_URL")
         if not self.model:
             missing.append("LLM_MODEL")
@@ -270,30 +277,18 @@ def build_chat_completions_url(base_url: str) -> str:
     return f"{normalized}/chat/completions"
 
 
-def extract_chat_completion_content(response: httpx.Response) -> str:
+def extract_chat_completion_content(response: Any) -> str:
     try:
-        payload = response.json()
-    except ValueError as exc:
-        logger.warning(
-            "llm.response.invalid reason=non_json status_code=%s content_excerpt=%s",
-            response.status_code,
-            _excerpt(response.text, 1000),
-        )
-        raise LLMResponseFormatError("LLM response body is not JSON.") from exc
-
-    try:
-        choices = payload["choices"]
-    except (KeyError, TypeError) as exc:
+        choices = response.choices
+    except AttributeError as exc:
         logger.warning("llm.response.invalid reason=missing_choices")
         raise LLMResponseFormatError("LLM response missing choices.") from exc
-    if not isinstance(choices, list) or not choices:
+    if not choices:
         logger.warning("llm.response.invalid reason=empty_choices")
         raise LLMResponseFormatError("LLM response choices is empty.")
-
     try:
-        message = choices[0]["message"]
-        content = message["content"]
-    except (KeyError, TypeError) as exc:
+        content = choices[0].message.content
+    except AttributeError as exc:
         logger.warning("llm.response.invalid reason=missing_message_content")
         raise LLMResponseFormatError("LLM response missing message content.") from exc
     if not isinstance(content, str) or not content.strip():

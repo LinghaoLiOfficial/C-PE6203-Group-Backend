@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import UTC, datetime
 from uuid import UUID, uuid4
 
-from sqlalchemy import Boolean, DateTime, String, func
+from sqlalchemy import Boolean, DateTime, Integer, String, func
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy.types import Uuid
 
@@ -23,6 +23,7 @@ class User(Base):
     is_email_verified: Mapped[bool] = mapped_column(Boolean(), nullable=False, default=False)
     avatar_seed: Mapped[str] = mapped_column(String(100), nullable=False)
     avatar_bg_color: Mapped[str] = mapped_column(String(20), nullable=False)
+    refresh_token_version: Mapped[int] = mapped_column(Integer, nullable=False, default=0)
     last_login_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True), nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),

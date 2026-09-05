@@ -14,10 +14,10 @@ class Settings(BaseSettings):
         default="http://localhost:3000,http://127.0.0.1:3000",
         alias="BACKEND_CORS_ORIGINS",
     )
-    llm_provider: str = Field(default="openai_compatible", alias="LLM_PROVIDER")
-    llm_base_url: str | None = Field(default=None, alias="LLM_BASE_URL")
+    llm_provider: str = Field(default="groq", alias="LLM_PROVIDER")
+    llm_base_url: str | None = Field(default="https://api.groq.com/openai/v1", alias="LLM_BASE_URL")
     llm_api_key: str | None = Field(default=None, alias="LLM_API_KEY")
-    llm_model: str | None = Field(default=None, alias="LLM_MODEL")
+    llm_model: str | None = Field(default="llama-3.3-70b-versatile", alias="LLM_MODEL")
     llm_timeout_seconds: float = Field(default=60.0, alias="LLM_TIMEOUT_SECONDS")
     llm_stream_read_timeout_seconds: float = Field(
         default=300.0, alias="LLM_STREAM_READ_TIMEOUT_SECONDS"
@@ -34,10 +34,11 @@ class Settings(BaseSettings):
     queue_max_attempts: int = Field(default=3, alias="QUEUE_MAX_ATTEMPTS")
     queue_worker_id: str | None = Field(default=None, alias="QUEUE_WORKER_ID")
     auth_secret_key: str | None = Field(default=None, alias="AUTH_SECRET_KEY")
-    auth_token_expire_days: int = Field(default=7, alias="AUTH_TOKEN_EXPIRE_DAYS")
-    auth_cookie_name: str = Field(default="access_token", alias="AUTH_COOKIE_NAME")
-    auth_cookie_secure: bool = Field(default=False, alias="AUTH_COOKIE_SECURE")
-    auth_cookie_samesite: str = Field(default="lax", alias="AUTH_COOKIE_SAMESITE")
+    auth_refresh_secret_key: str | None = Field(default=None, alias="AUTH_REFRESH_SECRET_KEY")
+    auth_access_token_expire_minutes: int = Field(
+        default=30, alias="AUTH_ACCESS_TOKEN_EXPIRE_MINUTES"
+    )
+    auth_refresh_token_expire_days: int = Field(default=7, alias="AUTH_REFRESH_TOKEN_EXPIRE_DAYS")
     email_verification_expire_minutes: int = Field(
         default=10, alias="EMAIL_VERIFICATION_EXPIRE_MINUTES"
     )
@@ -59,6 +60,19 @@ class Settings(BaseSettings):
     bootstrap_admin_email: str | None = Field(default=None, alias="BOOTSTRAP_ADMIN_EMAIL")
     bootstrap_admin_username: str | None = Field(default=None, alias="BOOTSTRAP_ADMIN_USERNAME")
     bootstrap_admin_password: str | None = Field(default=None, alias="BOOTSTRAP_ADMIN_PASSWORD")
+    upload_dir: str = Field(default="storage", alias="UPLOAD_DIR")
+    match_score_threshold: float = Field(default=0.73, alias="MATCH_SCORE_THRESHOLD")
+    daily_rewrite_limit: int = Field(default=10, alias="DAILY_REWRITE_LIMIT")
+    max_resume_upload_bytes: int = Field(default=3 * 1024 * 1024, alias="MAX_RESUME_UPLOAD_BYTES")
+    embedding_model_name: str = Field(
+        default="sentence-transformers/all-MiniLM-L6-v2", alias="EMBEDDING_MODEL_NAME"
+    )
+    embedding_dimension: int = Field(default=384, alias="EMBEDDING_DIMENSION")
+    adzuna_app_id: str | None = Field(default=None, alias="ADZUNA_APP_ID")
+    adzuna_app_key: str | None = Field(default=None, alias="ADZUNA_APP_KEY")
+    arbeidnow_api_url: str = Field(
+        default="https://www.arbeitnow.com/api/job-board-api", alias="ARBEITNOW_API_URL"
+    )
 
     @property
     def cors_origins(self) -> list[str]:
@@ -66,6 +80,8 @@ class Settings(BaseSettings):
 
     @property
     def llm_configured(self) -> bool:
+        if self.llm_provider.lower() == "groq":
+            return bool(self.llm_api_key and self.llm_model)
         return bool(self.llm_base_url and self.llm_api_key and self.llm_model)
 
     @property

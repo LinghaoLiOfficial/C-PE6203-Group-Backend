@@ -31,8 +31,7 @@ os.environ["LLM_BASE_URL"] = ""
 os.environ["LLM_API_KEY"] = ""
 os.environ["LLM_MODEL"] = ""
 os.environ["AUTH_SECRET_KEY"] = "test-auth-secret"
-os.environ["AUTH_COOKIE_SECURE"] = "false"
-os.environ["AUTH_COOKIE_SAMESITE"] = "lax"
+os.environ["AUTH_REFRESH_SECRET_KEY"] = "test-refresh-secret"
 
 security = importlib.import_module("app.core.security")
 User = importlib.import_module("app.models.user").User
@@ -94,4 +93,6 @@ def client(db_session: Session, test_user: User) -> Generator[TestClient, None, 
             json={"email": test_user.email, "password": "Password1!"},
         )
         assert response.status_code == 200
+        token = response.json()["access_token"]
+        test_client.headers.update({"Authorization": f"Bearer {token}"})
         yield test_client

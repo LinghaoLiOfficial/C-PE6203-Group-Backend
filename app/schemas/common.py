@@ -1,6 +1,9 @@
 from enum import StrEnum
+from typing import Generic, TypeVar
 
 from pydantic import BaseModel, ConfigDict, Field
+
+DataT = TypeVar("DataT")
 
 
 class ApiStatus(StrEnum):
@@ -9,12 +12,12 @@ class ApiStatus(StrEnum):
 
 
 class ErrorResponse(BaseModel):
-    status: ApiStatus = ApiStatus.ERROR
+    error: str
     code: str
-    message: str
+    details: dict | list | str | None = None
 
 
-class ApiResponse[DataT](BaseModel):
+class ApiResponse(BaseModel, Generic[DataT]):
     status: ApiStatus = ApiStatus.SUCCESS
     data: DataT
     message: str | None = None
@@ -27,7 +30,7 @@ class PaginationMeta(BaseModel):
     total_pages: int = Field(ge=0)
 
 
-class PaginatedResponse[DataT](BaseModel):
+class PaginatedResponse(BaseModel, Generic[DataT]):
     items: list[DataT]
     pagination: PaginationMeta
 

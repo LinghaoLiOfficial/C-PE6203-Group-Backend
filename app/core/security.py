@@ -38,17 +38,17 @@ def verify_password(password: str, password_hash: str) -> bool:
 def validate_password_strength(password: str) -> None:
     errors: list[str] = []
     if len(password) < 8:
-        errors.append("至少 8 位")
+        errors.append("at least 8 characters")
     if not re.search(r"[A-Z]", password):
-        errors.append("包含大写字母")
+        errors.append("an uppercase letter")
     if not re.search(r"[a-z]", password):
-        errors.append("包含小写字母")
+        errors.append("a lowercase letter")
     if not re.search(r"\d", password):
-        errors.append("包含数字")
+        errors.append("a number")
     if not re.search(r"[^A-Za-z0-9]", password):
-        errors.append("包含特殊字符")
+        errors.append("a special character")
     if errors:
-        raise ValueError(f"密码强度不足，需要：{', '.join(errors)}。")
+        raise ValueError(f"Password is too weak. It needs {', '.join(errors)}.")
 
 
 def generate_verification_code() -> str:
@@ -65,25 +65,62 @@ def verify_verification_code(email: str, code: str, code_hash: str) -> bool:
     return hmac.compare_digest(hash_verification_code(email, code), code_hash)
 
 
-def create_access_token(user_id: UUID) -> tuple[str, datetime]:
-    expires_at = datetime.now(UTC) + timedelta(days=settings.auth_token_expire_days)
+def create_access_token(user_id: UUID, *, role: str, version: int) -> tuple[str, datetime]:
+    expires_at = datetime.now(UTC) + timedelta(minutes=settings.auth_access_token_expire_minutes)
     token = jwt.encode(
-        {"sub": str(user_id), "exp": expires_at},
+        {"sub": str(user_id), "role": role, "ver": version, "typ": "access", "exp": expires_at},
         _auth_secret(),
         algorithm=ALGORITHM,
     )
     return token, expires_at
 
 
-def decode_access_token(token: str) -> UUID:
+def create_refresh_token(user_id: UUID, *, role: str, version: int) -> tuple[str, datetime]:
+    expires_at = datetime.now(UTC) + timedelta(days=settings.auth_refresh_token_expire_days)
+    token = jwt.encode(
+        {"sub": str(user_id), "role": role, "ver": version, "typ": "refresh", "exp": expires_at},
+        _refresh_secret(),
+        algorithm=ALGORITHM,
+    )
+    return token, expires_at
+
+
+def decode_access_token(token: str) -> tuple[UUID, str, int]:
     try:
         payload = jwt.decode(token, _auth_secret(), algorithms=[ALGORITHM])
         subject = payload.get("sub")
-        if not isinstance(subject, str):
+        role = payload.get("role")
+        version = payload.get("ver")
+        token_type = payload.get("typ")
+        if (
+            not isinstance(subject, str)
+            or not isinstance(role, str)
+            or not isinstance(version, int)
+            or token_type != "access"
+        ):
             raise ValueError
-        return UUID(subject)
+        return UUID(subject), role, version
     except (JWTError, ValueError) as exc:
         raise ValueError("Invalid authentication token.") from exc
+
+
+def decode_refresh_token(token: str) -> tuple[UUID, str, int]:
+    try:
+        payload = jwt.decode(token, _refresh_secret(), algorithms=[ALGORITHM])
+        subject = payload.get("sub")
+        role = payload.get("role")
+        version = payload.get("ver")
+        token_type = payload.get("typ")
+        if (
+            not isinstance(subject, str)
+            or not isinstance(role, str)
+            or not isinstance(version, int)
+            or token_type != "refresh"
+        ):
+            raise ValueError
+        return UUID(subject), role, version
+    except (JWTError, ValueError) as exc:
+        raise ValueError("Invalid refresh token.") from exc
 
 
 def make_avatar_seed(username: str) -> str:
@@ -99,3 +136,9 @@ def _auth_secret() -> str:
     if settings.auth_secret_key:
         return settings.auth_secret_key
     return "development-only-auth-secret"
+
+
+def _refresh_secret() -> str:
+    if settings.auth_refresh_secret_key:
+        return settings.auth_refresh_secret_key
+    return f"{_auth_secret()}-refresh"
