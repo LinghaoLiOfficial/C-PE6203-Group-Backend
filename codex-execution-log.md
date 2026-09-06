@@ -157,3 +157,16 @@
 - Result: 搜索仍保持两段式反馈，但等待时长缩短到 1 秒。
 - Verification: `pnpm lint -- src/app/(dashboard)/dashboard/jobs/page.tsx`，`pnpm exec tsc --noEmit --pretty false`。
 - Follow-ups: 无。
+## 2026-09-06 15:32 SGT - 修复简历 LLM API 无结果
+
+- Request: 解决当前 `.env` 配置下简历全文发送到 LLM 后长时间无结果或被系统回退的问题。
+- Actions: 为 OpenAI 兼容客户端加入 `LLM_MAX_OUTPUT_TOKENS`、`enable_thinking`、流式读取超时和 `finish_reason=length` 检测；修复结构化调用参数合并；增强简历 schema 对模型对象/字符串返回形状的兼容；收紧学术 CV JSON 提示词与单块输出上限；补充客户端和 schema 回归测试。
+- Result: 确认 18,673 字符全文可返回；此前失败主要是输出截断和 schema 形状不匹配。修复后四块完整解析约 100 秒完成，未触发 fallback，产生技能、经历、教育、项目、成就、发表和证据结果。
+- Verification: 真实 `Hello` 调用成功；首块真实生产链路约 28 秒通过 schema；完整四块约 100 秒完成；相关测试 10 passed；新增文件静态检查通过；`compileall` 通过。
+- Follow-ups: 当前 `LLM_MAX_OUTPUT_TOKENS` 默认 8192，简历块请求使用 4096；完整解析仍受供应商延迟影响。此前暴露的 API key 应立即轮换。
+## 2026-09-06 15:45 SGT - 新增简历 LLM 故障复盘文档
+
+- Request: 将原有 LLM API 问题的原因和解决思路整理成精简 Markdown 文档。
+- Actions: 新增 `llm-resume-parse-incident.md`，记录根因、验证证据、修复方法、修复后结果和注意事项。
+- Result: 文档已写入后端根目录，明确区分 API 未返回、输出截断、schema 校验失败和 fallback。
+- Verification: 检查文档内容与当前代码及样例重跑结果一致。

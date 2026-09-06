@@ -5,13 +5,17 @@ import os
 import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass
+from datetime import UTC, datetime
 from hashlib import sha1
 from socket import gethostname
 from uuid import uuid4
 
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
+from app.models.resume_parse_task import ResumeParseTask
+from app.models.career_intelligence import ResumeTailoringTask
 
 logger = logging.getLogger(__name__)
 
@@ -33,9 +37,63 @@ class GenerationQueueService:
         logger.debug("queue heartbeat worker_id=%s", worker_id)
         return QueueHeartbeat(worker_id=worker_id)
 
-    def run_once(self, worker_id: str) -> None:
-        logger.debug("queue worker poll worker_id=%s", worker_id)
-        return None
+    def run_once(self, worker_id: str) -> str | None:
+        task = self._claim_resume_parse_task(worker_id)
+        if task is None:
+            task = self._claim_resume_tailoring_task(worker_id)
+            if task is None:
+                logger.debug("queue worker poll worker_id=%s", worker_id)
+                return None
+            logger.info("queue worker claimed tailoring task_id=%s worker_id=%s", task.id, worker_id)
+            from app.services.job_portal_service import JobPortalService
+            JobPortalService(self.db).process_resume_tailoring_task(task.id, worker_id)
+            return str(task.id)
+
+        logger.info("queue worker claimed task_id=%s worker_id=%s", task.id, worker_id)
+        from app.services.job_portal_service import JobPortalService
+
+        JobPortalService(self.db).process_resume_parse_task(task.id, worker_id)
+        return str(task.id)
+
+    def _claim_resume_parse_task(self, worker_id: str) -> ResumeParseTask | None:
+        task = self.db.scalar(
+            select(ResumeParseTask)
+            .where(ResumeParseTask.status == "queued")
+            .order_by(ResumeParseTask.created_at.asc())
+            .with_for_update(skip_locked=True)
+        )
+        if task is None:
+            return None
+
+        task.status = "running"
+        task.stage = "claiming"
+        task.worker_id = worker_id
+        task.attempts += 1
+        task.started_at = task.started_at or datetime.now(UTC)
+        task.heartbeat_at = datetime.now(UTC)
+        self.db.add(task)
+        self.db.commit()
+        self.db.refresh(task)
+        return task
+
+    def _claim_resume_tailoring_task(self, worker_id: str) -> ResumeTailoringTask | None:
+        task = self.db.scalar(
+            select(ResumeTailoringTask)
+            .where(ResumeTailoringTask.status == "queued")
+            .order_by(ResumeTailoringTask.created_at.asc())
+            .with_for_update(skip_locked=True)
+        )
+        if task is None:
+            return None
+        task.status = "running"
+        task.stage = "claiming"
+        task.worker_id = worker_id
+        task.attempts += 1
+        task.started_at = task.started_at or datetime.now(UTC)
+        self.db.add(task)
+        self.db.commit()
+        self.db.refresh(task)
+        return task
 
 
 def run_worker_loop(

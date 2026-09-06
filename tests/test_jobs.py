@@ -3,6 +3,7 @@ from uuid import uuid4
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
+from app.models.application import Application
 from app.models.job import Job
 
 
@@ -139,3 +140,41 @@ def test_list_jobs_supports_pagination(client: TestClient, db_session: Session) 
     assert payload["pagination"]["total"] == 3
     assert payload["pagination"]["total_pages"] == 3
     assert len(payload["items"]) == 1
+
+
+def test_application_delete_removes_user_application(
+    client: TestClient, db_session: Session, test_user
+) -> None:
+    job = Job(
+        id=uuid4(),
+        job_title="Applied Role",
+        job_description="Desc",
+        company_name="Example Co",
+        location="Singapore",
+        source="job_market_csv",
+        external_id="app-1",
+        external_apply_url="https://example.com/jobs/app-1",
+        is_active=True,
+    )
+    db_session.add(job)
+    db_session.flush()
+    application = Application(
+        user_id=test_user.id,
+        job_id=job.id,
+        job_name_snapshot=job.job_title,
+        company_name_snapshot=job.company_name,
+        location_snapshot=job.location,
+        external_apply_url_snapshot=job.external_apply_url,
+        status="applied",
+        match_score=0.85,
+    )
+    db_session.add(application)
+    db_session.commit()
+    db_session.refresh(application)
+
+    delete_response = client.delete(f"/api/v1/applications/{application.id}")
+
+    assert delete_response.status_code == 204
+    list_response = client.get("/api/v1/applications")
+    assert list_response.status_code == 200
+    assert list_response.json() == []

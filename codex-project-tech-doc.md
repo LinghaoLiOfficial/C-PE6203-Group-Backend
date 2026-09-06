@@ -7,14 +7,16 @@
 ## Architecture
 - Web 层：FastAPI 路由位于 `app/api/v1/endpoints/`。
 - 业务层：核心求职门户逻辑集中在 `app/services/job_portal_service.py`。
-- LLM 层：统一通过 `app/llm/` 的 OpenAI 兼容客户端访问 Groq。
+- LLM 层：统一通过 `app/llm/` 的 OpenAI 兼容客户端访问配置中的服务；当前本机 `.env` 使用 DashScope 兼容接口和 `qwen3.6-plus`。
 - 向量层：简历与职位 embedding 使用 `sentence-transformers/all-MiniLM-L6-v2`，数据库类型使用 `pgvector.Vector(384)`。
 - 数据层：SQLAlchemy + Alembic + PostgreSQL。
 
 ## Key Files and Directories
 - `app/services/job_portal_service.py`: 简历解析、职位匹配、申请状态、通知、摄取。
 - `app/services/embedding_service.py`: sentence-transformers 向量编码。
-- `app/llm/structured_client.py`: Groq 结构化输出封装。
+- `app/llm/structured_client.py`: 结构化 JSON 输出、schema 校验和重试封装。
+- `app/llm/client.py`: OpenAI 兼容请求、非思考参数、输出 token 上限、流式超时与截断检测。
+- `scripts/probe_resume_llm.py`: 直接读取样例简历并探测 LLM 全文结构化输出。
 - `app/db/session.py`: psycopg 连接时注册 pgvector。
 - `app/db/base_class.py`: `Base.metadata` 的扩展钩子。
 - `alembic/versions/20260831_0001_create_base_tables.py`: 基础表迁移，包含 `vector(384)` 和 HNSW 索引。
@@ -40,6 +42,8 @@
 - CSV 导入的职位统一使用 `source = 'job_market_csv'`，`external_id` 对应 `source_id`，`external_apply_url` 目前使用稳定占位链接。
 - `GET /api/v1/jobs` 现在默认返回所有 active jobs；如果用户有可用简历 embedding，再附加 `match_score` 作为相关度信息。
 - `GET /api/v1/jobs` 默认按岗位名英文文本升序排序，再按公司名和入库时间做稳定排序。
+- 简历 LLM 请求默认通过 `LLM_MAX_OUTPUT_TOKENS=8192` 控制输出；百炼兼容接口通过 `enable_thinking` 传递 `LLM_THINKING`，简历分块请求使用较小的 `max_tokens`。
+- `ResumeAnalysisResult` 对技能对象数组、字符串证据和字典形 `skill_evidence` 做兼容归一化，防止合法模型输出因字段形状差异触发静默 fallback。
 - 前端 Jobs 页面仅在 `active_resume_exists` 为真时显示分数 badge；无简历时保留列表和操作按钮。
 - 前端 Jobs 卡片只展示一条聚合后的 `location` 文本，避免将 `city_location` 与 `country_location` 重复渲染。
 - 前端 Jobs 卡片将公司名、地点、薪资周期拆成三枚 badge 展示，不再用 `·` 拼接在一行。
@@ -49,6 +53,7 @@
 - 点击搜索后先进入至少 1 秒的 `Loading jobs...` 状态，结束后一次性展示结果与居中 `primary` 蓝句子式结果卡片。
 
 ## Known Issues and Follow-ups
+- 完整学术简历解析包含多个 LLM 分块请求，延迟可能接近 100 秒；前端应持续显示 analyzing 状态并展示诊断信息。
 - 前端仍需继续对接这些后端接口。
 - 生产/新机器环境要先安装 PostgreSQL `vector` 扩展，否则建表会失败。
 - 如果需要真实投递地址，`job_market_data.csv` 还要补充来源链接或外部抓取映射。

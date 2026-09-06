@@ -13,12 +13,40 @@ Reusable FastAPI scaffold for new backend projects.
 
 ## Setup
 
+1. Create the local PostgreSQL databases:
+
+```bash
+createdb job_portal
+createdb job_portal_test
+```
+
+If you prefer `psql`, the equivalent is:
+
+```sql
+CREATE DATABASE job_portal;
+CREATE DATABASE job_portal_test;
+```
+
+2. Install dependencies and apply database migrations:
+
 ```bash
 cp .env.example .env
 uv sync --group dev
 uv run python -m alembic upgrade head
+```
+
+3. Start the API server:
+
+```bash
 uv run python -m uvicorn app.main:app --reload
 ```
+
+The Alembic migration step creates all required tables in both the main database and the test database once `TEST_DATABASE_URL` points at `job_portal_test`.
+
+## Quick Start
+
+- Backend: `make dev`
+- Workers: `make workers`
 
 ## Run
 

@@ -48,6 +48,7 @@ def generate_structured_json(
         user_payload,
         response_model=response_model,
         max_retries=max_retries,
+        extra_params=extra_params,
     )
 
 
@@ -57,6 +58,7 @@ def _generate_structured_json_with_instructor(
     *,
     response_model: type[BaseModel],
     max_retries: int | None,
+    extra_params: dict[str, Any] | None,
 ) -> dict[str, Any]:
     _validate_configuration()
     retries = settings.llm_structured_max_retries if max_retries is None else max_retries
@@ -64,13 +66,15 @@ def _generate_structured_json_with_instructor(
     last_error: Exception | None = None
     for attempt in range(retries + 1):
         try:
-            extra_params: dict[str, Any] = {"temperature": DEFAULT_TEMPERATURE}
+            request_params: dict[str, Any] = {"temperature": DEFAULT_TEMPERATURE}
             if settings.llm_use_response_format:
-                extra_params["response_format"] = {"type": "json_object"}
+                request_params["response_format"] = {"type": "json_object"}
+            if extra_params is not None:
+                request_params.update(extra_params)
             raw = client.invoke(
                 system_prompt,
                 user_payload,
-                extra_params=extra_params,
+                extra_params=request_params,
             )
             if not isinstance(raw, str) or not raw.strip():
                 raise LLMEmptyResponseError("LLM structured response is empty.")

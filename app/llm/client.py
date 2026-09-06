@@ -56,6 +56,8 @@ class LLMRequestMetadata:
     timeout: float
     stream_read_timeout: float
     use_response_format: bool
+    max_output_tokens: int
+    thinking: bool
     has_api_key: bool
 
 
@@ -98,6 +100,8 @@ class OpenAICompatibleLLMClient:
             timeout=self.timeout,
             stream_read_timeout=self.stream_read_timeout,
             use_response_format=self.use_response_format,
+            max_output_tokens=settings.llm_max_output_tokens,
+            thinking=settings.llm_thinking,
             has_api_key=bool(self.api_key),
         )
 
@@ -109,19 +113,34 @@ class OpenAICompatibleLLMClient:
     ) -> str:
         self._validate_configuration()
         request_body = self._build_request_body(system_prompt, user_payload, extra_params)
+        output_limit = request_body.get("max_tokens", settings.llm_max_output_tokens)
         logger.info(
-            "llm.request.start provider=%s base_url=%s model=%s timeout=%s use_response_format=%s",
+            "llm.request.start provider=%s base_url=%s model=%s timeout=%s "
+            "use_response_format=%s max_tokens=%s thinking=%s",
             self.provider,
             self.base_url,
             self.model,
             self.timeout,
             self.use_response_format,
+            output_limit,
+            settings.llm_thinking,
         )
         try:
             response = self._create_chat_completion(request_body, stream=False)
         except Exception as exc:
             self._raise_request_error(exc)
         content = extract_chat_completion_content(response)
+        finish_reason = extract_chat_completion_finish_reason(response)
+        if finish_reason == "length":
+            logger.warning(
+                "llm.response.truncated provider=%s model=%s max_tokens=%s",
+                self.provider,
+                self.model,
+                output_limit,
+            )
+            raise LLMResponseFormatError(
+                "LLM response was truncated at the output token limit."
+            )
         logger.info(
             "llm.request.success provider=%s content_length=%s",
             self.provider,
@@ -150,11 +169,17 @@ class OpenAICompatibleLLMClient:
         try:
             stream = self._create_chat_completion(request_body, stream=True)
             for chunk in stream:
+                if extract_chat_completion_finish_reason(chunk) == "length":
+                    raise LLMResponseFormatError(
+                        "LLM stream was truncated at the output token limit."
+                    )
                 delta = self._extract_stream_delta(chunk)
                 if delta is None:
                     continue
                 yield delta
         except LLMRequestError:
+            raise
+        except LLMResponseFormatError:
             raise
         except Exception as exc:
             self._raise_request_error(exc)
@@ -173,10 +198,18 @@ class OpenAICompatibleLLMClient:
                 stream=stream,
             )
 
+        timeout = self.timeout
+        if stream:
+            timeout = httpx.Timeout(
+                connect=self.timeout,
+                read=self.stream_read_timeout,
+                write=self.timeout,
+                pool=self.timeout,
+            )
         client = openai.OpenAI(
             base_url=self.base_url,
             api_key=self.api_key,
-            timeout=self.timeout,
+            timeout=timeout,
         )
         return client.chat.completions.create(
             **request_body,
@@ -184,6 +217,25 @@ class OpenAICompatibleLLMClient:
         )
 
     def _extract_stream_delta(self, chunk: Any) -> str | None:
+        if hasattr(chunk, "choices"):
+            try:
+                choices = getattr(chunk, "choices", None)
+                if not choices:
+                    return None
+                first_choice = choices[0]
+                delta = getattr(first_choice, "delta", None)
+                if delta is None:
+                    return None
+                content = getattr(delta, "content", None)
+                if content is None:
+                    return None
+                if not isinstance(content, str):
+                    raise LLMResponseFormatError("LLM stream delta content must be a string.")
+                return content
+            except LLMResponseFormatError:
+                raise
+            except Exception as exc:
+                raise LLMResponseFormatError("LLM stream chunk is invalid.") from exc
         if self.provider == "groq":
             try:
                 choices = getattr(chunk, "choices", None)
@@ -260,7 +312,10 @@ class OpenAICompatibleLLMClient:
                 {"role": "user", "content": user_content},
             ],
             "temperature": DEFAULT_TEMPERATURE,
+            "max_tokens": settings.llm_max_output_tokens,
         }
+        if self.provider != "groq":
+            request_body["extra_body"] = {"enable_thinking": settings.llm_thinking}
         if self.use_response_format:
             request_body["response_format"] = DEFAULT_RESPONSE_FORMAT
         if extra_params:
@@ -295,6 +350,16 @@ def extract_chat_completion_content(response: Any) -> str:
         logger.warning("llm.response.invalid reason=empty_content")
         raise LLMEmptyResponseError("LLM response content is empty.")
     return content
+
+
+def extract_chat_completion_finish_reason(response: Any) -> str | None:
+    try:
+        choices = response.choices
+        if not choices:
+            return None
+        return getattr(choices[0], "finish_reason", None)
+    except AttributeError:
+        return None
 
 
 def extract_chat_completion_stream_delta(line: str | bytes) -> str | None:

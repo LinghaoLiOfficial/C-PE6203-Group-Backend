@@ -82,6 +82,24 @@ def test_user(db_session: Session) -> User:
 
 
 @pytest.fixture
+def admin_user(db_session: Session) -> User:
+    user = User(
+        email="admin@example.com",
+        username="admin",
+        password_hash=security.hash_password("Password1!"),
+        role="admin",
+        is_active=True,
+        is_email_verified=True,
+        avatar_seed=security.make_avatar_seed("admin"),
+        avatar_bg_color=security.make_avatar_color("admin"),
+    )
+    db_session.add(user)
+    db_session.commit()
+    db_session.refresh(user)
+    return user
+
+
+@pytest.fixture
 def client(db_session: Session, test_user: User) -> Generator[TestClient, None, None]:
     from app.services.generation_queue_service import GenerationQueueService
 
@@ -91,6 +109,23 @@ def client(db_session: Session, test_user: User) -> Generator[TestClient, None, 
         response = test_client.post(
             "/api/v1/auth/login",
             json={"email": test_user.email, "password": "Password1!"},
+        )
+        assert response.status_code == 200
+        token = response.json()["access_token"]
+        test_client.headers.update({"Authorization": f"Bearer {token}"})
+        yield test_client
+
+
+@pytest.fixture
+def admin_client(db_session: Session, admin_user: User) -> Generator[TestClient, None, None]:
+    from app.services.generation_queue_service import GenerationQueueService
+
+    GenerationQueueService(db_session).heartbeat_worker("test-worker")
+
+    with TestClient(app) as test_client:
+        response = test_client.post(
+            "/api/v1/auth/login",
+            json={"email": admin_user.email, "password": "Password1!"},
         )
         assert response.status_code == 200
         token = response.json()["access_token"]
