@@ -492,11 +492,17 @@ class JobPortalService:
     def _generate_tailored_resume(self, resume_text: str, job_description: str, requirement_summary: dict[str, object]) -> TailoredResumeResult:
         prompt = (
             "Create a truthful tailored resume as structured JSON using only facts from the source. "
-            "Never invent credentials, employers, dates, metrics, skills, or experience. "
-            "Return a resume object with summary, skills, experience, projects, education, achievements, and publications; "
-            "a complete rewritten_text; change_summary entries with section, action, reason, and source_evidence; "
-            "evidence_used; target_requirements entries with requirement, matched_evidence, and coverage; and validation_results. "
-            "Return concise audit summaries with source evidence, never hidden chain-of-thought.\n\n"
+            "Never invent credentials, employers, dates, metrics, skills, or experience.\n"
+            "Return ONLY a JSON object with exactly these keys:\n"
+            "{\n"
+            '  "resume": {"summary": "", "skills": [""], "experience": [""], "projects": [""], "education": [""], "achievements": [""], "publications": [""]},\n'
+            '  "rewritten_text": "the complete polished resume",\n'
+            '  "change_summary": [{"section": "", "action": "", "reason": "", "source_evidence": ""}],\n'
+            '  "evidence_used": [{"claim": "", "evidence": ""}],\n'
+            '  "target_requirements": [{"requirement": "", "matched_evidence": "", "coverage": ""}],\n'
+            '  "validation_results": [{"status": "", "rule": "", "claim": "", "evidence_count": 0}]\n'
+            "}\n"
+            "Do not include markdown, commentary, or hidden chain-of-thought.\n\n"
             f"Source resume:\n{resume_text}\n\nTarget job:\n{job_description}\n\n"
             f"Requirements:\n{self._format_requirement_context(requirement_summary)}"
         )
@@ -1350,7 +1356,9 @@ class JobPortalService:
         prompt = (
             "Rewrite the resume to better fit the target role. "
             "Only rephrase, reorder, and emphasize content already present in the source resume. "
-            "Do not add new skills, credentials, or work history. Return one polished resume body.\n\n"
+            "Do not add new skills, credentials, or work history.\n"
+            'Return ONLY a JSON object with a single key "rewritten_text" whose value is the polished resume body. '
+            "Do not include markdown, commentary, or any other keys.\n\n"
             f"Source resume:\n{resume_text}\n\nTarget job description:\n{job_description}"
             f"\n\nCanonical job profile:\n{target_context}"
         )
