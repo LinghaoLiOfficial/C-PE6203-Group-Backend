@@ -509,12 +509,78 @@ class JobPortalService:
         last_error: Exception | None = None
         for _ in range(2):
             try:
-                return TailoredResumeResult.model_validate(generate_structured_json(
+                result = TailoredResumeResult.model_validate(generate_structured_json(
                     "You produce truthful, evidence-grounded tailored resumes.", prompt, response_model=TailoredResumeResult
                 ))
+                return self._enforce_fidelity(resume_text, result)
             except (LLMConfigurationError, LLMRequestError, LLMResponseFormatError, ValueError) as exc:
                 last_error = exc
         raise RuntimeError("Structured tailored resume generation failed after two attempts.") from last_error
+
+    def _skill_in_source(self, skill: str, source_lower: str) -> bool:
+        """Return True when a skill has at least one significant token in the source.
+
+        Conservative by design: a skill is treated as grounded when its full text, or any
+        alphanumeric token of three or more characters, appears in the source resume. Only
+        skills with zero textual overlap are flagged, so legitimate rephrasings such as
+        ``"Python (pandas)"`` against a resume that mentions ``Python`` are kept.
+        """
+        normalized = (skill or "").strip().lower()
+        if not normalized:
+            return True
+        if normalized in source_lower:
+            return True
+        tokens = [
+            token
+            for token in re.findall(r"[a-z0-9+#.]+", normalized)
+            if len(token) >= 3 and not token.isdigit()
+        ]
+        if not tokens:
+            return normalized in source_lower
+        return any(token in source_lower for token in tokens)
+
+    def _enforce_fidelity(self, source_text: str, result: TailoredResumeResult) -> TailoredResumeResult:
+        """Remove skills not grounded in the source resume and record the check.
+
+        The LLM self-reports ``validation_results``, which the three-variant test showed can
+        still hallucinate a few technical terms under heavy skill-gap pressure. This adds a
+        deterministic post-generation check against the actual source text and strips any
+        listed skill that has no presence in the resume.
+        """
+        raw_skills = result.resume.get("skills") or []
+        skills = [item.get("name", "") if isinstance(item, dict) else item for item in raw_skills]
+        # Drop the LLM's self-reported skills-fabrication entry; we replace it below with a
+        # deterministic check against the actual source text (the self-report proved unreliable).
+        result.validation_results = [
+            entry
+            for entry in result.validation_results
+            if not (isinstance(entry, dict) and "skill" in str(entry.get("rule", "")).lower())
+        ]
+        if not skills:
+            return result
+        source_lower = (source_text or "").lower()
+        unverified = [skill for skill in skills if not self._skill_in_source(skill, source_lower)]
+        if not unverified:
+            result.validation_results.append(
+                {
+                    "status": "pass",
+                    "rule": "no fabricated skills (deterministic check)",
+                    "claim": "Every listed skill was found in the source resume.",
+                    "evidence_count": len(skills),
+                }
+            )
+            return result
+        result.resume["skills"] = [skill for skill in skills if skill not in unverified]
+        result.validation_results.append(
+            {
+                "status": "fail",
+                "rule": "no fabricated skills (deterministic check)",
+                "claim": "Removed skills not present in the source resume.",
+                "evidence_count": len(unverified),
+                "removed_skills": unverified,
+            }
+        )
+        return result
 
     def _update_resume_parse_task(
         self,
