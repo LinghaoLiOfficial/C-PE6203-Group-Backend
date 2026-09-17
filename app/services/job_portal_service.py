@@ -5,14 +5,14 @@ import logging
 import math
 import re
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from uuid import UUID, uuid4
 
 import httpx
 from fastapi import HTTPException, UploadFile, status
-from sqlalchemy import func, or_, select
+from sqlalchemy import delete, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -122,6 +122,10 @@ class _OpportunityParts:
     rationale: list[str]
     transition_difficulty: str
     data_confidence: float
+    exact_skills: list[str] = field(default_factory=list)
+    transferable_skills: list[str] = field(default_factory=list)
+    missing_skills: list[str] = field(default_factory=list)
+    required_skills: list[str] = field(default_factory=list)
 
 
 @dataclass(slots=True)
@@ -219,7 +223,7 @@ class JobPortalService:
         variants = list(
             self.db.scalars(
                 select(ResumeVariant)
-                .where(ResumeVariant.user_id == user_id)
+                .where(ResumeVariant.user_id == user_id, ResumeVariant.resume_id.is_not(None))
                 .order_by(ResumeVariant.created_at.desc())
             )
         )
@@ -496,12 +500,13 @@ class JobPortalService:
             "Return ONLY a JSON object with exactly these keys:\n"
             "{\n"
             '  "resume": {"summary": "", "skills": [""], "experience": [""], "projects": [""], "education": [""], "achievements": [""], "publications": [""]},\n'
-            '  "rewritten_text": "the complete polished resume",\n'
             '  "change_summary": [{"section": "", "action": "", "reason": "", "source_evidence": ""}],\n'
             '  "evidence_used": [{"claim": "", "evidence": ""}],\n'
             '  "target_requirements": [{"requirement": "", "matched_evidence": "", "coverage": ""}],\n'
             '  "validation_results": [{"status": "", "rule": "", "claim": "", "evidence_count": 0}]\n'
             "}\n"
+            "Do NOT emit a separate prose resume or ``rewritten_text``; the structured sections above "
+            "are the only resume content and the prose form is assembled afterwards. "
             "Do not include markdown, commentary, or hidden chain-of-thought.\n\n"
             f"Source resume:\n{resume_text}\n\nTarget job:\n{job_description}\n\n"
             f"Requirements:\n{self._format_requirement_context(requirement_summary)}"
@@ -512,10 +517,60 @@ class JobPortalService:
                 result = TailoredResumeResult.model_validate(generate_structured_json(
                     "You produce truthful, evidence-grounded tailored resumes.", prompt, response_model=TailoredResumeResult
                 ))
-                return self._enforce_fidelity(resume_text, result)
+                result = self._enforce_fidelity(resume_text, result)
+                result.rewritten_text = self._derive_rewritten_text(result.resume)
+                return result
             except (LLMConfigurationError, LLMRequestError, LLMResponseFormatError, ValueError) as exc:
                 last_error = exc
         raise RuntimeError("Structured tailored resume generation failed after two attempts.") from last_error
+
+    def _derive_rewritten_text(self, resume: dict[str, object]) -> str:
+        """Assemble the plain-text resume from the structured sections.
+
+        The tailoring model previously emitted a separate prose resume alongside the
+        structured sections, which duplicated content and overflowed the model's output
+        budget on dense two-page resumes. The structured sections are now the single source
+        of truth and the prose resume is assembled deterministically here.
+        """
+        def _items(value: object) -> list[str]:
+            if value is None:
+                return []
+            if isinstance(value, str):
+                return [value.strip()] if value.strip() else []
+            items: list[str] = []
+            for entry in value:
+                if isinstance(entry, dict):
+                    text = str(
+                        entry.get("name") or entry.get("title") or entry.get("text") or ""
+                    ).strip()
+                    if not text:
+                        text = " — ".join(str(v) for v in entry.values() if v).strip()
+                else:
+                    text = str(entry).strip()
+                if text:
+                    items.append(text)
+            return items
+
+        sections: list[tuple[str, list[str]]] = [
+            ("Summary", _items(resume.get("summary"))),
+            ("Skills", _items(resume.get("skills"))),
+            ("Experience", _items(resume.get("experience"))),
+            ("Projects", _items(resume.get("projects"))),
+            ("Education", _items(resume.get("education"))),
+            ("Achievements", _items(resume.get("achievements"))),
+            ("Publications", _items(resume.get("publications"))),
+        ]
+        parts: list[str] = []
+        for heading, items in sections:
+            if not items:
+                continue
+            if heading == "Summary":
+                parts.append(items[0])
+            elif heading == "Skills":
+                parts.append(f"{heading}: {', '.join(items)}")
+            else:
+                parts.append(f"{heading}:\n" + "\n".join(f"- {item}" for item in items))
+        return "\n\n".join(parts).strip()
 
     def _skill_in_source(self, skill: str, source_lower: str) -> bool:
         """Return True when a skill has at least one significant token in the source.
@@ -616,6 +671,13 @@ class JobPortalService:
     def delete_resume(self, user_id: UUID, resume_id: UUID) -> None:
         resume = self._get_resume(resume_id, user_id)
         file_path = Path(resume.file_url)
+        # ResumeVariant.resume_id and CandidateJobMatch.resume_id use ON DELETE SET
+        # NULL (not CASCADE), so deleting a resume would orphan their rows and a
+        # NULL resume_id then crashes list_tailored_resumes on Pydantic UUID
+        # validation. Delete the dependent rows explicitly so a resume deletion
+        # also cleans up its tailored variants and job-match scores.
+        self.db.execute(delete(ResumeVariant).where(ResumeVariant.resume_id == resume_id))
+        self.db.execute(delete(CandidateJobMatch).where(CandidateJobMatch.resume_id == resume_id))
         self.db.delete(resume)
         self.db.commit()
         if file_path.exists():
@@ -1263,7 +1325,10 @@ class JobPortalService:
             "You extract structured resume information for a career opportunity engine.",
             prompt,
             response_model=ResumeAnalysisResult,
-            extra_params={"max_tokens": 4096},
+            # A hardcoded 4096 output budget truncated dense multi-page CVs and
+            # pushed the whole parse into the low-quality heuristic fallback.
+            # Reuse the configurable output budget instead (default 8192).
+            extra_params={"max_tokens": settings.llm_max_output_tokens},
         )
         return ResumeAnalysisResult.model_validate(payload)
 
@@ -1756,10 +1821,13 @@ class JobPortalService:
         graph = self._get_candidate_graph(user_id, resume.id)
         market = self.db.scalar(select(JobMarketProfile).where(JobMarketProfile.job_id == job.id))
         candidate_skills = {item["name"].lower() for item in (graph.skills or []) if item.get("name")}
-        required_skills = set(market.required_skills or job.skill_tags or [])
-        preferred_skills = set(market.preferred_skills or [])
-        exact = len(candidate_skills & required_skills)
-        transferable = len(candidate_skills & preferred_skills)
+        required_skills = {skill.lower() for skill in ((market.required_skills if market else None) or job.skill_tags or [])}
+        preferred_skills = {skill.lower() for skill in ((market.preferred_skills if market else None) or [])}
+        exact_skills = sorted(candidate_skills & required_skills)
+        transferable_skills = sorted(candidate_skills & preferred_skills)
+        missing_skills = sorted(required_skills - candidate_skills)
+        exact = len(exact_skills)
+        transferable = len(transferable_skills)
         total_required = max(len(required_skills), 1)
         attainability = min(1.0, (exact + transferable * 0.6) / total_required)
         salary = self._annualized_salary(job.mid_salary_sgd, job.pay_period) or 0.0
@@ -1769,22 +1837,32 @@ class JobPortalService:
         career_option = 0.7 if market and market.occupation_family == "Engineering" else 0.6
         preference_fit = 0.8 if not graph.preferences or not graph.preferences.get("location") else 0.7
         data_confidence = market.trust_score if market else 0.7
-        fit = (
-            0.30 * salary_advantage
-            + 0.25 * attainability
-            + 0.15 * demand
-            + 0.10 * (1.0 - entry_barrier)
-            + 0.10 * career_option
-            + 0.05 * preference_fit
-            + 0.05 * data_confidence
+        # Opportunity fit = skill match (attainability) acting as a multiplicative
+        # gate over job quality. A strong job can amplify a real match but can no
+        # longer mask a poor one: zero skill match now yields zero fit instead of
+        # ~53% from the old additive formula that overweighted salary/demand.
+        job_quality = (
+            0.45 * salary_advantage
+            + 0.25 * demand
+            + 0.20 * career_option
+            + 0.10 * data_confidence
         )
-        category = "easy_win" if fit >= 0.75 and entry_barrier < 0.35 else "high_potential" if fit >= 0.58 else "stretch"
+        fit = attainability * (0.55 + 0.45 * job_quality)
+        category = (
+            "easy_win"
+            if fit >= 0.60 and attainability >= 0.55
+            else "high_potential"
+            if fit >= 0.30
+            else "stretch"
+        )
         transition_difficulty = "low" if entry_barrier < 0.25 else "moderate" if entry_barrier < 0.55 else "high"
         rationale = []
-        if exact:
-            rationale.append(f"{exact} direct skill matches")
-        if transferable:
-            rationale.append(f"{transferable} adjacent skills transfer")
+        if exact_skills:
+            rationale.append(f"{exact} direct skill match" + ("es" if exact > 1 else ""))
+        else:
+            rationale.append("No direct skill match")
+        if transferable_skills:
+            rationale.append(f"{transferable} adjacent skill" + ("s" if transferable > 1 else "") + " transfer")
         if salary:
             rationale.append(f"Salary signal around SGD {salary:,.0f}")
         if market and market.occupation_family:
@@ -1816,6 +1894,10 @@ class JobPortalService:
             rationale=rationale,
             transition_difficulty=transition_difficulty,
             data_confidence=round(data_confidence, 3),
+            exact_skills=exact_skills,
+            transferable_skills=transferable_skills,
+            missing_skills=missing_skills,
+            required_skills=list(required_skills),
         )
 
     def _maybe_score_job_from_embeddings(self, job: Job) -> CandidateJobMatch | None:
@@ -1885,20 +1967,16 @@ class JobPortalService:
         }
 
     def _compute_transfer_notes(self, job: Job, resume: Resume, match: _OpportunityParts) -> list[str]:
-        resume_skills = set(resume.extracted_skills or [])
-        job_skills = set(job.skill_tags or [])
-        transferables = sorted(resume_skills & job_skills)
-        return [f"{skill} is already present in the resume" for skill in transferables[:3]] or [
-            "Existing experience can be reframed toward the target role."
-        ]
+        if match.transferable_skills:
+            return [f"{skill} (preferred) already in profile" for skill in match.transferable_skills[:3]]
+        return ["No preferred skills overlap with this profile."]
 
     def _compute_gap_notes(self, job: Job, resume: Resume, match: _OpportunityParts) -> list[str]:
-        job_skills = set(job.skill_tags or [])
-        resume_skills = set(resume.extracted_skills or [])
-        gaps = sorted(job_skills - resume_skills)
-        return [f"Consider evidence for {skill}" for skill in gaps[:3]] or [
-            "Core requirements appear covered by the current profile."
-        ]
+        if match.missing_skills:
+            return [f"Missing: {skill}" for skill in match.missing_skills[:3]]
+        if match.required_skills:
+            return ["Core requirements appear covered by this profile."]
+        return ["No structured skill requirements available to compare against."]
 
     def _salary_context(self, job: Job) -> dict[str, object]:
         annual = self._annualized_salary(job.mid_salary_sgd, job.pay_period)

@@ -114,7 +114,10 @@ class ResumeRewriteResult(BaseModel):
 
 class TailoredResumeResult(BaseModel):
     resume: dict = Field(default_factory=dict)
-    rewritten_text: str = Field(min_length=1)
+    # Optional: derived deterministically from ``resume`` sections after generation. The
+    # model no longer emits a separate prose resume, which previously duplicated the
+    # structured sections and overflowed the output budget on dense two-page resumes.
+    rewritten_text: str = ""
     change_summary: list[dict] = Field(default_factory=list)
     evidence_used: list[dict] = Field(default_factory=list)
     target_requirements: list[dict] = Field(default_factory=list)
