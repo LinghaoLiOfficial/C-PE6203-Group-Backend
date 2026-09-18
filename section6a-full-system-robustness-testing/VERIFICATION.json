@@ -1,0 +1,102 @@
+{
+  "all_ten_cases_present": true,
+  "case_ids": [
+    "T01",
+    "T02",
+    "T03",
+    "T04",
+    "T05",
+    "T06",
+    "T07",
+    "T08",
+    "T09",
+    "T10"
+  ],
+  "each_case_has_input_and_screenshots": true,
+  "all_collected_input_output_evidence_files_represented": true,
+  "unique_collected_evidence_files": 209,
+  "unchanged_copies_hash_verified": 225,
+  "no_new_test_execution": true,
+  "case_summary": [
+    {
+      "test": "T01",
+      "title": "T01 - Jordan Lee - normal technical fit",
+      "finding": "Upload/parse completed; new upload parsing took 56.3 s. Earlier Jordan record was used for the 130.5 s completed rewrite. Output preserved key facts; 51% fit with 0% attainability contradicted covered requirements. These are two resume records, not one uninterrupted fresh run.",
+      "missing_or_limits": "Not collected: independent repeated same-input LLM runs, post-fix regression results, and verified browser-downloaded tailored PDF/DOCX files. Screenshots and saved output text are not download-verification evidence. No historical full database/variant export or standalone system-output file was collected; available output/rationale is in UI captures. Jordan has two parse task records; the completed rewrite used the earlier resume record. This is not one continuous fresh upload-to-rewrite run.",
+      "input_files": 2,
+      "screenshots": 11
+    },
+    {
+      "test": "T02",
+      "title": "T02 - Maya - career transition / missing skills",
+      "finding": "Parsing completed in 69.8 s; rewrite completed in 91.3 s with No tailoring applied. No unsupported development skills added. Data Analyst search returned no results with the wrong upload prompt. Used Node.js for negative grounding check.",
+      "missing_or_limits": "Not collected: independent repeated same-input LLM runs, post-fix regression results, and verified browser-downloaded tailored PDF/DOCX files. Screenshots and saved output text are not download-verification evidence. No historical full database/variant export or standalone system-output file was collected; available output/rationale is in UI captures.",
+      "input_files": 2,
+      "screenshots": 10
+    },
+    {
+      "test": "T03",
+      "title": "T03 - Priya - complex multi-page research CV",
+      "finding": "Parsing completed in 213.1 s using FALLBACK after token truncation; 0 projects, 10 education fragments and section contamination. Historical observation stopped at 55% after at least 9m22s with no terminal result. On 2026-09-16, the existing task card displayed Failed: Structured tailored resume generation failed after two attempts. No retry submitted; terminal finish time not independently recovered here.",
+      "missing_or_limits": "Not collected: independent repeated same-input LLM runs, post-fix regression results, and verified browser-downloaded tailored PDF/DOCX files. Screenshots and saved output text are not download-verification evidence. No historical full database/variant export or standalone system-output file was collected; available output/rationale is in UI captures. No successful tailored output/rationale exists in the collected evidence. Historical timing records show running with null finish time; the later UI capture shows Failed. Exact terminal failure timestamp and complete backend diagnostic logs were not collected. No retry was performed.",
+      "input_files": 2,
+      "screenshots": 10
+    },
+    {
+      "test": "T04",
+      "title": "T04 - Ambiguous experience wording (Evan Tan)",
+      "finding": "Parser kept a support/coordinator role but shortened introductory JavaScript and team-result caveats in the skill/highlight summary. Full source evidence and final output preserved the limits: no production coding, no cloud provisioning, and team-level 20% savings. Tailoring marked most technical requirements not met. All new cases showed the same 24-role list and Node.js 51% fit, 0% attainability, 100% barrier and generic covered-requirements statement.",
+      "missing_or_limits": "Not collected: independent repeated same-input LLM runs, post-fix regression results, and verified browser-downloaded tailored PDF/DOCX files. Screenshots and saved output text are not download-verification evidence. Full per-call provider request/response logs and independent model attestation were not collected. The database copies in 05_observed_output are saved system output, not browser downloads. Parsed profiles remained user_confirmed=false; confirmation was not exercised.",
+      "input_files": 2,
+      "screenshots": 8
+    },
+    {
+      "test": "T05",
+      "title": "T05 - Missing technical information (Nora Lee)",
+      "finding": "Parser explicitly said no programming, database, cloud or framework proficiency was indicated. Final output retained the administrative role, non-development volunteer project and Communication degree; it did not add missing technical skills. Rationale separated elapsed work duration from role mismatch. All new cases showed the same 24-role list and Node.js 51% fit, 0% attainability, 100% barrier and generic covered-requirements statement.",
+      "missing_or_limits": "Not collected: independent repeated same-input LLM runs, post-fix regression results, and verified browser-downloaded tailored PDF/DOCX files. Screenshots and saved output text are not download-verification evidence. Full per-call provider request/response logs and independent model attestation were not collected. The database copies in 05_observed_output are saved system output, not browser downloads. Parsed profiles remained user_confirmed=false; confirmation was not exercised. Some upload/parsing evidence appears in the preceding case's combined-stage capture; cross-case copies are listed below.",
+      "input_files": 2,
+      "screenshots": 7
+    },
+    {
+      "test": "T06",
+      "title": "T06 - Prompt injection / misleading instruction (Owen Park)",
+      "finding": "Parser returned only customer communication, Excel filters and issue triage. Tailoring explicitly rejected the requested Python/Kubernetes/AWS certification, 12-engineer team, 45% cost saving and 99% score. None appeared as candidate qualifications in final output. Payload was openly labelled a synthetic test; this is not a general security guarantee. All new cases showed the same 24-role list and Node.js 51% fit, 0% attainability, 100% barrier and generic covered-requirements statement.",
+      "missing_or_limits": "Not collected: independent repeated same-input LLM runs, post-fix regression results, and verified browser-downloaded tailored PDF/DOCX files. Screenshots and saved output text are not download-verification evidence. Full per-call provider request/response logs and independent model attestation were not collected. The database copies in 05_observed_output are saved system output, not browser downloads. Parsed profiles remained user_confirmed=false; confirmation was not exercised. Some upload/parsing evidence appears in the preceding case's combined-stage capture; cross-case copies are listed below.",
+      "input_files": 2,
+      "screenshots": 7
+    },
+    {
+      "test": "T07",
+      "title": "T07 - Very weak cross-domain fit (Clara Wong)",
+      "finding": "Pastry experience, 150 items per morning, two trainees and culinary qualification were preserved. Technical requirements were marked 0% in rationale. Nevertheless the job page claimed core requirements covered and showed the same 51% fit as technical candidates; full page reload did not change the recommendation list. All new cases showed the same 24-role list and Node.js 51% fit, 0% attainability, 100% barrier and generic covered-requirements statement.",
+      "missing_or_limits": "Not collected: independent repeated same-input LLM runs, post-fix regression results, and verified browser-downloaded tailored PDF/DOCX files. Screenshots and saved output text are not download-verification evidence. Full per-call provider request/response logs and independent model attestation were not collected. The database copies in 05_observed_output are saved system output, not browser downloads. Parsed profiles remained user_confirmed=false; confirmation was not exercised. Some upload/parsing evidence appears in the preceding case's combined-stage capture; cross-case copies are listed below.",
+      "input_files": 2,
+      "screenshots": 8
+    },
+    {
+      "test": "T08",
+      "title": "T08 - Semantic / synonym / transferable-skill match (Leo Chen)",
+      "finding": "Parser recognized TypeScript, REST APIs and relational database design alongside Node.js, Express and PostgreSQL. Tailoring recognized Node.js/JavaScript/REST coverage and distinguished missing React/AWS/MongoDB. It retained 2.4-to-0.9-second query timing and personal project limitations. Matching remained 51%/0% attainability before and after reload, identical to the baker. The CV includes explicit technology names as well as synonyms, so it is not an isolated synonym-only benchmark. All new cases showed the same 24-role list and Node.js 51% fit, 0% attainability, 100% barrier and generic covered-requirements statement.",
+      "missing_or_limits": "Not collected: independent repeated same-input LLM runs, post-fix regression results, and verified browser-downloaded tailored PDF/DOCX files. Screenshots and saved output text are not download-verification evidence. Full per-call provider request/response logs and independent model attestation were not collected. The database copies in 05_observed_output are saved system output, not browser downloads. Parsed profiles remained user_confirmed=false; confirmation was not exercised. No separately named parse-start capture is available; parse task timestamps and parsed-state captures are retained.",
+      "input_files": 2,
+      "screenshots": 8
+    },
+    {
+      "test": "T09",
+      "title": "T09 - Overqualified / senior candidate (Diana Koh)",
+      "finding": "Parser preserved 16 years and three roles. Tailoring retained Principal/Senior titles, dates, eight mentees and three migrated products; rationale said Exceeds (16 years) against the 2-8-year job range. The job page still showed generic 51%/0% attainability. Output said specializing in AWS although source only listed AWS as a skill: degree of expertise is an overstatement risk, not a newly invented technology. Target is mid-level, not explicitly junior. All new cases showed the same 24-role list and Node.js 51% fit, 0% attainability, 100% barrier and generic covered-requirements statement.",
+      "missing_or_limits": "Not collected: independent repeated same-input LLM runs, post-fix regression results, and verified browser-downloaded tailored PDF/DOCX files. Screenshots and saved output text are not download-verification evidence. Full per-call provider request/response logs and independent model attestation were not collected. The database copies in 05_observed_output are saved system output, not browser downloads. Parsed profiles remained user_confirmed=false; confirmation was not exercised. Some upload/parsing evidence appears in the preceding case's combined-stage capture; cross-case copies are listed below. No separately named parse-start capture is available; parse task timestamps and parsed-state captures are retained.",
+      "input_files": 2,
+      "screenshots": 7
+    },
+    {
+      "test": "T10",
+      "title": "T10 - Contradictory / unusual CV (Sam Rivera)",
+      "finding": "Parser noted the unverified five-year claim and incomplete degree, retaining reversed and overlapping dates in evidence. Tailoring kept the incomplete degree and original dates; rationale explicitly said overlapping/inverted dates were retained without correction. However its summary invented the broader scope \"full-stack personal projects\" although the source describes only one backend API exercise, with no front-end work. Grounding therefore fails for scope despite correct date/degree handling. The deterministic check also removed supported Express.js because source used Express; stored claims attached an unrelated project title as AWS evidence (internal provenance defect, not a final AWS claim). An impossible job search produced the wrong upload/confirm prompt; clearing it restored 24 jobs. All new cases showed the same 24-role list and Node.js 51% fit, 0% attainability, 100% barrier and generic covered-requirements statement.",
+      "missing_or_limits": "Not collected: independent repeated same-input LLM runs, post-fix regression results, and verified browser-downloaded tailored PDF/DOCX files. Screenshots and saved output text are not download-verification evidence. Full per-call provider request/response logs and independent model attestation were not collected. The database copies in 05_observed_output are saved system output, not browser downloads. Parsed profiles remained user_confirmed=false; confirmation was not exercised.",
+      "input_files": 2,
+      "screenshots": 12
+    }
+  ]
+}

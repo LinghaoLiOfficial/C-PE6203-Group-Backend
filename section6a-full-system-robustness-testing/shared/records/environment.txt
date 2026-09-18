@@ -1,0 +1,8 @@
+Date: 2026-09-16 Asia/Singapore
+Frontend: c90eaf9e192c2f6f09a8da012e760777020fa809, locally modified src/lib/types.ts
+Backend: 8fb1c1a3bcf4bbc2b69c0635d5fee7df9e2c9091, locally modified app/services/job_portal_service.py
+Model configured in .env: qwen3.7-plus; provider openrouter; max output tokens 8192; structured retries 2. Configuration observation, not per-call model attestation.
+Account: lucastest0010
+Browser: Codex in-app browser, localhost:3000
+Backend: localhost:8000
+Existing code changes retained. No changes to product code.

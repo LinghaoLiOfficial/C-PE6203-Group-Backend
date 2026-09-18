@@ -1,0 +1,25 @@
+Leo Chen
+Backend Software Engineer
+Singapore
+
+PROFILE
+Backend engineer building server-side JavaScript services and relational data workflows.
+
+EXPERIENCE
+Silver Reed Software | Backend Engineer | Jun 2023 - Aug 2026
+- Built HTTP endpoints using the JavaScript runtime Node.js and the Express framework.
+- Used typed JavaScript (TypeScript) to validate request contracts.
+- Designed relational tables and wrote joins in PostgreSQL; added indexes to reduce a report query from 2.4 to 0.9 seconds.
+- Implemented a Redis in-memory cache and asynchronous job processing.
+- Wrote automated unit checks with Jest and reviewed changes through Git pull requests.
+- Packaged services into Docker containers and used a continuous integration pipeline in GitHub Actions.
+
+PROJECT
+Library lending API | Personal project | 2023
+- Implemented REST endpoints, token-based sign-in and pagination. Tested locally; no claimed commercial users.
+
+EDUCATION
+BSc in Information Systems | Westhaven College | 2023
+
+SKILLS
+Node.js, Express, TypeScript, PostgreSQL, Redis, Jest, Git, Docker, GitHub Actions, REST

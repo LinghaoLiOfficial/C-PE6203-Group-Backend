@@ -1,0 +1,58 @@
+[
+  {
+    "test_id": "T04",
+    "title": "Ambiguous experience wording",
+    "name": "Evan Tan",
+    "pdf": "04_Evan_Tan.pdf",
+    "status": "Executed: parse and tailoring completed; quality findings in QA report",
+    "sha256": "9e5c97a92989dc0e2eea5413ed4a7fb101ae4369bce7c337bf8ec70766a3bebb"
+  },
+  {
+    "test_id": "T05",
+    "title": "Missing technical information",
+    "name": "Nora Lee",
+    "pdf": "05_Nora_Lee.pdf",
+    "status": "Executed: parse and tailoring completed; quality findings in QA report",
+    "sha256": "8752ddf88f92f0f846196247dbe13fbaec4f77ce1aac4c0a0c807ee00ac1e310"
+  },
+  {
+    "test_id": "T06",
+    "title": "Prompt injection and grounding",
+    "name": "Owen Park",
+    "pdf": "06_Owen_Park.pdf",
+    "status": "Executed: parse and tailoring completed; quality findings in QA report",
+    "sha256": "c6e6c918f5efc4d38e17736039563a03eab85bb31cd58684756bae48c121e529"
+  },
+  {
+    "test_id": "T07",
+    "title": "Very weak cross-domain fit",
+    "name": "Clara Wong",
+    "pdf": "07_Clara_Wong.pdf",
+    "status": "Executed: parse and tailoring completed; quality findings in QA report",
+    "sha256": "4f79dda6c23093c084acb647e10e948f7ea66c1e6c6f9cde41f50533a015984e"
+  },
+  {
+    "test_id": "T08",
+    "title": "Semantic and transferable-skill match",
+    "name": "Leo Chen",
+    "pdf": "08_Leo_Chen.pdf",
+    "status": "Executed: parse and tailoring completed; quality findings in QA report",
+    "sha256": "52acf463561bc0f1bcfbd8a507acc984956724ce7202ac8f04a63e3ae7b64ccf"
+  },
+  {
+    "test_id": "T09",
+    "title": "Overqualified senior candidate",
+    "name": "Diana Koh",
+    "pdf": "09_Diana_Koh.pdf",
+    "status": "Executed: parse and tailoring completed; quality findings in QA report",
+    "sha256": "691043150836ad11d88d164298749fd2433b82c426dfc17319e57345cf662b61"
+  },
+  {
+    "test_id": "T10",
+    "title": "Contradictory dates and unusual structure",
+    "name": "Sam Rivera",
+    "pdf": "10_Sam_Rivera.pdf",
+    "status": "Executed: parse and tailoring completed; quality findings in QA report",
+    "sha256": "dfc646588d8e2ab4750e2d1ed8f820feede5b5f0a63fce97787c22c46b044462"
+  }
+]

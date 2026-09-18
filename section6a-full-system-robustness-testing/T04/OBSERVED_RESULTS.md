@@ -1,0 +1,15 @@
+# T04 - Ambiguous experience wording (Evan Tan)
+
+Extracted from the existing QA report; this is a report excerpt, not a new execution. Original report-relative links below refer to the former layout; use README.md in this folder for the package file paths.
+
+- Severity: High shared matching/coverage defect; Medium misleading Cached date. Additional observations described below.
+- Area: parsing robustness, grounding, active-resume propagation, recommendations, score/explanation consistency, tailoring completion and rationale.
+- Environment: new-case snapshot above; actual task timestamps below.
+- Input: [PDF](inputs/04_Evan_Tan.pdf) and [source TXT](inputs/04_Evan_Tan.txt); SHA-256 `9e5c97a92989dc0e2eea5413ed4a7fb101ae4369bce7c337bf8ec70766a3bebb`.
+- Steps: Upload the designated PDF → verify new Active file and old Inactive state → click Parse → wait for completed state and inspect fields → Browse jobs → inspect recommendations → open Node js developer / HyperNova Consulting → inspect score, vector and canonical requirements → Plan tailored resume → inspect terminal output and Modification rationale. Save screenshot/visible text and read-only task records. No real application submitted.
+- Expected: Do not promote supporting/observed work into production coding or cloud ownership; keep team attribution and introductory skill level. Matching must be grounded and internally consistent; completion must not imply correctness without inspecting output.
+- Actual: Parser kept a support/coordinator role but shortened introductory JavaScript and team-result caveats in the skill/highlight summary. Full source evidence and final output preserved the limits: no production coding, no cloud provisioning, and team-level 20% savings. Tailoring marked most technical requirements not met. All new cases showed the same 24-role list and Node.js 51% fit, 0% attainability, 100% barrier and generic covered-requirements statement.
+- Evidence: [T04_job_detail](evidence/T04_job_detail.txt), [T04_matches](evidence/T04_matches.txt), [T04_output_T05_uploaded](evidence/T04_output_T05_uploaded.txt), [T04_parse_started](evidence/T04_parse_started.txt), [T04_parsed](evidence/T04_parsed.txt), [T04_rationale](evidence/T04_rationale.txt), [T04_tailoring_running](evidence/T04_tailoring_running.txt), [T04_upload](evidence/T04_upload.txt); corresponding PNGs share each basename. Read-only source/task/variant evidence: [database snapshot](evidence/database_latest.json).
+- Resume ID: `8f0381a5-e82a-4f74-80f2-992862a74797`. Parse task: `d8c10a43-5e51-40bb-9582-68f0b7c91e72` (completed), 2026-09-16 16:52:13.919825+08:00 to 2026-09-16 16:52:56.989057+08:00. Tailoring task: `f5a1626f-73ce-4dc8-8262-04789ac191f2` (completed), 2026-09-16 18:22:18.070715+08:00 to 2026-09-16 18:23:18.285118+08:00.
+- Reproducible: matching contradiction observed across seven distinct inputs; page reload repeated for T07/T08. Per-case LLM generation run once, not an independent same-input repeat. No post-fix regression performed.
+

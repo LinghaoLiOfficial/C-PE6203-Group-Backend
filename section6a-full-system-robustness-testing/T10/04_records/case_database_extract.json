@@ -1,0 +1,492 @@
+{
+  "provenance": "Filtered from shared/records/database_latest.json. All row values preserved; not a fresh database query.",
+  "observed_at": "2026-09-17T02:10:38.951064+00:00",
+  "resumes": [
+    {
+      "id": "8af04e50-47ed-4dca-b162-a73fa7bf7032",
+      "file_name": "10_Sam_Rivera.pdf",
+      "is_active": true,
+      "parsed_text": "Synthetic test candidate | Lucas full-system QA | Test 10\n1\n Sam Rivera\nSoftware Developer\n[redacted-email] | Singapore\nSELECTED PROJECT BEFORE EMPLOYMENT\nStockroom API | Personal project | 2024\nNode.js, Express and SQLite; 18 automated tests. This was a personal exercise, not an employer project.\nEMPLOYMENT - AS SUBMITTED\nMoss Harbor Labs | Software Developer | Jan 2025 - Dec 2023\nMaintained internal API endpoints. The end date precedes the start date; correct dates are not supplied.\nBirch Signal Studio | Full-time QA Assistant | Feb 2024 - Nov 2025\nRan manual test scripts and documented defects.\nMoss Harbor Labs | Full-time Software Developer | Mar 2024 - Oct 2025\nWorked on Node.js bug fixes. These two full-time entries overlap; no explanation is supplied.\nEDUCATION\nBSc in Computing | Westhaven College | 2022\nEducation note: degree not completed; withdrew in 2022. The heading and note conflict.\nSKILLS AND SUMMARY\nJavaScript, Node.js, manual testing, SQLite. Summary claims five years of professional development experience,\nbut dated entries do not establish five years. Do not infer missing dates or award a completed degree.",
+      "extracted_skills": [
+        "JavaScript",
+        "Node.js",
+        "manual testing",
+        "SQLite"
+      ],
+      "created_at": "2026-09-17 10:04:26.137854+08:00",
+      "updated_at": "2026-09-17 10:06:11.378672+08:00"
+    }
+  ],
+  "resume_parse_tasks": [
+    {
+      "id": "3e0f61b2-6227-437e-8c36-11aaa2c0b5d6",
+      "resume_id": "8af04e50-47ed-4dca-b162-a73fa7bf7032",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-17 10:05:28.906605+08:00",
+      "finished_at": "2026-09-17 10:06:11.381646+08:00",
+      "heartbeat_at": "2026-09-17 10:06:11.381647+08:00",
+      "created_at": "2026-09-17 10:04:52.910356+08:00",
+      "updated_at": "2026-09-17 10:06:11.378672+08:00",
+      "diagnostics": {
+        "task_id": "3e0f61b2-6227-437e-8c36-11aaa2c0b5d6",
+        "graph_id": "f57eef3d-52d5-45f1-987e-4919b4954eda",
+        "char_count": 1149,
+        "line_count": 21,
+        "chunk_count": 1,
+        "pypdf_score": 0.83,
+        "skill_count": 4,
+        "text_source": "pypdf",
+        "title_count": 6,
+        "schema_valid": true,
+        "section_hits": {
+          "skills": 1,
+          "projects": 0,
+          "education": 1,
+          "experience": 2,
+          "achievements": 0,
+          "publications": 0
+        },
+        "analysis_mode": "llm",
+        "fallback_used": false,
+        "project_count": 1,
+        "cleaning_ratio": 0.994,
+        "evidence_count": 6,
+        "fallback_score": null,
+        "analysis_reason": null,
+        "education_count": 1,
+        "analysis_message": null,
+        "achievement_count": 0,
+        "publication_count": 0,
+        "cleaned_char_count": 1142
+      }
+    }
+  ],
+  "resume_tailoring_tasks": [
+    {
+      "id": "2726450d-7dd2-45f8-8198-43d2fea8816e",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "8af04e50-47ed-4dca-b162-a73fa7bf7032",
+      "job_id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-17 10:07:37.723533+08:00",
+      "finished_at": "2026-09-17 10:08:40.059793+08:00",
+      "created_at": "2026-09-17 10:07:37.212129+08:00",
+      "updated_at": "2026-09-17 10:07:37.738900+08:00"
+    }
+  ],
+  "resume_variants": [
+    {
+      "id": "69e4fd37-f820-4d55-b97f-1374a2779078",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "8af04e50-47ed-4dca-b162-a73fa7bf7032",
+      "job_id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "plan": {
+        "notes": [
+          "Target role: Node js developer",
+          "Occupation family: Engineering",
+          "Transition focus: structured skill bridge"
+        ],
+        "section_order": [
+          "summary",
+          "skills",
+          "experience",
+          "projects"
+        ],
+        "emphasized_skills": [
+          "JavaScript",
+          "Node.js",
+          "manual testing",
+          "SQLite",
+          "aws",
+          "javascript",
+          "react",
+          "rest"
+        ],
+        "selected_evidence": [
+          {
+            "text": "javascript",
+            "source": "candidate_graph",
+            "evidence": [
+              {
+                "text": "JavaScript",
+                "source": "resume"
+              }
+            ],
+            "transformation": "evidence_selected"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "claim": "Highlights JavaScript for the target role",
+          "evidence": [
+            {
+              "text": "JavaScript",
+              "source": "resume"
+            }
+          ],
+          "transformation": "emphasized"
+        },
+        {
+          "claim": "Highlights Node.js for the target role",
+          "evidence": [
+            {
+              "text": "Node.js",
+              "source": "resume"
+            }
+          ],
+          "transformation": "emphasized"
+        },
+        {
+          "claim": "Highlights manual testing for the target role",
+          "evidence": [
+            {
+              "text": "manual testing",
+              "source": "resume"
+            }
+          ],
+          "transformation": "emphasized"
+        },
+        {
+          "claim": "Highlights SQLite for the target role",
+          "evidence": [
+            {
+              "text": "SQLite",
+              "source": "resume"
+            }
+          ],
+          "transformation": "emphasized"
+        },
+        {
+          "claim": "Highlights aws for the target role",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Stockroom API | Personal project | 2024",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "transformation": "emphasized"
+        },
+        {
+          "claim": "Sam Rivera\nSoftware Developer\nSingapore\n\nSummary\nSoftware Developer with experience in JavaScript, Node.js, and API maintenance. Background includes full-stack personal projects using Node.js and Express, alongside profe",
+          "evidence": [
+            {
+              "text": "javascript",
+              "source": "candidate_graph",
+              "evidence": [
+                {
+                  "text": "JavaScript",
+                  "source": "resume"
+                }
+              ],
+              "transformation": "evidence_selected"
+            }
+          ],
+          "transformation": "rephrased"
+        },
+        {
+          "claim": "Aligned to Engineering profile",
+          "evidence": [
+            {
+              "text": "aws, javascript, react, rest",
+              "type": "required_skills",
+              "source": "job_profile"
+            },
+            {
+              "text": "2+ years",
+              "type": "experience_requirements",
+              "source": "job_profile"
+            }
+          ],
+          "transformation": "reordered"
+        }
+      ],
+      "validation_results": [
+        {
+          "rule": "No invented credentials",
+          "claim": "Education is listed as incomplete",
+          "status": "Pass",
+          "evidence_count": 1
+        },
+        {
+          "rule": "No invented experience duration",
+          "claim": "Did not claim 5 years of experience",
+          "status": "Pass",
+          "evidence_count": 1
+        },
+        {
+          "rule": "no fabricated skills (deterministic check)",
+          "claim": "Removed skills not present in the source resume.",
+          "status": "fail",
+          "evidence_count": 1,
+          "removed_skills": [
+            "Express.js"
+          ]
+        }
+      ],
+      "rewritten_text": "Sam Rivera\nSoftware Developer\nSingapore\n\nSummary\nSoftware Developer with experience in JavaScript, Node.js, and API maintenance. Background includes full-stack personal projects using Node.js and Express, alongside professional experience in software development and QA testing.\n\nSkills\nJavaScript, Node.js, Express.js, SQLite, API development, manual testing\n\nExperience\nMoss Harbor Labs | Full-time Software Developer | Mar 2024 - Oct 2025\n- Worked on Node.js bug fixes.\n\nBirch Signal Studio | Full-time QA Assistant | Feb 2024 - Nov 2025\n- Ran manual test scripts and documented defects.\n\nMoss Harbor Labs | Software Developer | Jan 2025 - Dec 2023\n- Maintained internal API endpoints.\n\nProjects\nStockroom API | Personal project | 2024\n- Developed using Node.js, Express, and SQLite.\n- Implemented 18 automated tests.\n\nEducation\nBSc in Computing (Incomplete / Withdrew 2022) | Westhaven College | 2022",
+      "created_at": "2026-09-08 18:18:10.222880+08:00",
+      "resume_sections": {
+        "skills": [
+          "JavaScript",
+          "Node.js",
+          "SQLite",
+          "API development",
+          "manual testing"
+        ],
+        "summary": "Software Developer with experience in JavaScript, Node.js, and API maintenance. Background includes full-stack personal projects using Node.js and Express, alongside professional experience in software development and QA testing.",
+        "projects": [
+          "Stockroom API | Personal project | 2024: Node.js, Express and SQLite; 18 automated tests."
+        ],
+        "education": [
+          "BSc in Computing (Incomplete / Withdrew 2022) | Westhaven College | 2022"
+        ],
+        "experience": [
+          "Moss Harbor Labs | Full-time Software Developer | Mar 2024 - Oct 2025: Worked on Node.js bug fixes.",
+          "Birch Signal Studio | Full-time QA Assistant | Feb 2024 - Nov 2025: Ran manual test scripts and documented defects.",
+          "Moss Harbor Labs | Software Developer | Jan 2025 - Dec 2023: Maintained internal API endpoints."
+        ],
+        "achievements": [],
+        "publications": []
+      },
+      "change_summary": [
+        {
+          "action": "Modified",
+          "reason": "Removed unverified claim of five years of experience as source notes dates do not establish this.",
+          "section": "Summary",
+          "source_evidence": "Summary claims five years of professional development experience, but dated entries do not establish five years."
+        },
+        {
+          "action": "Modified",
+          "reason": "Clarified degree status to reflect withdrawal and incomplete status.",
+          "section": "Education",
+          "source_evidence": "degree not completed; withdrew in 2022."
+        },
+        {
+          "action": "Retained",
+          "reason": "Kept overlapping and inverted dates exactly as provided without inventing corrected dates.",
+          "section": "Experience",
+          "source_evidence": "The end date precedes the start date; correct dates are not supplied."
+        }
+      ],
+      "evidence_used": [
+        {
+          "claim": "Developed using Node.js, Express, and SQLite",
+          "evidence": "Node.js, Express and SQLite"
+        },
+        {
+          "claim": "Maintained internal API endpoints",
+          "evidence": "Maintained internal API endpoints"
+        },
+        {
+          "claim": "Degree not completed",
+          "evidence": "degree not completed; withdrew in 2022"
+        },
+        {
+          "claim": "Worked on Node.js bug fixes",
+          "evidence": "Worked on Node.js bug fixes"
+        }
+      ],
+      "target_requirements": [
+        {
+          "coverage": "Partial - Source confirms JavaScript, Node.js, and Express.js.",
+          "requirement": "Node.js, Express.js, Javascript",
+          "matched_evidence": "JavaScript, Node.js, Express (from Stockroom API project)"
+        },
+        {
+          "coverage": "Partial - Source confirms API endpoint maintenance and personal API project.",
+          "requirement": "Web back end development and API",
+          "matched_evidence": "Maintained internal API endpoints; Stockroom API project"
+        },
+        {
+          "coverage": "Unverified - Source explicitly states dates do not establish the claimed duration.",
+          "requirement": "Minimum 2 years experience",
+          "matched_evidence": "Dates provided contain overlaps and inversions"
+        },
+        {
+          "coverage": "Not met - Source explicitly states the degree was not completed.",
+          "requirement": "Computer Science Graduate",
+          "matched_evidence": "BSc in Computing (withdrew in 2022, not completed)"
+        }
+      ]
+    }
+  ],
+  "candidate_graphs": [
+    {
+      "id": "f57eef3d-52d5-45f1-987e-4919b4954eda",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "8af04e50-47ed-4dca-b162-a73fa7bf7032",
+      "summary": "Software Developer with experience in Node.js and manual testing. Claims five years of professional experience, though dated entries do not establish this. Withdrew from BSc in Computing in 2022 without completing the degree.",
+      "skills": [
+        {
+          "name": "JavaScript",
+          "evidence": [
+            {
+              "text": "JavaScript",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Node.js",
+          "evidence": [
+            {
+              "text": "Node.js",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "manual testing",
+          "evidence": [
+            {
+              "text": "manual testing",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "SQLite",
+          "evidence": [
+            {
+              "text": "SQLite",
+              "source": "resume"
+            }
+          ]
+        }
+      ],
+      "experience_highlights": [
+        "Maintained internal API endpoints at Moss Harbor Labs",
+        "Ran manual test scripts and documented defects at Birch Signal Studio",
+        "Worked on Node.js bug fixes at Moss Harbor Labs"
+      ],
+      "experiences": [
+        {
+          "title": "Software Developer",
+          "company": "Moss Harbor Labs",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Moss Harbor Labs | Software Developer | Jan 2025 - Dec 2023\nMaintained internal API endpoints.",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "description": "Maintained internal API endpoints."
+        },
+        {
+          "title": "Full-time QA Assistant",
+          "company": "Birch Signal Studio",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Birch Signal Studio | Full-time QA Assistant | Feb 2024 - Nov 2025\nRan manual test scripts and documented defects.",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "description": "Ran manual test scripts and documented defects."
+        },
+        {
+          "title": "Full-time Software Developer",
+          "company": "Moss Harbor Labs",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Moss Harbor Labs | Full-time Software Developer | Mar 2024 - Oct 2025\nWorked on Node.js bug fixes.",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "description": "Worked on Node.js bug fixes."
+        }
+      ],
+      "education": [
+        {
+          "text": "BSc in Computing | Westhaven College | 2022 (degree not completed; withdrew in 2022)",
+          "source": "resume"
+        }
+      ],
+      "projects": [
+        {
+          "text": "Stockroom API | Personal project | 2024 | Node.js, Express and SQLite; 18 automated tests.",
+          "source": "resume"
+        }
+      ],
+      "achievements": [],
+      "constraints": {},
+      "preferences": {
+        "location": null,
+        "role_families": [],
+        "remote_preference": null,
+        "work_authorization": null
+      },
+      "source_spans": [
+        {
+          "end": null,
+          "text": "Stockroom API | Personal project | 2024",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Moss Harbor Labs | Software Developer | Jan 2025 - Dec 2023",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Birch Signal Studio | Full-time QA Assistant | Feb 2024 - Nov 2025",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Moss Harbor Labs | Full-time Software Developer | Mar 2024 - Oct 2025",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "BSc in Computing | Westhaven College | 2022",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "JavaScript, Node.js, manual testing, SQLite.",
+          "start": null,
+          "source": "resume"
+        }
+      ],
+      "user_confirmed": false,
+      "created_at": "2026-09-17 10:06:11.379675+08:00",
+      "updated_at": "2026-09-17 10:06:11.379676+08:00",
+      "publications": []
+    }
+  ],
+  "candidate_job_matches": [],
+  "jobs": [
+    {
+      "id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "job_title": "Node js developer",
+      "company_name": "HyperNova Consulting",
+      "job_description": "Key Responsibilities:\nImplement Web applications using nodejs and javascript eco system\nTranslate client requirements to application design, and document\nTranslate client requirements to application design, and document\nWeb application low level design, db design, and UX design\nWeb back end development and SaaS application development\nEssential Skillset/s:\n\nNode.js, Express.js, MEANJS, Restful services, JSON,No SQL, Mongo DB, MySQL\n\nDesirable Skill set/s:\n\nJavascript, Angular JS, React JS, Java, AWS\n\nQualification:\n\nComputer Science Graduates. B.Tech preferred\n\nWork Experience:\n\nMinimum – 2 , Max – 8",
+      "skill_tags": null
+    }
+  ],
+  "job_market_profiles": []
+}

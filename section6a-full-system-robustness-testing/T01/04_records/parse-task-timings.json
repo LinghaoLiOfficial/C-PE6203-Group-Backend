@@ -1,0 +1,23 @@
+{
+  "provenance": "Rows selected without value changes from shared/historical_originals/parse-task-timings.json",
+  "rows": [
+    [
+      "01_Jordan_Lee_NodeJS_Developer.pdf",
+      "a7d35882-dace-4969-b780-a5ae30cf75b0",
+      "completed",
+      "2026-09-09 14:02:29.115108+08:00",
+      "2026-09-09 14:02:31.094892+08:00",
+      "2026-09-09 14:03:41.941337+08:00",
+      null
+    ],
+    [
+      "01_Jordan_Lee_NodeJS_Developer.pdf",
+      "811a8e5b-e958-44df-b136-a4a78d5351a4",
+      "completed",
+      "2026-09-09 14:21:57.670393+08:00",
+      "2026-09-09 14:21:57.739744+08:00",
+      "2026-09-09 14:22:54.018329+08:00",
+      null
+    ]
+  ]
+}

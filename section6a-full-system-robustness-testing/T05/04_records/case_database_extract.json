@@ -1,0 +1,324 @@
+{
+  "provenance": "Filtered from shared/records/database_latest.json. All row values preserved; not a fresh database query.",
+  "observed_at": "2026-09-17T02:10:38.951064+00:00",
+  "resumes": [
+    {
+      "id": "3ed06126-660d-4856-b1da-377b5ef51c1c",
+      "file_name": "05_Nora_Lee.pdf",
+      "is_active": false,
+      "parsed_text": "Synthetic test candidate | Lucas full-system QA | Test 05\n1\n Nora Lee\nProject Assistant\n[redacted-email] | Singapore\nPROFILE\nProject assistant interested in technology delivery. This CV does not provide programming language, database,\ncloud or software framework proficiency.\nEXPERIENCE\nMaple Orbit Services | Project Assistant | Mar 2024 - Aug 2026\nMaintained meeting minutes and tracked actions for six client onboarding projects.\nCompiled weekly status updates from team submissions and coordinated review meetings.\nRecorded customer-reported defects and routed them to the engineering team; did not implement fixes.\nPROJECT\nCommunity event registration | Volunteer coordinator | 2025\nPrepared attendee lists and sent reminders using existing office tools. No software development was involved.\nEDUCATION\nBachelor of Arts in Communication | Westhaven College | 2023\nOTHER\nLanguages: English and Mandarin. Technical certifications: none listed. Quantified business impact: not\nmeasured.",
+      "extracted_skills": [
+        "Meeting minutes",
+        "Action tracking",
+        "Status reporting",
+        "Meeting coordination",
+        "Defect tracking",
+        "Defect routing",
+        "Client onboarding",
+        "Attendee list preparation",
+        "Reminder coordination",
+        "English",
+        "Mandarin"
+      ],
+      "created_at": "2026-09-16 18:38:58.826833+08:00",
+      "updated_at": "2026-09-16 18:42:37.286021+08:00"
+    }
+  ],
+  "resume_parse_tasks": [
+    {
+      "id": "006ab611-2224-4509-9d6d-d78c5318e5fd",
+      "resume_id": "3ed06126-660d-4856-b1da-377b5ef51c1c",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-16 18:39:10.196215+08:00",
+      "finished_at": "2026-09-16 18:39:46.910304+08:00",
+      "heartbeat_at": "2026-09-16 18:39:46.910305+08:00",
+      "created_at": "2026-09-16 18:39:09.206941+08:00",
+      "updated_at": "2026-09-16 18:39:46.904905+08:00",
+      "diagnostics": {
+        "task_id": "006ab611-2224-4509-9d6d-d78c5318e5fd",
+        "graph_id": "e4b74bea-974d-4148-8fe2-f5bd24481ff8",
+        "char_count": 993,
+        "line_count": 21,
+        "chunk_count": 1,
+        "pypdf_score": 0.749,
+        "skill_count": 11,
+        "text_source": "pypdf",
+        "title_count": 7,
+        "schema_valid": true,
+        "section_hits": {
+          "skills": 0,
+          "projects": 1,
+          "education": 1,
+          "experience": 1,
+          "achievements": 0,
+          "publications": 0
+        },
+        "analysis_mode": "llm",
+        "fallback_used": false,
+        "project_count": 1,
+        "cleaning_ratio": 0.995,
+        "evidence_count": 6,
+        "fallback_score": null,
+        "analysis_reason": null,
+        "education_count": 1,
+        "analysis_message": null,
+        "achievement_count": 0,
+        "publication_count": 0,
+        "cleaned_char_count": 988
+      }
+    }
+  ],
+  "resume_tailoring_tasks": [
+    {
+      "id": "e40360d7-9e4c-4c2d-9c95-1ec2632c34df",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "3ed06126-660d-4856-b1da-377b5ef51c1c",
+      "job_id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-16 18:40:35.115393+08:00",
+      "finished_at": "2026-09-16 18:41:44.471477+08:00",
+      "created_at": "2026-09-16 18:40:34.270779+08:00",
+      "updated_at": "2026-09-16 18:40:35.131642+08:00"
+    }
+  ],
+  "resume_variants": [],
+  "candidate_graphs": [
+    {
+      "id": "e4b74bea-974d-4148-8fe2-f5bd24481ff8",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "3ed06126-660d-4856-b1da-377b5ef51c1c",
+      "summary": "Project assistant with experience in client onboarding coordination, status reporting, and defect tracking. Holds a Bachelor of Arts in Communication. Proficient in English and Mandarin. No programming, database, cloud, or software framework proficiency indicated.",
+      "skills": [
+        {
+          "name": "Meeting minutes",
+          "evidence": [
+            {
+              "text": "Meeting minutes",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Action tracking",
+          "evidence": [
+            {
+              "text": "Action tracking",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Status reporting",
+          "evidence": [
+            {
+              "text": "Status reporting",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Meeting coordination",
+          "evidence": [
+            {
+              "text": "Meeting coordination",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Defect tracking",
+          "evidence": [
+            {
+              "text": "Defect tracking",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Defect routing",
+          "evidence": [
+            {
+              "text": "Defect routing",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Client onboarding",
+          "evidence": [
+            {
+              "text": "Client onboarding",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Attendee list preparation",
+          "evidence": [
+            {
+              "text": "Attendee list preparation",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Reminder coordination",
+          "evidence": [
+            {
+              "text": "Reminder coordination",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "English",
+          "evidence": [
+            {
+              "text": "English",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Mandarin",
+          "evidence": [
+            {
+              "text": "Mandarin",
+              "source": "resume"
+            }
+          ]
+        }
+      ],
+      "experience_highlights": [
+        "Maintained meeting minutes and tracked actions for six client onboarding projects",
+        "Compiled weekly status updates and coordinated review meetings",
+        "Recorded customer-reported defects and routed them to engineering",
+        "Prepared attendee lists and sent reminders for community event registration"
+      ],
+      "experiences": [
+        {
+          "title": "Project Assistant",
+          "company": "Maple Orbit Services",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Maple Orbit Services | Project Assistant | Mar 2024 - Aug 2026",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Maintained meeting minutes and tracked actions for six client onboarding projects.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Compiled weekly status updates from team submissions and coordinated review meetings.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Recorded customer-reported defects and routed them to the engineering team; did not implement fixes.",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "description": "Maintained meeting minutes and tracked actions for six client onboarding projects. Compiled weekly status updates from team submissions and coordinated review meetings. Recorded customer-reported defects and routed them to the engineering team."
+        }
+      ],
+      "education": [
+        {
+          "text": "Bachelor of Arts in Communication | Westhaven College | 2023",
+          "source": "resume"
+        }
+      ],
+      "projects": [
+        {
+          "text": "Community event registration | Volunteer coordinator | 2025",
+          "source": "resume"
+        }
+      ],
+      "achievements": [],
+      "constraints": {
+        "no_cloud_proficiency": true,
+        "no_database_proficiency": true,
+        "no_programming_proficiency": true,
+        "no_technical_certifications": true,
+        "no_quantified_business_impact": true,
+        "no_software_framework_proficiency": true
+      },
+      "preferences": {
+        "location": null,
+        "role_families": [],
+        "remote_preference": null,
+        "work_authorization": null
+      },
+      "source_spans": [
+        {
+          "end": null,
+          "text": "Maintained meeting minutes and tracked actions for six client onboarding projects.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Compiled weekly status updates from team submissions and coordinated review meetings.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Recorded customer-reported defects and routed them to the engineering team; did not implement fixes.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Prepared attendee lists and sent reminders using existing office tools. No software development was involved.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "This CV does not provide programming language, database, cloud or software framework proficiency.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Languages: English and Mandarin. Technical certifications: none listed. Quantified business impact: not measured.",
+          "start": null,
+          "source": "resume"
+        }
+      ],
+      "user_confirmed": false,
+      "created_at": "2026-09-16 18:39:46.907581+08:00",
+      "updated_at": "2026-09-16 18:39:46.907582+08:00",
+      "publications": []
+    }
+  ],
+  "candidate_job_matches": [],
+  "jobs": [
+    {
+      "id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "job_title": "Node js developer",
+      "company_name": "HyperNova Consulting",
+      "job_description": "Key Responsibilities:\nImplement Web applications using nodejs and javascript eco system\nTranslate client requirements to application design, and document\nTranslate client requirements to application design, and document\nWeb application low level design, db design, and UX design\nWeb back end development and SaaS application development\nEssential Skillset/s:\n\nNode.js, Express.js, MEANJS, Restful services, JSON,No SQL, Mongo DB, MySQL\n\nDesirable Skill set/s:\n\nJavascript, Angular JS, React JS, Java, AWS\n\nQualification:\n\nComputer Science Graduates. B.Tech preferred\n\nWork Experience:\n\nMinimum – 2 , Max – 8",
+      "skill_tags": null
+    }
+  ],
+  "job_market_profiles": []
+}

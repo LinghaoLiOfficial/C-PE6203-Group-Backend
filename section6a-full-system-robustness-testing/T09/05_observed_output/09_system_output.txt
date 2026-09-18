@@ -1,0 +1,25 @@
+Diana Koh
+Principal Software Engineer
+Singapore | [redacted-email]
+
+PROFILE
+Software engineer with 16 years of industry experience, including technical leadership. Specializing in backend architecture, Node.js, RESTful services, and AWS. Interested in a hands-on individual contributor role focusing on web and SaaS application development.
+
+EXPERIENCE
+Quartz Bay Systems | Principal Engineer | Jan 2020 - Aug 2026
+- Set backend architecture standards and mentored eight engineers.
+- Implemented Node.js and TypeScript services.
+- Led a PostgreSQL migration for three internal products and reviewed reliability plans.
+
+Elm Circuit Technologies | Senior Backend Engineer | Jan 2015 - Dec 2019
+- Built REST APIs with Node.js, Express and Redis.
+- Introduced automated tests and CI.
+
+Pine Arc Digital | Software Engineer | Jul 2010 - Dec 2014
+- Developed Java services and SQL reporting tools.
+
+SKILLS
+Node.js, TypeScript, Express, REST APIs, PostgreSQL, Redis, Docker, AWS, Java, System Design, Mentoring.
+
+EDUCATION
+BSc in Computer Science | Westhaven College | 2010

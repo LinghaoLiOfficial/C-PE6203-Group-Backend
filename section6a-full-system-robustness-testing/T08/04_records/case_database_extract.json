@@ -1,0 +1,346 @@
+{
+  "provenance": "Filtered from shared/records/database_latest.json. All row values preserved; not a fresh database query.",
+  "observed_at": "2026-09-17T02:10:38.951064+00:00",
+  "resumes": [
+    {
+      "id": "a2e5e3cb-5cd4-4001-8bf3-784b91c0e16b",
+      "file_name": "08_Leo_Chen.pdf",
+      "is_active": false,
+      "parsed_text": "Synthetic test candidate | Lucas full-system QA | Test 08\n1\n Leo Chen\nBackend Software Engineer\n[redacted-email] | Singapore\nPROFILE\nBackend engineer building server-side JavaScript services and relational data workflows.\nEXPERIENCE\nSilver Reed Software | Backend Engineer | Jun 2023 - Aug 2026\nBuilt HTTP endpoints using the JavaScript runtime Node.js and the Express framework.\nUsed typed JavaScript (TypeScript) to validate request contracts.\nDesigned relational tables and wrote joins in PostgreSQL; added indexes to reduce a report query from 2.4 to 0.9\nseconds.\nImplemented a Redis in-memory cache and asynchronous job processing.\nWrote automated unit checks with Jest and reviewed changes through Git pull requests.\nPackaged services into Docker containers and used a continuous integration pipeline in GitHub Actions.\nPROJECT\nLibrary lending API | Personal project | 2023\nImplemented REST endpoints, token-based sign-in and pagination. Tested locally; no claimed commercial users.\nEDUCATION\nBSc in Information Systems | Westhaven College | 2023",
+      "extracted_skills": [
+        "JavaScript",
+        "Node.js",
+        "Express",
+        "TypeScript",
+        "PostgreSQL",
+        "Redis",
+        "Jest",
+        "Git",
+        "Docker",
+        "GitHub Actions",
+        "REST APIs",
+        "Relational Database Design"
+      ],
+      "created_at": "2026-09-16 18:48:20.090642+08:00",
+      "updated_at": "2026-09-16 18:51:10.669837+08:00"
+    }
+  ],
+  "resume_parse_tasks": [
+    {
+      "id": "7c1b1913-31d3-4e23-80b9-eb4008b11004",
+      "resume_id": "a2e5e3cb-5cd4-4001-8bf3-784b91c0e16b",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-16 18:49:15.253157+08:00",
+      "finished_at": "2026-09-16 18:50:02.049766+08:00",
+      "heartbeat_at": "2026-09-16 18:50:02.049767+08:00",
+      "created_at": "2026-09-16 18:48:31.501274+08:00",
+      "updated_at": "2026-09-16 18:50:02.045979+08:00",
+      "diagnostics": {
+        "task_id": "7c1b1913-31d3-4e23-80b9-eb4008b11004",
+        "graph_id": "ebb6cd9a-d0e3-4251-8b01-b2fdc32da28d",
+        "char_count": 1057,
+        "line_count": 21,
+        "chunk_count": 1,
+        "pypdf_score": 0.734,
+        "skill_count": 12,
+        "text_source": "pypdf",
+        "title_count": 6,
+        "schema_valid": true,
+        "section_hits": {
+          "skills": 0,
+          "projects": 0,
+          "education": 1,
+          "experience": 1,
+          "achievements": 0,
+          "publications": 0
+        },
+        "analysis_mode": "llm",
+        "fallback_used": false,
+        "project_count": 1,
+        "cleaning_ratio": 0.995,
+        "evidence_count": 8,
+        "fallback_score": null,
+        "analysis_reason": null,
+        "education_count": 1,
+        "analysis_message": null,
+        "achievement_count": 0,
+        "publication_count": 0,
+        "cleaned_char_count": 1052
+      }
+    }
+  ],
+  "resume_tailoring_tasks": [
+    {
+      "id": "424fdc07-d284-4a60-b25a-f1b4d75bc347",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "a2e5e3cb-5cd4-4001-8bf3-784b91c0e16b",
+      "job_id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-16 18:51:00.309794+08:00",
+      "finished_at": "2026-09-16 18:52:24.489561+08:00",
+      "created_at": "2026-09-16 18:50:58.803583+08:00",
+      "updated_at": "2026-09-16 18:51:00.325656+08:00"
+    }
+  ],
+  "resume_variants": [],
+  "candidate_graphs": [
+    {
+      "id": "ebb6cd9a-d0e3-4251-8b01-b2fdc32da28d",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "a2e5e3cb-5cd4-4001-8bf3-784b91c0e16b",
+      "summary": "Backend Software Engineer with experience building server-side JavaScript services, relational data workflows, and REST APIs using Node.js, TypeScript, PostgreSQL, and Docker.",
+      "skills": [
+        {
+          "name": "JavaScript",
+          "evidence": [
+            {
+              "text": "JavaScript",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Node.js",
+          "evidence": [
+            {
+              "text": "Node.js",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Express",
+          "evidence": [
+            {
+              "text": "Express",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "TypeScript",
+          "evidence": [
+            {
+              "text": "TypeScript",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "PostgreSQL",
+          "evidence": [
+            {
+              "text": "PostgreSQL",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Redis",
+          "evidence": [
+            {
+              "text": "Redis",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Jest",
+          "evidence": [
+            {
+              "text": "Jest",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Git",
+          "evidence": [
+            {
+              "text": "Git",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Docker",
+          "evidence": [
+            {
+              "text": "Docker",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "GitHub Actions",
+          "evidence": [
+            {
+              "text": "GitHub Actions",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "REST APIs",
+          "evidence": [
+            {
+              "text": "REST APIs",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Relational Database Design",
+          "evidence": [
+            {
+              "text": "Relational Database Design",
+              "source": "resume"
+            }
+          ]
+        }
+      ],
+      "experience_highlights": [
+        "Backend Engineer at Silver Reed Software (Jun 2023 - Aug 2026)",
+        "Reduced PostgreSQL report query time from 2.4 to 0.9 seconds via indexing",
+        "Implemented Redis in-memory cache and asynchronous job processing",
+        "Built HTTP endpoints using Node.js and Express",
+        "Packaged services into Docker containers with GitHub Actions CI pipeline"
+      ],
+      "experiences": [
+        {
+          "title": "Backend Engineer",
+          "company": "Silver Reed Software",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Silver Reed Software | Backend Engineer | Jun 2023 - Aug 2026",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Built HTTP endpoints using the JavaScript runtime Node.js and the Express framework.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Designed relational tables and wrote joins in PostgreSQL; added indexes to reduce a report query from 2.4 to 0.9 seconds.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Implemented a Redis in-memory cache and asynchronous job processing.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Packaged services into Docker containers and used a continuous integration pipeline in GitHub Actions.",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "description": "Built HTTP endpoints using Node.js and Express, designed PostgreSQL tables with indexing, implemented Redis caching and async job processing, wrote Jest unit tests, and packaged services into Docker containers with GitHub Actions CI."
+        }
+      ],
+      "education": [
+        {
+          "text": "BSc in Information Systems | Westhaven College | 2023",
+          "source": "resume"
+        }
+      ],
+      "projects": [
+        {
+          "text": "Library lending API | Personal project | 2023",
+          "source": "resume"
+        }
+      ],
+      "achievements": [],
+      "constraints": {},
+      "preferences": {
+        "location": null,
+        "role_families": [],
+        "remote_preference": null,
+        "work_authorization": null
+      },
+      "source_spans": [
+        {
+          "end": null,
+          "text": "Backend engineer building server-side JavaScript services and relational data workflows.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Silver Reed Software | Backend Engineer | Jun 2023 - Aug 2026",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Built HTTP endpoints using the JavaScript runtime Node.js and the Express framework.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Designed relational tables and wrote joins in PostgreSQL; added indexes to reduce a report query from 2.4 to 0.9 seconds.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Implemented a Redis in-memory cache and asynchronous job processing.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Packaged services into Docker containers and used a continuous integration pipeline in GitHub Actions.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Library lending API | Personal project | 2023",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "BSc in Information Systems | Westhaven College | 2023",
+          "start": null,
+          "source": "resume"
+        }
+      ],
+      "user_confirmed": false,
+      "created_at": "2026-09-16 18:50:02.047631+08:00",
+      "updated_at": "2026-09-16 18:50:02.047632+08:00",
+      "publications": []
+    }
+  ],
+  "candidate_job_matches": [],
+  "jobs": [
+    {
+      "id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "job_title": "Node js developer",
+      "company_name": "HyperNova Consulting",
+      "job_description": "Key Responsibilities:\nImplement Web applications using nodejs and javascript eco system\nTranslate client requirements to application design, and document\nTranslate client requirements to application design, and document\nWeb application low level design, db design, and UX design\nWeb back end development and SaaS application development\nEssential Skillset/s:\n\nNode.js, Express.js, MEANJS, Restful services, JSON,No SQL, Mongo DB, MySQL\n\nDesirable Skill set/s:\n\nJavascript, Angular JS, React JS, Java, AWS\n\nQualification:\n\nComputer Science Graduates. B.Tech preferred\n\nWork Experience:\n\nMinimum – 2 , Max – 8",
+      "skill_tags": null
+    }
+  ],
+  "job_market_profiles": []
+}

@@ -1,0 +1,165 @@
+# Job Portal 三份简历端到端测试报告
+
+测试日期：2026-09-09（Asia/Singapore）。报告由实际浏览器操作、页面截图、页面文字及只读任务记录生成。
+
+**总体结论：有条件不通过。** 基础上传和两份单页解析可用；复杂简历解析质量、匹配解释仍有重要问题。Priya改写按用户要求停止等待，未验证的下载及最终生成结果不计通过。
+
+## 1. 范围与环境
+
+- 环境：http://localhost:3000，API http://localhost:8000/api/v1，本地 PostgreSQL、后台 generation worker。
+- 前端基准提交：5e27b87；后端基准提交：da34149。运行版本还包含此前的本地职位空值修复、历史改写列表空值修复及相应测试；不是完全干净的远程版本。
+- AI：日志显示 provider=openrouter、model=qwen3.7-plus；本报告不包含密钥或登录凭据。
+- 测试账户：lucastest0010，既有账号和数据保留；未执行真实求职投递、删除简历、修改代码或数据库迁移。
+- 范围：上传、手动解析、激活简历、机会列表、职位详情、改写任务、修改说明和下载按钮。并非系统全部功能的全面验收；注册、管理端、真实邮件、批量导入、安全、并发和移动端兼容性不在本轮范围。
+- 测试顺序以 Jordan、Maya、Priya 为主。受文件移动及会话中断影响，Jordan 先使用既有同一测试文件完成改写，再重新上传并解析；报告没有把两条记录当作同一个全新端到端任务。Maya 改写结束后才开始 Priya 的有效上传和解析。
+
+## 2. 测试数据及验收标准
+
+| 文件 | 内容 | 重点 |
+|---|---|---|
+| 01 Jordan（1页） | 3年 Node.js 后端经验 | Node.js/TypeScript技能、12个API、80个测试、85%覆盖率、240→95ms不可被改造 |
+| 02 Maya（1页） | 4年客服，基础数据分析学习 | 区分客服工龄与分析经验；40小时课程不能变成学位；不能编造开发技能 |
+| 03 Priya（2页） | ML工程、兼职研究、2个研究项目、2项发表 | 多页结构、两项学历、职业空档、志愿活动；区分技术报告与同行评审论文 |
+
+默认不预设一个“正确匹配分数”。验收关注分数是否有候选人证据、解释是否自洽，以及改写是否保持事实。
+
+## 3. 执行结果
+
+| 步骤 | Jordan | Maya | Priya |
+|---|---|---|---|
+| PDF上传 | 通过（使用实际存在的文件路径） | 通过 | 通过 |
+| 手动解析与任务完成 | 通过，LLM | 通过，LLM | 任务完成，但 FALLBACK |
+| 内容解析质量 | 关键项通过；技能列表非完整提取 | 核心职业/课程区分通过 | 失败：项目遗漏、分类混淆、技能遗漏 |
+| 当前简历切换 | 上传后显示 Active，旧记录 Inactive | 同左 | 同左 |
+| 机会列表加载 | 通过，24条 | 通过，24条 | 通过，24条 |
+| 匹配解释质量 | 失败/需修正 | 失败/需修正 | 失败/需修正 |
+| 目标岗位 | Node js developer / HyperNova Consulting | 无Data Analyst结果，改用同一Node.js岗位做负向真实性检查 | Machine Learning / Pioneer Consulting（新加坡） |
+| 改写 | 已完成；保留源事实 | 已完成；明确不做无依据的定制 | 见第6节最终结果 |
+| 下载按钮 | 已点击；落地文件未确认 | 已点击；落地文件未确认 | 见第6节 |
+
+### 实测耗时
+
+以数据库 created_at 至 finished_at 计算，包含排队；不是连续人工秒表，也不包含用户中断的间隔。
+
+| 简历 | 新上传后解析 | 岗位改写（秒） | 改写状态 |
+|---|---:|---:|---|
+| Jordan | 56.3 秒 | 130.5 | completed |
+| Maya | 69.8 秒 | 91.3 | completed |
+| Priya | 213.1 秒 | 未完成 | running |
+
+Jordan 改写任务 fc584f98-7322-4aba-bc4a-14613f9bb549 使用已存在的 Jordan 记录；新上传解析任务为 811a8e5b-e958-44df-b136-a4a78d5351a4。Maya 改写为 74769ecd-f276-43de-afbf-47aed716b234；Priya 改写为 096580a7-afea-4b84-800f-4b45187d00a9。
+
+## 4. 分样本观察
+
+### Jordan
+
+解析显示12项技能、5项经历亮点、1项学历和1个项目。Node.js、Express.js、TypeScript、PostgreSQL、Redis及关键数字识别正确。原始技能中的HTML、CSS、Git、Supertest和GitHub Actions未全部进入技能汇总，部分仍出现在经历/项目文本中，因此不把技能汇总视为无遗漏解析。
+
+Node.js岗位51% fit，可达性0%、进入壁垒100%、信心70%；同时“WHAT IS MISSING”声称核心要求已覆盖。改写生成成功，保留3年后端经历、原公司/日期及12个API、80个测试、85%覆盖率和240→95ms。理由多为 retained；明确未新增AWS、MongoDB、Angular等无来源技能。事实保真通过；没有明显内容定制，不据此断言生成失败。
+
+### Maya
+
+解析显示11项技能、4项亮点、2项教育/培训和1个个人项目。保留客服工作、40小时课程、基础SQL/Python、个人学习项目的性质，没有改成4年分析师或开发者。语言被合并进技能计数，是分类方式观察。
+
+搜索Data Analyst后无结果，页面却提示“Upload and confirm a resume first”。清空或改为Node后恢复结果，证明不是未上传简历。没有声称数据库全部100条都没有数据分析岗位，仅确认当前机会列表中搜不到。用Node.js岗位进行负向测试仍显示51% fit及0%可达性，与Jordan相同。
+
+改写结果明确“No tailoring applied”，理由是没有目标开发技能的来源证据；原文、工作性质、学历/课程和2,000行个人项目保留。原文中的“每周报表3小时降到2小时”还被归入成果，来源存在，不属于编造。真实性通过，但数据分析岗位定制未覆盖。
+
+### Priya
+
+两页文件成功上传。解析连续三次达到4096-token输出上限，日志记录truncated及retry_exhausted，随后显示Completed FALLBACK。
+
+实际只有8项粗粒度技能，缺失PyTorch、scikit-learn、sentence-transformers等关键项；2个项目被记为0；2项学历拆成10条并混入研究项目标题和正文；经验亮点包含页脚“Fictional candidate”、联系方式和简介；论文栏混入CAREER BREAK与VOLUNTEERING。第二页文字被读取到了，但分段分类失败，不是完整解析通过。
+
+机器学习岗位53% fit、可达性0%、进入壁垒100%；仍提示核心要求已覆盖。与不同背景样本的分数及列表几乎一致，不足以证明系统已可靠个性化。
+
+## 5. 缺陷与风险清单
+
+严重度为本轮建议，待团队确认。High表示影响核心匹配/解析正确性；Medium表示误导状态或操作反馈。
+
+### BUG-01（High）：复杂简历截断后降级解析错误
+
+复现：上传03 Priya → Parse → 等待重试结束。预期两项学历、两个研究项目和两项发表被分开保留；实际项目0、教育10、论文混入职业空档和志愿活动。任务Completed不等于内容正确。建议改进分块/输出预算及降级结构解析，并在低质量结果上提示人工确认。证据：P04-fallback-result及任务时间。
+
+### BUG-02（High）：匹配证据缺失及解释矛盾
+
+复现：分别使用Jordan和Maya解析后打开Node.js岗位；二者51% fit、可达性0%，却提示核心要求已覆盖。Priya同样存在0%可达性与“已覆盖”矛盾。预期空证据应明确标记未知/缺失，不应宣称已覆盖。需检查初始职位分析数据完整性、评分与详情是否使用同一数据源。证据：J05、M06、P06；不能仅凭分数相同就推断算法全部失效。
+
+### BUG-03（Medium）：搜索空结果提示错误
+
+复现：Maya完成解析 → Jobs输入Data Analyst。预期“没有符合搜索条件的职位”；实际要求先上传并确认简历。证据：M05-data-analyst-no-results。
+
+### OBS-04（Medium，待确认）：新改写仍显示旧日期/缓存标签
+
+9月9日触发新任务，结果卡片仍显示Latest Cached 2026/9/8。可能展示的是被复用结果记录的最初创建时间，而非本次生成时间；应明确区分创建与更新及缓存命中。本轮已看到任务真正进入生成，不能因为Cached标签就认定没有调用AI。证据：J08、M08、任务时间。
+
+### ENV-05（数据限制）：外部投递链接是占位页
+
+用户反馈打开Example Domain；初始CSV迁移使用example.com/jobs/...。这不是真实职位投递地址。本轮未点击Track and apply新增投递。真实外部申请流程无法据此验收，需要提供真实测试链接或模拟站点。
+
+### TOOL-06（已澄清，不记产品缺陷）：最初上传Failed to fetch
+
+三份原PDF已从项目output/pdf移动到Documents/Downloads。测试最初使用失效路径，随后定位到实际文件并上传成功。因此早期J01/M01/P01截图仅保留为执行历史，不计后端上传失败；也不能把这次复测原因推广到所有Failed to fetch。
+
+### LIMIT-07：下载及复制落地验证受限
+
+Jordan和Maya的Download按钮已点击，Jordan的浏览器download事件等待10秒超时；标准下载目录未找到本轮生成的新TXT。复制操作后自动化剪贴板读回为空。这些可能是内嵌浏览器/自动化能力限制，未确认为产品缺陷，也没有标记下载成功。前端源代码表明导出格式为TXT，不是PDF。页面正文截图/文本已保存，不能把这些证据文件冒充产品下载文件。
+
+## 6. Priya 改写最终结果
+
+截至停止观察时，页面仍显示 Generating / 55%，未观察到完成或失败终态。用户要求直接记录并生成报告，因此不再继续等待，也未取消后台任务。
+
+日志已确认4次8192-token输出截断（19:38:03、19:40:24、19:42:44、19:45:05），19:45:05又开始下一次请求。首次开始于19:35:43，因此已观察到至少9分22秒仍未产出可验收结果。此时前3次结构化重试耗尽后又进入外层第二轮；不能把“第3次”当作系统最后一次尝试。
+
+判定：复杂改写稳定性/等待体验失败，最终生成内容和真实性未验证；没有可用的Priya改写结果可供下载测试。后续后台可能继续运行，本报告不推断其最终状态。建议单独核对最终任务096580a7-afea-4b84-800f-4b45187d00a9，不自动重复提交。
+
+对应建议缺陷 BUG-08（High）：复杂简历多层重试导致长时间无结果。复现：将已降级解析的Priya用于Pioneer Consulting的Machine Learning职位，点击Plan tailored resume；实际多次输出截断，页面始终55%，没有展示重试次数或预期等待。预期有可控总耗时、明确进度/降级说明或可恢复失败提示。
+
+## 7. 结论与后续验收
+
+- 上传和基础单页解析可使用；不能据此宣布完整系统通过。
+- 优先修复复杂简历降级质量、评分证据与解释一致性，再复测三份样本。
+- 为Maya提供可选的数据分析目标岗位，补测原计划的正向转岗定制。
+- 用普通浏览器人工核验Download生成的TXT能打开、正文与页面一致；如确认下载失败，再创建可复现产品缺陷。
+- 补充真实投递测试地址。本轮没有进行删除回归、真实投递和安全测试，不将它们算作通过。
+- 本轮未改动业务代码或执行修复；保留新增测试简历和生成任务。Jordan现有两条同名记录是复测上传产生，不是系统自动重复创建的证据。
+
+## 8. 证据索引
+
+PNG为原始浏览器截图，TXT为同次DOM可见文字。长截图对固定浮层可能重复拼接，应配合viewport截图和TXT定位；不能把拼接重复当产品缺陷。索引时间使用UTC，正文时间使用Asia/Singapore。
+
+- [J01-upload-error.png](J01-upload-error.png)
+- [J02-parse-start.png](J02-parse-start.png)
+- [J03-parsed-result.png](J03-parsed-result.png)
+- [J04-matches.png](J04-matches.png)
+- [J05-job-detail.png](J05-job-detail.png)
+- [J06-rewrite-queued.png](J06-rewrite-queued.png)
+- [J07-generating.png](J07-generating.png)
+- [J08-rewrite-result.png](J08-rewrite-result.png)
+- [J09-rationale.png](J09-rationale.png)
+- [J11-upload-success.png](J11-upload-success.png)
+- [J12-new-parse-complete.png](J12-new-parse-complete.png)
+- [M01-upload-error.png](M01-upload-error.png)
+- [M02-upload-success.png](M02-upload-success.png)
+- [M03-parsed.png](M03-parsed.png)
+- [M04-matches.png](M04-matches.png)
+- [M05-data-analyst-no-results.png](M05-data-analyst-no-results.png)
+- [M06-job-detail.png](M06-job-detail.png)
+- [M06-job-viewport.png](M06-job-viewport.png)
+- [M07-rewrite-queued.png](M07-rewrite-queued.png)
+- [M08-rewrite-result.png](M08-rewrite-result.png)
+- [M09-rationale.png](M09-rationale.png)
+- [P01-upload-error.png](P01-upload-error.png)
+- [P02-upload-success.png](P02-upload-success.png)
+- [P03-long-running.png](P03-long-running.png)
+- [P04-fallback-result.png](P04-fallback-result.png)
+- [P05-matches.png](P05-matches.png)
+- [P06-job-detail.png](P06-job-detail.png)
+- [P06-job-viewport.png](P06-job-viewport.png)
+- [P07-rewrite-start.png](P07-rewrite-start.png)
+
+本报告截至用户要求停止等待时的观察，不是持续监控结果。后台worker未停止。
+
+任务状态与耗时：[解析记录](parse-task-timings.json)、[改写记录](rewrite-task-timings.json)。
+
+最终等待截图：[P08-generation-wait-viewport.png](P08-generation-wait-viewport.png)

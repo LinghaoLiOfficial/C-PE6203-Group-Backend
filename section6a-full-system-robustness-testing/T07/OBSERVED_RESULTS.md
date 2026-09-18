@@ -1,0 +1,15 @@
+# T07 - Very weak cross-domain fit (Clara Wong)
+
+Extracted from the existing QA report; this is a report excerpt, not a new execution. Original report-relative links below refer to the former layout; use README.md in this folder for the package file paths.
+
+- Severity: High shared matching/coverage defect; Medium misleading Cached date. Additional observations described below.
+- Area: parsing robustness, grounding, active-resume propagation, recommendations, score/explanation consistency, tailoring completion and rationale.
+- Environment: new-case snapshot above; actual task timestamps below.
+- Input: [PDF](inputs/07_Clara_Wong.pdf) and [source TXT](inputs/07_Clara_Wong.txt); SHA-256 `4f79dda6c23093c084acb647e10e948f7ea66c1e6c6f9cde41f50533a015984e`.
+- Steps: Upload the designated PDF → verify new Active file and old Inactive state → click Parse → wait for completed state and inspect fields → Browse jobs → inspect recommendations → open Node js developer / HyperNova Consulting → inspect score, vector and canonical requirements → Plan tailored resume → inspect terminal output and Modification rationale. Save screenshot/visible text and read-only task records. No real application submitted.
+- Expected: Explain technical mismatch without turning baking experience into engineering experience. Matching must be grounded and internally consistent; completion must not imply correctness without inspecting output.
+- Actual: Pastry experience, 150 items per morning, two trainees and culinary qualification were preserved. Technical requirements were marked 0% in rationale. Nevertheless the job page claimed core requirements covered and showed the same 51% fit as technical candidates; full page reload did not change the recommendation list. All new cases showed the same 24-role list and Node.js 51% fit, 0% attainability, 100% barrier and generic covered-requirements statement.
+- Evidence: [T07_job_detail](evidence/T07_job_detail.txt), [T07_matches_after_reload](evidence/T07_matches_after_reload.txt), [T07_matches_before_reload](evidence/T07_matches_before_reload.txt), [T07_output](evidence/T07_output.txt), [T07_parse_started](evidence/T07_parse_started.txt), [T07_parsed](evidence/T07_parsed.txt), [T07_rationale](evidence/T07_rationale.txt), [T07_tailoring_started](evidence/T07_tailoring_started.txt); corresponding PNGs share each basename. Read-only source/task/variant evidence: [database snapshot](evidence/database_latest.json).
+- Resume ID: `8abccd06-877a-4394-ab8e-815aba601216`. Parse task: `9fd1fc37-e150-4361-b20b-e42ca17efb06` (completed), 2026-09-16 18:46:47.907490+08:00 to 2026-09-16 18:47:29.113481+08:00. Tailoring task: `8c6f7e34-fa9d-48e1-a4dd-b8d8a04494d9` (completed), 2026-09-16 18:48:05.753492+08:00 to 2026-09-16 18:49:15.242785+08:00.
+- Reproducible: matching contradiction observed across seven distinct inputs; page reload repeated for T07/T08. Per-case LLM generation run once, not an independent same-input repeat. No post-fix regression performed.
+

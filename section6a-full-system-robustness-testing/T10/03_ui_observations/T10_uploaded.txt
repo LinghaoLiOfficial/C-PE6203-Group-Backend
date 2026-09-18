@@ -1,0 +1,122 @@
+2026-09-17T02:04:52.582Z
+- main:
+  - generic: Navigation
+  - generic: Job Portal
+  - button:
+  - generic: Job Portal
+  - generic: lucastest0010
+  - button "Toggle theme":
+  - link "Browse jobs":
+    - /url: /dashboard/jobs
+  - button "Sign out":
+    - text: Sign out
+  - heading "Tailored resumes" [level=2]
+  - paragraph: Generated versions appear here above the original uploads.
+  - generic: Node js developer
+  - paragraph: HyperNova Consulting · 09_Diana_Koh.pdf
+  - generic: Generating
+  - generic: generating
+  - generic: 55%
+  - generic: Machine Learning
+  - paragraph: Pioneer Consulting · 03_Priya_Rao_ML_Research.pdf
+  - generic: Failed
+  - paragraph: Structured tailored resume generation failed after two attempts.
+  - button "Retry":
+    - text: Retry
+  - generic: Upload resume
+  - paragraph: Upload first, manage the file, then start parsing manually when you are ready.
+  - text: Choose file
+  - generic: 10_Sam_Rivera.pdf
+  - generic: Active file
+  - generic: Uploaded
+  - generic: UNKNOWN
+  - button "Parse":
+    - text: Parse
+  - button "Delete 10_Sam_Rivera.pdf":
+  - generic: Progress
+  - generic: 0%
+  - paragraph: Summary
+  - paragraph
+  - generic: Skills
+  - generic: "0"
+  - generic: Highlights
+  - generic: "0"
+  - generic: Education
+  - generic: "0"
+  - generic: Projects
+  - generic: "0"
+  - generic: Achievements
+  - generic: "0"
+  - generic: 09_Diana_Koh.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 09_Diana_Koh.pdf":
+  - generic: 08_Leo_Chen.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 08_Leo_Chen.pdf":
+  - generic: 07_Clara_Wong.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 07_Clara_Wong.pdf":
+  - generic: 06_Owen_Park.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 06_Owen_Park.pdf":
+  - generic: 05_Nora_Lee.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 05_Nora_Lee.pdf":
+  - generic: 04_Evan_Tan.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 04_Evan_Tan.pdf":
+  - generic: 03_Priya_Rao_ML_Research.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: FALLBACK
+  - button "Parse":
+    - text: Parse
+  - button "Delete 03_Priya_Rao_ML_Research.pdf":
+  - generic: 02_Maya_Lim_Career_Change.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 02_Maya_Lim_Career_Change.pdf":
+  - generic: 01_Jordan_Lee_NodeJS_Developer.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 01_Jordan_Lee_NodeJS_Developer.pdf":
+  - generic: 01_Jordan_Lee_NodeJS_Developer.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 01_Jordan_Lee_NodeJS_Developer.pdf":
+- region "Notifications alt+T"
+- button "Open Next.js Dev Tools":
+- alert

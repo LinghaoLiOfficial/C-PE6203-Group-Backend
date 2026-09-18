@@ -1,0 +1,14 @@
+{
+  "test": "T10",
+  "parse_seconds": 78.5,
+  "tailor_seconds": 62.8,
+  "parse_status": "completed",
+  "tailor_status": "completed",
+  "resume_id": "8af04e50-47ed-4dca-b162-a73fa7bf7032",
+  "parse_task_id": "3e0f61b2-6227-437e-8c36-11aaa2c0b5d6",
+  "tailor_task_id": "2726450d-7dd2-45f8-8198-43d2fea8816e",
+  "parse_created": "2026-09-17 10:04:52.910356+08:00",
+  "parse_finished": "2026-09-17 10:06:11.381646+08:00",
+  "tailor_created": "2026-09-17 10:07:37.212129+08:00",
+  "tailor_finished": "2026-09-17 10:08:40.059793+08:00"
+}

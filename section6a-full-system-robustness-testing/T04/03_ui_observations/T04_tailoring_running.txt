@@ -1,0 +1,103 @@
+2026-09-16T10:23:01.689Z
+- main:
+  - generic: Navigation
+  - generic: Job Portal
+  - button:
+  - generic: Job Portal
+  - generic: lucastest0010
+  - button "Toggle theme":
+  - link "Browse jobs":
+    - /url: /dashboard/jobs
+  - button "Sign out":
+    - text: Sign out
+  - heading "Tailored resumes" [level=2]
+  - paragraph: Generated versions appear here above the original uploads.
+  - generic: Node js developer
+  - paragraph: HyperNova Consulting · 04_Evan_Tan.pdf
+  - generic: Generating
+  - generic: generating
+  - generic: 55%
+  - generic: Machine Learning
+  - paragraph: Pioneer Consulting · 03_Priya_Rao_ML_Research.pdf
+  - generic: Failed
+  - paragraph: Structured tailored resume generation failed after two attempts.
+  - button "Retry":
+    - text: Retry
+  - generic: Upload resume
+  - paragraph: Upload first, manage the file, then start parsing manually when you are ready.
+  - text: Choose file
+  - generic: 04_Evan_Tan.pdf
+  - generic: Active file
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 04_Evan_Tan.pdf":
+  - generic: Progress
+  - generic: 100%
+  - paragraph: Summary
+  - paragraph: Operations Technology Coordinator with exposure to software delivery through collaboration with engineers. Seeking an associate technology role.
+  - generic: Skills
+  - generic: "8"
+  - generic: Highlights
+  - generic: "5"
+  - generic: Education
+  - generic: "1"
+  - generic: Projects
+  - generic: "0"
+  - generic: Achievements
+  - generic: "0"
+  - paragraph: Skills
+  - list:
+    - listitem: · Excel
+    - listitem: · Requirements gathering
+    - listitem: · User acceptance testing
+    - listitem: · Stakeholder coordination
+    - listitem: · JavaScript
+    - listitem: · Spreadsheet macros
+    - listitem: · AWS migration support
+    - listitem: · Reporting
+  - paragraph: Experience highlights
+  - list:
+    - listitem: · Operations Technology Coordinator at Cedar Quay Logistics
+    - listitem: · Collected warehouse requirements and checked screens for a Node.js booking service
+    - listitem: · Supported an AWS migration by scheduling user acceptance sessions
+    - listitem: · Helped improve weekly reporting with a reported 20% reduction in handling time
+    - listitem: · Adjusted spreadsheet macros using a colleague's template
+  - paragraph: Experience facts
+  - list:
+    - listitem: · Operations Technology Coordinator
+  - paragraph: Education
+  - list:
+    - listitem: · Diploma in Business Operations | Northbridge Institute | 2022
+  - generic: 03_Priya_Rao_ML_Research.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: FALLBACK
+  - button "Parse":
+    - text: Parse
+  - button "Delete 03_Priya_Rao_ML_Research.pdf":
+  - generic: 02_Maya_Lim_Career_Change.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 02_Maya_Lim_Career_Change.pdf":
+  - generic: 01_Jordan_Lee_NodeJS_Developer.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 01_Jordan_Lee_NodeJS_Developer.pdf":
+  - generic: 01_Jordan_Lee_NodeJS_Developer.pdf
+  - generic: Inactive
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 01_Jordan_Lee_NodeJS_Developer.pdf":
+- region "Notifications alt+T"
+- button "Open Next.js Dev Tools":
+- alert: Job Portal

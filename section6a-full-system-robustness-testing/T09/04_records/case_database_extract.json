@@ -1,0 +1,340 @@
+{
+  "provenance": "Filtered from shared/records/database_latest.json. All row values preserved; not a fresh database query.",
+  "observed_at": "2026-09-17T02:10:38.951064+00:00",
+  "resumes": [
+    {
+      "id": "830e12f1-51e8-464b-90e4-ceb2b9ff8ac9",
+      "file_name": "09_Diana_Koh.pdf",
+      "is_active": false,
+      "parsed_text": "Synthetic test candidate | Lucas full-system QA | Test 09\n1\n Diana Koh\nPrincipal Software Engineer\n[redacted-email] | Singapore\nPROFILE\nSoftware engineer with 16 years of industry experience, including technical leadership. Interested in a hands-on\nindividual contributor role; open to discussing scope.\nEXPERIENCE\nQuartz Bay Systems | Principal Engineer | Jan 2020 - Aug 2026\nSet backend architecture standards and mentored eight engineers. Continued to implement Node.js and\nTypeScript services.\nLed a PostgreSQL migration for three internal products and reviewed reliability plans.\nElm Circuit Technologies | Senior Backend Engineer | Jan 2015 - Dec 2019\nBuilt REST APIs with Node.js, Express and Redis; introduced automated tests and CI.\nPine Arc Digital | Software Engineer | Jul 2010 - Dec 2014\nDeveloped Java services and SQL reporting tools.\nSKILLS\nNode.js, TypeScript, PostgreSQL, Redis, Docker, AWS, system design, mentoring. No Kubernetes certification\nclaimed.\nEDUCATION\nBSc in Computer Science | Westhaven College | 2010\nROLE PREFERENCE\nHands-on backend work. Prior leadership must not be removed or rewritten as junior experience to fit an\nentry-level posting.",
+      "extracted_skills": [
+        "Node.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+        "AWS",
+        "system design",
+        "mentoring",
+        "REST APIs",
+        "Express",
+        "Java",
+        "SQL"
+      ],
+      "created_at": "2026-09-16 18:51:10.678379+08:00",
+      "updated_at": "2026-09-17 10:04:26.131170+08:00"
+    }
+  ],
+  "resume_parse_tasks": [
+    {
+      "id": "4e8996dd-273c-4cf4-b6f1-87a66fac08e1",
+      "resume_id": "830e12f1-51e8-464b-90e4-ceb2b9ff8ac9",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-16 18:52:24.505154+08:00",
+      "finished_at": "2026-09-16 18:53:10.632288+08:00",
+      "heartbeat_at": "2026-09-16 18:53:10.632290+08:00",
+      "created_at": "2026-09-16 18:51:21.920508+08:00",
+      "updated_at": "2026-09-16 18:53:10.629870+08:00",
+      "diagnostics": {
+        "task_id": "4e8996dd-273c-4cf4-b6f1-87a66fac08e1",
+        "graph_id": "9001c536-36ed-4fd5-bb05-60fba511728e",
+        "char_count": 1180,
+        "line_count": 25,
+        "chunk_count": 1,
+        "pypdf_score": 0.844,
+        "skill_count": 12,
+        "text_source": "pypdf",
+        "title_count": 8,
+        "schema_valid": true,
+        "section_hits": {
+          "skills": 1,
+          "projects": 0,
+          "education": 1,
+          "experience": 1,
+          "achievements": 0,
+          "publications": 0
+        },
+        "analysis_mode": "llm",
+        "fallback_used": false,
+        "project_count": 0,
+        "cleaning_ratio": 0.995,
+        "evidence_count": 6,
+        "fallback_score": null,
+        "analysis_reason": null,
+        "education_count": 1,
+        "analysis_message": null,
+        "achievement_count": 0,
+        "publication_count": 0,
+        "cleaned_char_count": 1174
+      }
+    }
+  ],
+  "resume_tailoring_tasks": [
+    {
+      "id": "9fdaffa4-74fa-46e5-b700-2e57e43353da",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "830e12f1-51e8-464b-90e4-ceb2b9ff8ac9",
+      "job_id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-17 10:04:07.121419+08:00",
+      "finished_at": "2026-09-17 10:05:28.896480+08:00",
+      "created_at": "2026-09-17 10:04:06.269052+08:00",
+      "updated_at": "2026-09-17 10:04:07.140718+08:00"
+    }
+  ],
+  "resume_variants": [],
+  "candidate_graphs": [
+    {
+      "id": "9001c536-36ed-4fd5-bb05-60fba511728e",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "830e12f1-51e8-464b-90e4-ceb2b9ff8ac9",
+      "summary": "Principal Software Engineer with 16 years of industry experience, including technical leadership. Seeking a hands-on individual contributor role in backend work.",
+      "skills": [
+        {
+          "name": "Node.js",
+          "evidence": [
+            {
+              "text": "Node.js",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "TypeScript",
+          "evidence": [
+            {
+              "text": "TypeScript",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "PostgreSQL",
+          "evidence": [
+            {
+              "text": "PostgreSQL",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Redis",
+          "evidence": [
+            {
+              "text": "Redis",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Docker",
+          "evidence": [
+            {
+              "text": "Docker",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "AWS",
+          "evidence": [
+            {
+              "text": "AWS",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "system design",
+          "evidence": [
+            {
+              "text": "system design",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "mentoring",
+          "evidence": [
+            {
+              "text": "mentoring",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "REST APIs",
+          "evidence": [
+            {
+              "text": "REST APIs",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Express",
+          "evidence": [
+            {
+              "text": "Express",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Java",
+          "evidence": [
+            {
+              "text": "Java",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "SQL",
+          "evidence": [
+            {
+              "text": "SQL",
+              "source": "resume"
+            }
+          ]
+        }
+      ],
+      "experience_highlights": [
+        "Principal Engineer at Quartz Bay Systems (Jan 2020 - Aug 2026)",
+        "Set backend architecture standards and mentored eight engineers",
+        "Led a PostgreSQL migration for three internal products",
+        "Senior Backend Engineer at Elm Circuit Technologies (Jan 2015 - Dec 2019)",
+        "Software Engineer at Pine Arc Digital (Jul 2010 - Dec 2014)"
+      ],
+      "experiences": [
+        {
+          "title": "Principal Engineer",
+          "company": "Quartz Bay Systems",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Set backend architecture standards and mentored eight engineers. Continued to implement Node.js and TypeScript services.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Led a PostgreSQL migration for three internal products and reviewed reliability plans.",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "description": "Set backend architecture standards and mentored eight engineers. Continued to implement Node.js and TypeScript services. Led a PostgreSQL migration for three internal products and reviewed reliability plans."
+        },
+        {
+          "title": "Senior Backend Engineer",
+          "company": "Elm Circuit Technologies",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Built REST APIs with Node.js, Express and Redis; introduced automated tests and CI.",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "description": "Built REST APIs with Node.js, Express and Redis; introduced automated tests and CI."
+        },
+        {
+          "title": "Software Engineer",
+          "company": "Pine Arc Digital",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Developed Java services and SQL reporting tools.",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "description": "Developed Java services and SQL reporting tools."
+        }
+      ],
+      "education": [
+        {
+          "text": "BSc in Computer Science | Westhaven College | 2010",
+          "source": "resume"
+        }
+      ],
+      "projects": [],
+      "achievements": [],
+      "constraints": {
+        "role_preference": "Hands-on backend work. Prior leadership must not be removed or rewritten as junior experience to fit an entry-level posting.",
+        "certification_exclusion": "No Kubernetes certification claimed."
+      },
+      "preferences": {
+        "location": null,
+        "role_families": [],
+        "remote_preference": null,
+        "work_authorization": null
+      },
+      "source_spans": [
+        {
+          "end": null,
+          "text": "Software engineer with 16 years of industry experience, including technical leadership.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Set backend architecture standards and mentored eight engineers.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Led a PostgreSQL migration for three internal products and reviewed reliability plans.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Built REST APIs with Node.js, Express and Redis; introduced automated tests and CI.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Developed Java services and SQL reporting tools.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Hands-on backend work. Prior leadership must not be removed or rewritten as junior experience to fit an entry-level posting.",
+          "start": null,
+          "source": "resume"
+        }
+      ],
+      "user_confirmed": false,
+      "created_at": "2026-09-16 18:53:10.630845+08:00",
+      "updated_at": "2026-09-16 18:53:10.630846+08:00",
+      "publications": []
+    }
+  ],
+  "candidate_job_matches": [],
+  "jobs": [
+    {
+      "id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "job_title": "Node js developer",
+      "company_name": "HyperNova Consulting",
+      "job_description": "Key Responsibilities:\nImplement Web applications using nodejs and javascript eco system\nTranslate client requirements to application design, and document\nTranslate client requirements to application design, and document\nWeb application low level design, db design, and UX design\nWeb back end development and SaaS application development\nEssential Skillset/s:\n\nNode.js, Express.js, MEANJS, Restful services, JSON,No SQL, Mongo DB, MySQL\n\nDesirable Skill set/s:\n\nJavascript, Angular JS, React JS, Java, AWS\n\nQualification:\n\nComputer Science Graduates. B.Tech preferred\n\nWork Experience:\n\nMinimum – 2 , Max – 8",
+      "skill_tags": null
+    }
+  ],
+  "job_market_profiles": []
+}

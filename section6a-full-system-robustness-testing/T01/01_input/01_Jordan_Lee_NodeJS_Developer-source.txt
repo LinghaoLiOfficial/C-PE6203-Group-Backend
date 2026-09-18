@@ -1,0 +1,35 @@
+Fictional candidate | Software testing only
+1
+Jordan Lee
+Backend Software Engineer
+Singapore | jordan.lee@example.com
+PROFESSIONAL SUMMARY
+Backend engineer with three years of experience building Node.js and TypeScript services. Experienced in
+REST APIs, PostgreSQL, Redis, automated testing and Docker. Seeking a Node.js backend developer role
+in Singapore.
+TECHNICAL SKILLS
+Languages: JavaScript, TypeScript, SQL
+Backend: Node.js, Express.js, REST APIs, JWT authentication
+Data: PostgreSQL, Redis
+Frontend: React, HTML, CSS
+Tools: Git, Docker, Jest, Supertest, GitHub Actions
+WORK EXPERIENCE
+Backend Software Engineer | Example Commerce Systems
+Singapore | July 2023 - August 2026
+- Developed 12 REST API endpoints for order and inventory management using Node.js, Express.js and
+TypeScript.
+- Added Redis caching; reduced median product lookup latency from 240 ms to 95 ms in a staging
+benchmark.
+- Wrote 80 automated tests using Jest and Supertest; maintained 85% line coverage for the order service.
+- Implemented role-based access control and JWT authentication for internal users.
+- Collaborated with four engineers on code reviews and weekly releases.
+PROJECTS
+Appointment Booking API | January 2026 - March 2026
+Node.js, TypeScript, PostgreSQL, Docker
+- Implemented booking validation, pagination and database transactions to prevent duplicate reservations.
+- Configured GitHub Actions to run automated tests on pull requests.
+EDUCATION
+BSc in Computer Science | Example Technology College
+Singapore | August 2019 - May 2023
+LANGUAGES
+English: Fluent | Mandarin Chinese: Conversational

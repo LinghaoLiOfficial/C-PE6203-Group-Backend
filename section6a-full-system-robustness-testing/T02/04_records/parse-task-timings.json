@@ -1,0 +1,14 @@
+{
+  "provenance": "Rows selected without value changes from shared/historical_originals/parse-task-timings.json",
+  "rows": [
+    [
+      "02_Maya_Lim_Career_Change.pdf",
+      "f76ea6b8-189a-41b7-b97b-2d125afca61a",
+      "completed",
+      "2026-09-09 14:23:55.544599+08:00",
+      "2026-09-09 14:23:56.316358+08:00",
+      "2026-09-09 14:25:05.353410+08:00",
+      null
+    ]
+  ]
+}
