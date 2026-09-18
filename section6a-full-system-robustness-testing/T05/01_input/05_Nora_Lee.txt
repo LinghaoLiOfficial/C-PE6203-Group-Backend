@@ -1,0 +1,22 @@
+Nora Lee
+Project Assistant
+nora_lee@example.com | Singapore
+
+PROFILE
+Project assistant interested in technology delivery. This CV does not provide programming language, database, cloud or software framework proficiency.
+
+EXPERIENCE
+Maple Orbit Services | Project Assistant | Mar 2024 - Aug 2026
+Maintained meeting minutes and tracked actions for six client onboarding projects.
+Compiled weekly status updates from team submissions and coordinated review meetings.
+Recorded customer-reported defects and routed them to the engineering team; did not implement fixes.
+
+PROJECT
+Community event registration | Volunteer coordinator | 2025
+Prepared attendee lists and sent reminders using existing office tools. No software development was involved.
+
+EDUCATION
+Bachelor of Arts in Communication | Westhaven College | 2023
+
+OTHER
+Languages: English and Mandarin. Technical certifications: none listed. Quantified business impact: not measured.

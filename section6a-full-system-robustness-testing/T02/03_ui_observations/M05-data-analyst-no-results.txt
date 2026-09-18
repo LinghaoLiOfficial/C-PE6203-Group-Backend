@@ -1,0 +1,19 @@
+- main:
+  - generic: Navigation
+  - generic: Job Portal
+  - button:
+  - generic: Job Portal
+  - generic: lucastest0010
+  - button "Toggle theme":
+  - link "Browse jobs":
+    - /url: /dashboard/jobs
+  - button "Sign out":
+    - text: Sign out
+  - paragraph: Opportunity map
+  - heading "Roles worth your attention" [level=1]
+  - paragraph: Scores are feature vectors, not a mysterious badge.
+  - textbox "Filter role, company, location" [active]: Data Analyst
+  - generic: No ranked opportunities yet. Upload and confirm a resume first.
+- region "Notifications alt+T"
+- button "Open Next.js Dev Tools":
+- alert

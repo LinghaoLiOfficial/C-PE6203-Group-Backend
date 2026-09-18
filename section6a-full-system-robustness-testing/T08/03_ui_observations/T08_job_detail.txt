@@ -1,0 +1,260 @@
+2026-09-16T10:50:58.407Z
+- main:
+  - generic: Navigation
+  - generic: Job Portal
+  - button:
+  - generic: Job Portal
+  - generic: lucastest0010
+  - button "Toggle theme":
+  - link "Browse jobs":
+    - /url: /dashboard/jobs
+  - button "Sign out":
+    - text: Sign out
+  - paragraph: Opportunity map
+  - heading "Roles worth your attention" [level=1]
+  - paragraph: Scores are feature vectors, not a mysterious badge.
+  - textbox "Filter role, company, location"
+  - heading "Stretch" [level=2]
+  - paragraph: Deliberate pivots that may compound your options.
+  - generic: 24 roles
+  - heading "Backend Developer" [level=3]
+  - paragraph: SkyFoundry Ventures
+  - paragraph: 53%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 121,000
+  - heading "Machine Learning" [level=3]
+  - paragraph: Aster Networks
+  - paragraph: 53%
+  - paragraph: opportunity fit
+  - text: Guangzhou, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 122,000
+  - heading "Software Engineer" [level=3]
+  - paragraph: WestGate Networks
+  - paragraph: 53%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 125,000
+  - heading "Machine Learning" [level=3]
+  - paragraph: Pioneer Consulting
+  - paragraph: 53%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 149,500
+  - heading "Machine Learning" [level=3]
+  - paragraph: LumaCore Data
+  - paragraph: 52%
+  - paragraph: opportunity fit
+  - text: Shenzhen, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 114,500
+  - heading "Node js developer" [level=3]
+  - paragraph: HyperNova Consulting
+  - paragraph: 51%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 110,500
+  - heading "Network Administrator" [level=3]
+  - paragraph: Finora Digital
+  - paragraph: 47%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 95,500
+  - heading "Software Engineer" [level=3]
+  - paragraph: HyperNova Systems
+  - paragraph: 47%
+  - paragraph: opportunity fit
+  - text: Chengdu, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 93,000
+  - heading "Backend Developer" [level=3]
+  - paragraph: BluePeak Innovations
+  - paragraph: 46%
+  - paragraph: opportunity fit
+  - text: Beijing, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 90,500
+  - heading "Java Developer" [level=3]
+  - paragraph: Solstice Solutions
+  - paragraph: 46%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 90,500
+  - heading "Flutter Developer" [level=3]
+  - paragraph: Meridian Technologies
+  - paragraph: 45%
+  - paragraph: opportunity fit
+  - text: Xi'an, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 88,500
+  - heading "Machine Learning" [level=3]
+  - paragraph: NexaBridge Consulting
+  - paragraph: 45%
+  - paragraph: opportunity fit
+  - text: Shenzhen, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 86,500
+  - heading "PHP Developer" [level=3]
+  - paragraph: WestGate Systems
+  - paragraph: 44%
+  - paragraph: opportunity fit
+  - text: Chengdu, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 84,000
+  - heading "Machine Learning" [level=3]
+  - paragraph: Vertex Innovations
+  - paragraph: 44%
+  - paragraph: opportunity fit
+  - text: Suzhou, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 81,500
+  - heading "JavaScript Developer" [level=3]
+  - paragraph: NexaBridge Technologies
+  - paragraph: 42%
+  - paragraph: opportunity fit
+  - text: Xi'an, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 76,000
+  - heading "Database Administrator" [level=3]
+  - paragraph: Solstice Digital
+  - paragraph: 41%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 70,500
+  - heading "Flutter Developer" [level=3]
+  - paragraph: Northstar Analytics
+  - paragraph: 41%
+  - paragraph: opportunity fit
+  - text: Hangzhou, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 70,000
+  - heading "Full Stack Developer" [level=3]
+  - paragraph: InnoWave Networks
+  - paragraph: 41%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 69,000
+  - heading "JavaScript Developer" [level=3]
+  - paragraph: NexaBridge Labs
+  - paragraph: 41%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 69,000
+  - heading "Java Developer" [level=3]
+  - paragraph: Pioneer Digital
+  - paragraph: 39%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 64,000
+  - heading "Database Administrator" [level=3]
+  - paragraph: Solstice Technologies
+  - paragraph: 39%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 61,500
+  - heading "DevOps Engineer" [level=3]
+  - paragraph: CloudHarbor Labs
+  - paragraph: 38%
+  - paragraph: opportunity fit
+  - text: Beijing, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 60,000
+  - heading "Flutter Developer" [level=3]
+  - paragraph: LumaCore Analytics
+  - paragraph: 38%
+  - paragraph: opportunity fit
+  - text: Wuhan, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 57,500
+  - heading "Backend Developer" [level=3]
+  - paragraph: Vertex Software
+  - paragraph: 37%
+  - paragraph: opportunity fit
+  - text: Xi'an, China
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 55,000
+  - generic: Node js developer
+  - paragraph: HyperNova Consulting · Singapore, Singapore
+  - button "Track and apply":
+    - text: Track and apply
+  - button "Plan tailored resume":
+    - text: Plan tailored resume
+  - generic: 51% fit
+  - button "Close details":
+  - paragraph: salary advantage
+  - paragraph: 92%
+  - paragraph: attainability
+  - paragraph: 0%
+  - paragraph: demand
+  - paragraph: 65%
+  - paragraph: entry barrier
+  - paragraph: 100%
+  - paragraph: career option
+  - paragraph: 60%
+  - paragraph: preference fit
+  - paragraph: 80%
+  - paragraph: data confidence
+  - paragraph: 70%
+  - heading "Opportunity context" [level=3]
+  - generic: Transition cost
+  - generic: high
+  - generic: Confidence
+  - generic: 70%
+  - generic: Salary
+  - generic: $110499.96 SGD
+  - heading "What fits" [level=4]
+  - list:
+    - listitem: Salary signal around SGD 110,500
+  - heading "What transfers" [level=4]
+  - list:
+    - listitem: Existing experience can be reframed toward the target role.
+  - heading "What is missing" [level=4]
+  - list:
+    - listitem: Core requirements appear covered by the current profile.
+  - heading "Canonical job profile" [level=3]
+  - generic: "Occupation: Engineering"
+  - generic: "Seniority: mid"
+  - generic: "Required skills: aws, javascript, react, rest"
+  - generic: "Preferred skills: None"
+  - generic: "Education: None"
+  - generic: "Experience: 2+ years"
+  - generic: "Salary confidence: C · Trust: 80% · Freshness: 100%"
+- region "Notifications alt+T"
+- button "Open Next.js Dev Tools":
+- alert

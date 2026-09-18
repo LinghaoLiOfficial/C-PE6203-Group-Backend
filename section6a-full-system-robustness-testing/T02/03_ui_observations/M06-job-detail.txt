@@ -1,0 +1,75 @@
+- main:
+  - generic: Navigation
+  - generic: Job Portal
+  - button:
+  - generic: Job Portal
+  - generic: lucastest0010
+  - button "Toggle theme":
+  - link "Browse jobs":
+    - /url: /dashboard/jobs
+  - button "Sign out":
+    - text: Sign out
+  - paragraph: Opportunity map
+  - heading "Roles worth your attention" [level=1]
+  - paragraph: Scores are feature vectors, not a mysterious badge.
+  - textbox "Filter role, company, location": Node
+  - heading "Stretch" [level=2]
+  - paragraph: Deliberate pivots that may compound your options.
+  - generic: 1 roles
+  - heading "Node js developer" [level=3]
+  - paragraph: HyperNova Consulting
+  - paragraph: 51%
+  - paragraph: opportunity fit
+  - text: Singapore, Singapore
+  - generic: high transition
+  - generic: 70% confidence
+  - generic: Salary signal around SGD 110,500
+  - generic: Node js developer
+  - paragraph: HyperNova Consulting · Singapore, Singapore
+  - button "Track and apply":
+    - text: Track and apply
+  - button "Plan tailored resume":
+    - text: Plan tailored resume
+  - generic: 51% fit
+  - button "Close details":
+  - paragraph: salary advantage
+  - paragraph: 92%
+  - paragraph: attainability
+  - paragraph: 0%
+  - paragraph: demand
+  - paragraph: 65%
+  - paragraph: entry barrier
+  - paragraph: 100%
+  - paragraph: career option
+  - paragraph: 60%
+  - paragraph: preference fit
+  - paragraph: 80%
+  - paragraph: data confidence
+  - paragraph: 70%
+  - heading "Opportunity context" [level=3]
+  - generic: Transition cost
+  - generic: high
+  - generic: Confidence
+  - generic: 70%
+  - generic: Salary
+  - generic: $110499.96 SGD
+  - heading "What fits" [level=4]
+  - list:
+    - listitem: Salary signal around SGD 110,500
+  - heading "What transfers" [level=4]
+  - list:
+    - listitem: Existing experience can be reframed toward the target role.
+  - heading "What is missing" [level=4]
+  - list:
+    - listitem: Core requirements appear covered by the current profile.
+  - heading "Canonical job profile" [level=3]
+  - generic: "Occupation: Engineering"
+  - generic: "Seniority: mid"
+  - generic: "Required skills: aws, javascript, react, rest"
+  - generic: "Preferred skills: None"
+  - generic: "Education: None"
+  - generic: "Experience: 2+ years"
+  - generic: "Salary confidence: C · Trust: 80% · Freshness: 100%"
+- region "Notifications alt+T"
+- button "Open Next.js Dev Tools":
+- alert

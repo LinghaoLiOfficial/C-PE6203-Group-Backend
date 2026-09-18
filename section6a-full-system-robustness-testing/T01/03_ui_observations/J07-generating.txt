@@ -1,0 +1,75 @@
+- main:
+  - generic: Navigation
+  - generic: Job Portal
+  - button:
+  - generic: Job Portal
+  - generic: lucastest0010
+  - button "Toggle theme":
+  - link "Browse jobs":
+    - /url: /dashboard/jobs
+  - button "Sign out":
+    - text: Sign out
+  - heading "Tailored resumes" [level=2]
+  - paragraph: Generated versions appear here above the original uploads.
+  - generic: Node js developer
+  - paragraph: HyperNova Consulting · 01_Jordan_Lee_NodeJS_Developer.pdf
+  - generic: Generating
+  - generic: generating
+  - generic: 55%
+  - generic: Upload resume
+  - paragraph: Upload first, manage the file, then start parsing manually when you are ready.
+  - text: Choose file
+  - generic: 01_Jordan_Lee_NodeJS_Developer.pdf
+  - generic: Active file
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 01_Jordan_Lee_NodeJS_Developer.pdf":
+  - generic: Progress
+  - generic: 100%
+  - paragraph: Summary
+  - paragraph: Backend Software Engineer with three years of experience building Node.js and TypeScript services, specializing in REST APIs, PostgreSQL, Redis, automated testing, and Docker.
+  - generic: Skills
+  - generic: "12"
+  - generic: Highlights
+  - generic: "5"
+  - generic: Education
+  - generic: "1"
+  - generic: Projects
+  - generic: "1"
+  - generic: Achievements
+  - generic: "0"
+  - paragraph: Skills
+  - list:
+    - listitem: · JavaScript
+    - listitem: · TypeScript
+    - listitem: · SQL
+    - listitem: · Node.js
+    - listitem: · Express.js
+    - listitem: · REST APIs
+    - listitem: · JWT authentication
+    - listitem: · PostgreSQL
+    - listitem: · Redis
+    - listitem: · React
+    - listitem: · Docker
+    - listitem: · Jest
+  - paragraph: Experience highlights
+  - list:
+    - listitem: · Developed 12 REST API endpoints for order and inventory management using Node.js, Express.js, and TypeScript
+    - listitem: · Reduced median product lookup latency from 240 ms to 95 ms using Redis caching
+    - listitem: · Wrote 80 automated tests using Jest and Supertest with 85% line coverage
+    - listitem: · Implemented role-based access control and JWT authentication for internal users
+    - listitem: · Collaborated with four engineers on code reviews and weekly releases
+  - paragraph: Projects
+  - list:
+    - listitem: · Appointment Booking API | January 2026 - March 2026 | Node.js, TypeScript, PostgreSQL, Docker | Implemented booking validation, pagination and database transactions to prevent duplicate reservations. Configured GitHub Actions to run automated tests on pull requests.
+  - paragraph: Experience facts
+  - list:
+    - listitem: · Backend Software Engineer
+  - paragraph: Education
+  - list:
+    - listitem: · BSc in Computer Science | Example Technology College | Singapore | August 2019 - May 2023
+- region "Notifications alt+T"
+- button "Open Next.js Dev Tools":
+- alert

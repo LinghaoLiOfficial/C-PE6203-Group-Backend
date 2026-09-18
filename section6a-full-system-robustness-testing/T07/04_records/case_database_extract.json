@@ -1,0 +1,270 @@
+{
+  "provenance": "Filtered from shared/records/database_latest.json. All row values preserved; not a fresh database query.",
+  "observed_at": "2026-09-17T02:10:38.951064+00:00",
+  "resumes": [
+    {
+      "id": "8abccd06-877a-4394-ab8e-815aba601216",
+      "file_name": "07_Clara_Wong.pdf",
+      "is_active": false,
+      "parsed_text": "Synthetic test candidate | Lucas full-system QA | Test 07\n1\n Clara Wong\nPastry Baker\n[redacted-email] | Singapore\nPROFILE\nPastry baker with five years in small-batch food production, applying to explore a career change.\nEXPERIENCE\nWillow Crumb Bakery | Pastry Baker | Sep 2021 - Aug 2026\nPrepared breads and pastries for a neighbourhood shop, typically 150 items per morning.\nMaintained food safety logs and monitored ingredient stock.\nTrained two new kitchen assistants on recipes and cleaning procedures.\nEDUCATION\nCertificate in Baking and Pastry | Harbour Culinary School | 2021\nSKILLS\nDough preparation, recipe scaling, food hygiene, stock rotation, customer service. No coding, machine learning,\nSQL, cloud or software engineering training.\nINTERESTS\nSeeking an entry-level career change; willing to study foundational computing. No technical projects completed.",
+      "extracted_skills": [
+        "Dough preparation",
+        "recipe scaling",
+        "food hygiene",
+        "stock rotation",
+        "customer service"
+      ],
+      "created_at": "2026-09-16 18:46:36.730901+08:00",
+      "updated_at": "2026-09-16 18:48:20.084034+08:00"
+    }
+  ],
+  "resume_parse_tasks": [
+    {
+      "id": "9fd1fc37-e150-4361-b20b-e42ca17efb06",
+      "resume_id": "8abccd06-877a-4394-ab8e-815aba601216",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-16 18:46:49.608657+08:00",
+      "finished_at": "2026-09-16 18:47:29.113481+08:00",
+      "heartbeat_at": "2026-09-16 18:47:29.113483+08:00",
+      "created_at": "2026-09-16 18:46:47.907490+08:00",
+      "updated_at": "2026-09-16 18:47:29.109790+08:00",
+      "diagnostics": {
+        "task_id": "9fd1fc37-e150-4361-b20b-e42ca17efb06",
+        "graph_id": "f9232d48-7bf6-4859-a58b-2a60da1aad9a",
+        "char_count": 875,
+        "line_count": 19,
+        "chunk_count": 1,
+        "pypdf_score": 0.738,
+        "skill_count": 5,
+        "text_source": "pypdf",
+        "title_count": 7,
+        "schema_valid": true,
+        "section_hits": {
+          "skills": 1,
+          "projects": 1,
+          "education": 1,
+          "experience": 1,
+          "achievements": 0,
+          "publications": 0
+        },
+        "analysis_mode": "llm",
+        "fallback_used": false,
+        "project_count": 0,
+        "cleaning_ratio": 0.992,
+        "evidence_count": 8,
+        "fallback_score": null,
+        "analysis_reason": null,
+        "education_count": 1,
+        "analysis_message": null,
+        "achievement_count": 0,
+        "publication_count": 0,
+        "cleaned_char_count": 868
+      }
+    }
+  ],
+  "resume_tailoring_tasks": [
+    {
+      "id": "8c6f7e34-fa9d-48e1-a4dd-b8d8a04494d9",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "8abccd06-877a-4394-ab8e-815aba601216",
+      "job_id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-16 18:48:07.266169+08:00",
+      "finished_at": "2026-09-16 18:49:15.242785+08:00",
+      "created_at": "2026-09-16 18:48:05.753492+08:00",
+      "updated_at": "2026-09-16 18:48:07.281547+08:00"
+    }
+  ],
+  "resume_variants": [],
+  "candidate_graphs": [
+    {
+      "id": "f9232d48-7bf6-4859-a58b-2a60da1aad9a",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "8abccd06-877a-4394-ab8e-815aba601216",
+      "summary": "Pastry baker with five years in small-batch food production, applying to explore a career change.",
+      "skills": [
+        {
+          "name": "Dough preparation",
+          "evidence": [
+            {
+              "text": "Dough preparation",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "recipe scaling",
+          "evidence": [
+            {
+              "text": "recipe scaling",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "food hygiene",
+          "evidence": [
+            {
+              "text": "food hygiene",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "stock rotation",
+          "evidence": [
+            {
+              "text": "stock rotation",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "customer service",
+          "evidence": [
+            {
+              "text": "customer service",
+              "source": "resume"
+            }
+          ]
+        }
+      ],
+      "experience_highlights": [
+        "Prepared breads and pastries for a neighbourhood shop, typically 150 items per morning.",
+        "Maintained food safety logs and monitored ingredient stock.",
+        "Trained two new kitchen assistants on recipes and cleaning procedures."
+      ],
+      "experiences": [
+        {
+          "title": "Pastry Baker",
+          "company": "Willow Crumb Bakery",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Willow Crumb Bakery | Pastry Baker | Sep 2021 - Aug 2026",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Prepared breads and pastries for a neighbourhood shop, typically 150 items per morning.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Maintained food safety logs and monitored ingredient stock.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Trained two new kitchen assistants on recipes and cleaning procedures.",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "description": "Prepared breads and pastries for a neighbourhood shop, typically 150 items per morning. Maintained food safety logs and monitored ingredient stock. Trained two new kitchen assistants on recipes and cleaning procedures."
+        }
+      ],
+      "education": [
+        {
+          "text": "Certificate in Baking and Pastry | Harbour Culinary School | 2021",
+          "source": "resume"
+        }
+      ],
+      "projects": [],
+      "achievements": [],
+      "constraints": {
+        "no_sql": true,
+        "no_cloud": true,
+        "no_coding": true,
+        "no_machine_learning": true,
+        "no_technical_projects_completed": true,
+        "no_software_engineering_training": true
+      },
+      "preferences": {
+        "location": null,
+        "role_families": [],
+        "remote_preference": null,
+        "work_authorization": null
+      },
+      "source_spans": [
+        {
+          "end": null,
+          "text": "Pastry baker with five years in small-batch food production, applying to explore a career change.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Prepared breads and pastries for a neighbourhood shop, typically 150 items per morning.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Maintained food safety logs and monitored ingredient stock.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Trained two new kitchen assistants on recipes and cleaning procedures.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Dough preparation, recipe scaling, food hygiene, stock rotation, customer service.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "No coding, machine learning, SQL, cloud or software engineering training.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Seeking an entry-level career change; willing to study foundational computing.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "No technical projects completed.",
+          "start": null,
+          "source": "resume"
+        }
+      ],
+      "user_confirmed": false,
+      "created_at": "2026-09-16 18:47:29.110859+08:00",
+      "updated_at": "2026-09-16 18:47:29.110860+08:00",
+      "publications": []
+    }
+  ],
+  "candidate_job_matches": [],
+  "jobs": [
+    {
+      "id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "job_title": "Node js developer",
+      "company_name": "HyperNova Consulting",
+      "job_description": "Key Responsibilities:\nImplement Web applications using nodejs and javascript eco system\nTranslate client requirements to application design, and document\nTranslate client requirements to application design, and document\nWeb application low level design, db design, and UX design\nWeb back end development and SaaS application development\nEssential Skillset/s:\n\nNode.js, Express.js, MEANJS, Restful services, JSON,No SQL, Mongo DB, MySQL\n\nDesirable Skill set/s:\n\nJavascript, Angular JS, React JS, Java, AWS\n\nQualification:\n\nComputer Science Graduates. B.Tech preferred\n\nWork Experience:\n\nMinimum – 2 , Max – 8",
+      "skill_tags": null
+    }
+  ],
+  "job_market_profiles": []
+}

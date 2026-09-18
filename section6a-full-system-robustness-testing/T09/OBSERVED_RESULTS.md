@@ -1,0 +1,15 @@
+# T09 - Overqualified / senior candidate (Diana Koh)
+
+Extracted from the existing QA report; this is a report excerpt, not a new execution. Original report-relative links below refer to the former layout; use README.md in this folder for the package file paths.
+
+- Severity: High shared matching/coverage defect; Medium misleading Cached date. Additional observations described below.
+- Area: parsing robustness, grounding, active-resume propagation, recommendations, score/explanation consistency, tailoring completion and rationale.
+- Environment: new-case snapshot above; actual task timestamps below.
+- Input: [PDF](inputs/09_Diana_Koh.pdf) and [source TXT](inputs/09_Diana_Koh.txt); SHA-256 `691043150836ad11d88d164298749fd2433b82c426dfc17319e57345cf662b61`.
+- Steps: Upload the designated PDF → verify new Active file and old Inactive state → click Parse → wait for completed state and inspect fields → Browse jobs → inspect recommendations → open Node js developer / HyperNova Consulting → inspect score, vector and canonical requirements → Plan tailored resume → inspect terminal output and Modification rationale. Save screenshot/visible text and read-only task records. No real application submitted.
+- Expected: Retain senior titles, 16 years and leadership; disclose the mismatch with the role range without down-leveling history. Matching must be grounded and internally consistent; completion must not imply correctness without inspecting output.
+- Actual: Parser preserved 16 years and three roles. Tailoring retained Principal/Senior titles, dates, eight mentees and three migrated products; rationale said Exceeds (16 years) against the 2-8-year job range. The job page still showed generic 51%/0% attainability. Output said specializing in AWS although source only listed AWS as a skill: degree of expertise is an overstatement risk, not a newly invented technology. Target is mid-level, not explicitly junior. All new cases showed the same 24-role list and Node.js 51% fit, 0% attainability, 100% barrier and generic covered-requirements statement.
+- Evidence: [T09_job_detail](evidence/T09_job_detail.txt), [T09_matches](evidence/T09_matches.txt), [T09_output](evidence/T09_output.txt), [T09_parsed](evidence/T09_parsed.txt), [T09_rationale](evidence/T09_rationale.txt), [T09_tailoring_started](evidence/T09_tailoring_started.txt), [T09_uploaded](evidence/T09_uploaded.txt); corresponding PNGs share each basename. Read-only source/task/variant evidence: [database snapshot](evidence/database_latest.json).
+- Resume ID: `830e12f1-51e8-464b-90e4-ceb2b9ff8ac9`. Parse task: `4e8996dd-273c-4cf4-b6f1-87a66fac08e1` (completed), 2026-09-16 18:51:21.920508+08:00 to 2026-09-16 18:53:10.632288+08:00. Tailoring task: `9fdaffa4-74fa-46e5-b700-2e57e43353da` (completed), 2026-09-17 10:04:06.269052+08:00 to 2026-09-17 10:05:28.896480+08:00.
+- Reproducible: matching contradiction observed across seven distinct inputs; page reload repeated for T07/T08. Per-case LLM generation run once, not an independent same-input repeat. No post-fix regression performed.
+

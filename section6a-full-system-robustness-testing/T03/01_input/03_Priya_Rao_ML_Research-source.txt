@@ -1,0 +1,62 @@
+Fictional candidate | Software testing only
+1
+Priya Rao
+Machine Learning Research Engineer
+Singapore | priya.rao@example.com
+PROFESSIONAL SUMMARY
+Machine learning engineer with research and industry experience in text classification and information
+retrieval. Experienced in Python, PyTorch, scikit-learn, model evaluation and reproducible experiments.
+Seeking applied NLP or machine learning engineering roles.
+TECHNICAL SKILLS
+Languages: Python, SQL, C++
+ML / NLP: PyTorch, scikit-learn, sentence-transformers, text classification, embeddings
+Engineering: FastAPI, PostgreSQL, Docker, Git, Linux
+Evaluation: Macro F1, precision, recall, NDCG@10, error analysis
+WORK EXPERIENCE
+Machine Learning Engineer | Example Search Technologies
+Singapore | February 2025 - August 2026
+- Built a semantic retrieval prototype using sentence-transformers and PostgreSQL vector search.
+- Improved NDCG@10 from 0.61 to 0.69 on a fixed offline evaluation set of 500 queries.
+- Exposed model inference through FastAPI and packaged the service with Docker.
+- Documented dataset limitations and reviewed false-positive retrieval results with product colleagues.
+Research Assistant (part-time) | Example Institute of Computing
+Singapore | September 2023 - December 2024
+- Conducted text classification experiments alongside full-time MSc studies.
+- Evaluated a classifier on 10,000 labelled documents, achieving macro F1 of 0.84 on a held-out test split.
+- Maintained reproducible experiment configurations and prepared research presentations.
+EDUCATION
+MSc in Artificial Intelligence | Example Institute of Computing
+August 2023 - January 2025
+Thesis: Robust Text Classification Under Domain Shift
+BEng in Electrical Engineering | Example Engineering College
+August 2018 - May 2022
+
+
+Fictional candidate | Software testing only
+2
+RESEARCH PROJECTS
+Multilingual Support Ticket Classifier | February 2024 - November 2024
+- Compared TF-IDF logistic regression against a PyTorch text classifier on English and Hindi support
+tickets.
+- Recorded per-language precision and recall to examine uneven performance.
+- Used anonymised research data and documented restrictions on model reuse.
+Document Retrieval Evaluation Toolkit | March 2025 - October 2025
+- Created scripts to calculate NDCG@10 and recall@20 from ranked search results.
+- Added repeatable baseline experiments and tests for duplicate-document handling.
+PUBLICATIONS
+Priya Rao and Daniel Chen. "Evaluating Domain Shift in Support Ticket Classification." Example Workshop
+on Applied NLP, 2024. Workshop paper.
+Priya Rao. "A Reproducible Protocol for Small-Scale Retrieval Evaluation." Example Institute Technical
+Report TR-2025-07, 2025. Technical report, not peer reviewed.
+CAREER BREAK
+June 2022 - July 2023 | Family caregiving. No employment during this period.
+VOLUNTEERING
+Python Workshop Mentor | Example Community Learning Group
+March 2024 - December 2024 | Two sessions per month
+- Assisted 15 adult learners with introductory Python exercises. This was an unpaid volunteer role.
+LANGUAGES
+English: Fluent | Hindi: Native | Mandarin Chinese: Beginner
+ADDITIONAL INFORMATION
+Open to applied research and ML engineering roles in Singapore. Research assistant employment
+overlapped with MSc studies because it was part-time. Publication titles and organisations in this test
+resume are fictional.

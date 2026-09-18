@@ -1,0 +1,14 @@
+{
+  "provenance": "Rows selected without value changes from shared/historical_originals/rewrite-task-timings.json",
+  "rows": [
+    [
+      "01_Jordan_Lee_NodeJS_Developer.pdf",
+      "fc584f98-7322-4aba-bc4a-14613f9bb549",
+      "completed",
+      "2026-09-09 14:16:22.406509+08:00",
+      "2026-09-09 14:16:22.829897+08:00",
+      "2026-09-09 14:18:32.929908+08:00",
+      null
+    ]
+  ]
+}

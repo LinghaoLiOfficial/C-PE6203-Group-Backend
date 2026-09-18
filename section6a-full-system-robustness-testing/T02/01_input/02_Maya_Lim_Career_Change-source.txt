@@ -1,0 +1,36 @@
+Fictional candidate | Software testing only
+1
+Maya Lim
+Customer Operations Specialist | Aspiring Junior Data Analyst
+Singapore | maya.lim@example.com
+PROFESSIONAL SUMMARY
+Customer operations professional with four years of experience in service reporting and process
+improvement. Recently completed introductory SQL and Python training and an independent data analysis
+project. Seeking an entry-level data analyst role; available for hybrid work in Singapore.
+SKILLS
+Work experience: Microsoft Excel, pivot tables, customer support, CRM reporting, stakeholder
+communication
+Foundational training: SQL SELECT statements and JOINs, Python basics, pandas, Power BI
+Languages: English (fluent), Malay (fluent)
+WORK EXPERIENCE
+Customer Operations Specialist | Example Service Centre
+Singapore | September 2022 - August 2026
+- Managed approximately 40 customer enquiries per day and maintained accurate CRM records.
+- Prepared weekly Excel reports covering ticket volumes, response times and common complaint
+categories.
+- Redesigned a reporting template, reducing weekly preparation time from three hours to two hours.
+- Trained two new team members in customer support procedures.
+INDEPENDENT PROJECT
+Retail Sales Dashboard | April 2026 - June 2026
+- Analysed a public practice dataset of 2,000 sales rows using Excel and basic SQL.
+- Used Power BI to visualise monthly revenue and product categories.
+- Used a short pandas script to identify missing values; documented the cleaning decisions.
+- This was a personal learning project, not a production deployment or paid analyst position.
+EDUCATION AND TRAINING
+Diploma in Business Administration | Example Business College
+Singapore | April 2019 - March 2022
+Introduction to Data Analysis | Example Learning Academy
+Completed June 2026 | 40-hour course; certificate of completion
+CAREER OBJECTIVE
+Transition into junior reporting or data analysis work. No professional software engineering or machine
+learning experience.

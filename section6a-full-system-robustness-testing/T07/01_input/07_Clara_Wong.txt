@@ -1,0 +1,21 @@
+Clara Wong
+Pastry Baker
+clara_wong@example.com | Singapore
+
+PROFILE
+Pastry baker with five years in small-batch food production, applying to explore a career change.
+
+EXPERIENCE
+Willow Crumb Bakery | Pastry Baker | Sep 2021 - Aug 2026
+Prepared breads and pastries for a neighbourhood shop, typically 150 items per morning.
+Maintained food safety logs and monitored ingredient stock.
+Trained two new kitchen assistants on recipes and cleaning procedures.
+
+EDUCATION
+Certificate in Baking and Pastry | Harbour Culinary School | 2021
+
+SKILLS
+Dough preparation, recipe scaling, food hygiene, stock rotation, customer service. No coding, machine learning, SQL, cloud or software engineering training.
+
+INTERESTS
+Seeking an entry-level career change; willing to study foundational computing. No technical projects completed.

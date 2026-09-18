@@ -1,0 +1,97 @@
+- main:
+  - generic: Navigation
+  - generic: Job Portal
+  - button:
+  - generic: Job Portal
+  - generic: lucastest0010
+  - button "Toggle theme":
+  - link "Browse jobs":
+    - /url: /dashboard/jobs
+  - button "Sign out":
+    - text: Sign out
+  - heading "Tailored resumes" [level=2]
+  - paragraph: Generated versions appear here above the original uploads.
+  - generic: Node js developer
+  - paragraph: HyperNova Consulting
+  - generic: Latest
+  - generic: Cached
+  - generic: 2026/9/8
+  - generic: Resume preview
+  - button "Copy":
+    - text: Copy
+  - button "Download":
+    - text: Download
+  - heading "skills" [level=3]
+  - paragraph: Python JavaScript TypeScript SQL React Next.js HTML CSS Tailwind CSS FastAPI REST APIs SQLAlchemy PostgreSQL SQLite Git Docker Postman pytest pandas NumPy scikit-learn
+  - heading "summary" [level=3]
+  - paragraph: Junior software engineer with experience developing web applications using Python, FastAPI, React, and PostgreSQL. Familiar with REST APIs, database design, automated testing, and Docker. Seeking an entry-level software engineering role in Singapore.
+  - heading "projects" [level=3]
+  - paragraph: "Job Application Tracker | January 2026 - April 2026 | Technologies: Next.js, FastAPI, PostgreSQL, Docker | Built a web application for tracking job applications and interview progress. Implemented user registration, login, and application status management. Designed relational tables for users, companies, and applications. Added automated tests covering authentication and application updates. Containerised the application for local development. Customer Churn Prediction | September 2025 - November 2025 | Technologies: Python, pandas, scikit-learn | Cleaned and analysed a public dataset containing 7,000 customer records. Trained logistic regression and random forest classifiers. Evaluated models using precision, recall, and F1 score. Presented findings and documented limitations in a project report."
+  - heading "education" [level=3]
+  - paragraph: "Bachelor of Engineering in Computer Engineering | Example Institute of Technology, Singapore | August 2022 - May 2026 | Relevant coursework: Data Structures, Algorithms, Database Systems, Software Engineering, Machine Learning."
+  - heading "experience" [level=3]
+  - paragraph: Software Engineering Intern | Example Software Labs | Singapore | May 2025 - August 2025 | Developed five REST API endpoints using FastAPI and PostgreSQL for an internal task management application. Built React components for task creation, filtering, and status updates. Wrote 25 automated API tests using pytest. Improved a database query, reducing average response time from 800 ms to 300 ms in a local benchmark. Collaborated with three engineers through code reviews and weekly planning meetings.
+  - heading "achievements" [level=3]
+  - paragraph
+  - heading "publications" [level=3]
+  - paragraph
+  - button "Modification rationale":
+    - text: Modification rationale
+  - paragraph: Review the evidence and target coverage behind this tailored version.
+  - generic: Upload resume
+  - paragraph: Upload first, manage the file, then start parsing manually when you are ready.
+  - text: Choose file
+  - generic: 01_Jordan_Lee_NodeJS_Developer.pdf
+  - generic: Active file
+  - generic: Completed
+  - generic: LLM
+  - button "Parse":
+    - text: Parse
+  - button "Delete 01_Jordan_Lee_NodeJS_Developer.pdf":
+  - generic: Progress
+  - generic: 100%
+  - paragraph: Summary
+  - paragraph: Backend Software Engineer with three years of experience building Node.js and TypeScript services, specializing in REST APIs, PostgreSQL, Redis, automated testing, and Docker.
+  - generic: Skills
+  - generic: "12"
+  - generic: Highlights
+  - generic: "5"
+  - generic: Education
+  - generic: "1"
+  - generic: Projects
+  - generic: "1"
+  - generic: Achievements
+  - generic: "0"
+  - paragraph: Skills
+  - list:
+    - listitem: · JavaScript
+    - listitem: · TypeScript
+    - listitem: · SQL
+    - listitem: · Node.js
+    - listitem: · Express.js
+    - listitem: · REST APIs
+    - listitem: · JWT authentication
+    - listitem: · PostgreSQL
+    - listitem: · Redis
+    - listitem: · React
+    - listitem: · Docker
+    - listitem: · Jest
+  - paragraph: Experience highlights
+  - list:
+    - listitem: · Developed 12 REST API endpoints for order and inventory management using Node.js, Express.js, and TypeScript
+    - listitem: · Reduced median product lookup latency from 240 ms to 95 ms using Redis caching
+    - listitem: · Wrote 80 automated tests using Jest and Supertest with 85% line coverage
+    - listitem: · Implemented role-based access control and JWT authentication for internal users
+    - listitem: · Collaborated with four engineers on code reviews and weekly releases
+  - paragraph: Projects
+  - list:
+    - listitem: · Appointment Booking API | January 2026 - March 2026 | Node.js, TypeScript, PostgreSQL, Docker | Implemented booking validation, pagination and database transactions to prevent duplicate reservations. Configured GitHub Actions to run automated tests on pull requests.
+  - paragraph: Experience facts
+  - list:
+    - listitem: · Backend Software Engineer
+  - paragraph: Education
+  - list:
+    - listitem: · BSc in Computer Science | Example Technology College | Singapore | August 2019 - May 2023
+- region "Notifications alt+T"
+- button "Open Next.js Dev Tools":
+- alert

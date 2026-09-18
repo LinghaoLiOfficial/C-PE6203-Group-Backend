@@ -1,0 +1,611 @@
+{
+  "observed_at": "2026-09-16T10:39:28.669711+00:00",
+  "resumes": [
+    {
+      "id": "8f0381a5-e82a-4f74-80f2-992862a74797",
+      "file_name": "04_Evan_Tan.pdf",
+      "is_active": false,
+      "parsed_text": "Synthetic test candidate | Lucas full-system QA | Test 04\n1\n Evan Tan\nOperations Technology Coordinator\n[redacted-email] | Singapore\nPROFILE\nOperations coordinator with exposure to software delivery through collaboration with engineers. Seeking an\nassociate technology role.\nEXPERIENCE\nCedar Quay Logistics | Operations Technology Coordinator | Jan 2023 - Aug 2026\nWorked with the team behind a Node.js booking service; my contribution was collecting warehouse requirements\nand checking screens, not writing production code.\nSupported an AWS migration by scheduling user acceptance sessions. Observed deployments but did not\nprovision cloud resources.\nHelped improve weekly reporting; the team reported a 20% reduction in handling time, but my individual\ncontribution was not measured.\nOccasionally adjusted a spreadsheet macro using a colleague's template.\nSKILLS\nExcel, requirements notes, user acceptance testing, stakeholder coordination. Introductory JavaScript self-study;\nno independently delivered software project.\nEDUCATION\nDiploma in Business Operations | Northbridge Institute | 2022",
+      "extracted_skills": [
+        "Excel",
+        "Requirements gathering",
+        "User acceptance testing",
+        "Stakeholder coordination",
+        "JavaScript",
+        "Spreadsheet macros",
+        "AWS migration support",
+        "Reporting"
+      ],
+      "created_at": "2026-09-16 16:51:52.017543+08:00",
+      "updated_at": "2026-09-16 18:38:58.726237+08:00"
+    },
+    {
+      "id": "3ed06126-660d-4856-b1da-377b5ef51c1c",
+      "file_name": "05_Nora_Lee.pdf",
+      "is_active": true,
+      "parsed_text": null,
+      "extracted_skills": null,
+      "created_at": "2026-09-16 18:38:58.826833+08:00",
+      "updated_at": "2026-09-16 18:38:58.826845+08:00"
+    }
+  ],
+  "resume_parse_tasks": [
+    {
+      "id": "d8c10a43-5e51-40bb-9582-68f0b7c91e72",
+      "resume_id": "8f0381a5-e82a-4f74-80f2-992862a74797",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-16 16:52:14.624117+08:00",
+      "finished_at": "2026-09-16 16:52:56.989057+08:00",
+      "heartbeat_at": "2026-09-16 16:52:56.989060+08:00",
+      "created_at": "2026-09-16 16:52:13.919825+08:00",
+      "updated_at": "2026-09-16 16:52:56.973045+08:00",
+      "diagnostics": {
+        "task_id": "d8c10a43-5e51-40bb-9582-68f0b7c91e72",
+        "graph_id": "939ba96a-c415-4e4e-b054-dd3b9db9c646",
+        "char_count": 1100,
+        "line_count": 22,
+        "chunk_count": 1,
+        "pypdf_score": 0.742,
+        "skill_count": 8,
+        "text_source": "pypdf",
+        "title_count": 6,
+        "schema_valid": true,
+        "section_hits": {
+          "skills": 1,
+          "projects": 0,
+          "education": 1,
+          "experience": 1,
+          "achievements": 0,
+          "publications": 0
+        },
+        "analysis_mode": "llm",
+        "fallback_used": false,
+        "project_count": 0,
+        "cleaning_ratio": 0.995,
+        "evidence_count": 7,
+        "fallback_score": null,
+        "analysis_reason": null,
+        "education_count": 1,
+        "analysis_message": null,
+        "achievement_count": 0,
+        "publication_count": 0,
+        "cleaned_char_count": 1095
+      }
+    },
+    {
+      "id": "006ab611-2224-4509-9d6d-d78c5318e5fd",
+      "resume_id": "3ed06126-660d-4856-b1da-377b5ef51c1c",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "status": "running",
+      "stage": "analyzing",
+      "progress": 55,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-16 18:39:10.196215+08:00",
+      "finished_at": null,
+      "heartbeat_at": "2026-09-16 18:39:10.222005+08:00",
+      "created_at": "2026-09-16 18:39:09.206941+08:00",
+      "updated_at": "2026-09-16 18:39:10.209173+08:00",
+      "diagnostics": null
+    }
+  ],
+  "resume_tailoring_tasks": [
+    {
+      "id": "f5a1626f-73ce-4dc8-8262-04789ac191f2",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "8f0381a5-e82a-4f74-80f2-992862a74797",
+      "job_id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "status": "completed",
+      "stage": "completed",
+      "progress": 100,
+      "error_message": null,
+      "attempts": 1,
+      "worker_id": "MacBook-Air.local:17356:0bd52221",
+      "started_at": "2026-09-16 18:22:19.791934+08:00",
+      "finished_at": "2026-09-16 18:23:18.285118+08:00",
+      "created_at": "2026-09-16 18:22:18.070715+08:00",
+      "updated_at": "2026-09-16 18:22:19.827639+08:00"
+    }
+  ],
+  "resume_variants": [
+    {
+      "id": "69e4fd37-f820-4d55-b97f-1374a2779078",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "8f0381a5-e82a-4f74-80f2-992862a74797",
+      "job_id": "90c35b3c-01ac-45be-885e-a42b08bf69c4",
+      "plan": {
+        "notes": [
+          "Target role: Node js developer",
+          "Occupation family: Engineering",
+          "Transition focus: structured skill bridge"
+        ],
+        "section_order": [
+          "summary",
+          "skills",
+          "experience",
+          "projects"
+        ],
+        "emphasized_skills": [
+          "Excel",
+          "Requirements gathering",
+          "User acceptance testing",
+          "Stakeholder coordination",
+          "JavaScript",
+          "Spreadsheet macros",
+          "AWS migration support",
+          "Reporting",
+          "aws",
+          "javascript",
+          "react",
+          "rest"
+        ],
+        "selected_evidence": [
+          {
+            "text": "javascript",
+            "source": "candidate_graph",
+            "evidence": [
+              {
+                "text": "JavaScript",
+                "source": "resume"
+              }
+            ],
+            "transformation": "evidence_selected"
+          }
+        ]
+      },
+      "claims": [
+        {
+          "claim": "Highlights Excel for the target role",
+          "evidence": [
+            {
+              "text": "Excel",
+              "source": "resume"
+            }
+          ],
+          "transformation": "emphasized"
+        },
+        {
+          "claim": "Highlights Requirements gathering for the target role",
+          "evidence": [
+            {
+              "text": "Requirements gathering",
+              "source": "resume"
+            }
+          ],
+          "transformation": "emphasized"
+        },
+        {
+          "claim": "Highlights User acceptance testing for the target role",
+          "evidence": [
+            {
+              "text": "User acceptance testing",
+              "source": "resume"
+            }
+          ],
+          "transformation": "emphasized"
+        },
+        {
+          "claim": "Highlights Stakeholder coordination for the target role",
+          "evidence": [
+            {
+              "text": "Stakeholder coordination",
+              "source": "resume"
+            }
+          ],
+          "transformation": "emphasized"
+        },
+        {
+          "claim": "Highlights JavaScript for the target role",
+          "evidence": [
+            {
+              "text": "JavaScript",
+              "source": "resume"
+            }
+          ],
+          "transformation": "emphasized"
+        },
+        {
+          "claim": "Evan Tan\nOperations Technology Coordinator\n[redacted-email] | Singapore\n\nPROFILE\nOperations coordinator with exposure to software delivery through collaboration with engineers. Seeking an associate technology role.\n\nEXPE",
+          "evidence": [
+            {
+              "text": "javascript",
+              "source": "candidate_graph",
+              "evidence": [
+                {
+                  "text": "JavaScript",
+                  "source": "resume"
+                }
+              ],
+              "transformation": "evidence_selected"
+            }
+          ],
+          "transformation": "rephrased"
+        },
+        {
+          "claim": "Aligned to Engineering profile",
+          "evidence": [
+            {
+              "text": "aws, javascript, react, rest",
+              "type": "required_skills",
+              "source": "job_profile"
+            },
+            {
+              "text": "2+ years",
+              "type": "experience_requirements",
+              "source": "job_profile"
+            }
+          ],
+          "transformation": "reordered"
+        }
+      ],
+      "validation_results": [
+        {
+          "rule": "No invented credentials",
+          "claim": "All credentials match source exactly",
+          "status": "pass",
+          "evidence_count": 1
+        },
+        {
+          "rule": "No invented employers",
+          "claim": "Only Cedar Quay Logistics listed, matching source",
+          "status": "pass",
+          "evidence_count": 1
+        },
+        {
+          "rule": "No invented dates",
+          "claim": "Jan 2023 - Aug 2026 and 2022 match source",
+          "status": "pass",
+          "evidence_count": 2
+        },
+        {
+          "rule": "No invented metrics",
+          "claim": "20% reduction in handling time attributed to team, not individual, matching source",
+          "status": "pass",
+          "evidence_count": 1
+        },
+        {
+          "rule": "No invented experience",
+          "claim": "Experience bullets match source verbatim; no development work added",
+          "status": "pass",
+          "evidence_count": 4
+        },
+        {
+          "rule": "No invented education",
+          "claim": "Diploma in Business Operations matches source; not upgraded to degree",
+          "status": "pass",
+          "evidence_count": 1
+        },
+        {
+          "rule": "Truthful coverage assessment",
+          "claim": "Target requirements honestly assessed as not met where source lacks evidence",
+          "status": "pass",
+          "evidence_count": 8
+        },
+        {
+          "rule": "no fabricated skills (deterministic check)",
+          "claim": "Every listed skill was found in the source resume.",
+          "status": "pass",
+          "evidence_count": 5
+        }
+      ],
+      "rewritten_text": "Evan Tan\nOperations Technology Coordinator\n[redacted-email] | Singapore\n\nPROFILE\nOperations coordinator with exposure to software delivery through collaboration with engineers. Seeking an associate technology role.\n\nEXPERIENCE\nCedar Quay Logistics | Operations Technology Coordinator | Jan 2023 - Aug 2026\n- Worked with the team behind a Node.js booking service; my contribution was collecting warehouse requirements and checking screens, not writing production code.\n- Supported an AWS migration by scheduling user acceptance sessions. Observed deployments but did not provision cloud resources.\n- Helped improve weekly reporting; the team reported a 20% reduction in handling time, but my individual contribution was not measured.\n- Occasionally adjusted a spreadsheet macro using a colleague's template.\n\nSKILLS\nExcel, requirements notes, user acceptance testing, stakeholder coordination. Introductory JavaScript self-study; no independently delivered software project.\n\nEDUCATION\nDiploma in Business Operations | Northbridge Institute | 2022",
+      "created_at": "2026-09-08 18:18:10.222880+08:00",
+      "resume_sections": {
+        "skills": [
+          "Excel",
+          "requirements notes",
+          "user acceptance testing",
+          "stakeholder coordination",
+          "Introductory JavaScript self-study"
+        ],
+        "summary": "Operations coordinator with exposure to software delivery through collaboration with engineers. Seeking an associate technology role.",
+        "projects": [],
+        "education": [
+          "Diploma in Business Operations | Northbridge Institute | 2022"
+        ],
+        "experience": [
+          "Cedar Quay Logistics | Operations Technology Coordinator | Jan 2023 - Aug 2026 | Worked with the team behind a Node.js booking service; my contribution was collecting warehouse requirements and checking screens, not writing production code. Supported an AWS migration by scheduling user acceptance sessions. Observed deployments but did not provision cloud resources. Helped improve weekly reporting; the team reported a 20% reduction in handling time, but my individual contribution was not measured. Occasionally adjusted a spreadsheet macro using a colleague's template."
+        ],
+        "achievements": [],
+        "publications": []
+      },
+      "change_summary": [
+        {
+          "action": "retained",
+          "reason": "Summary is directly from source; no embellishment added to avoid inventing qualifications not present.",
+          "section": "summary",
+          "source_evidence": "PROFILE: 'Operations coordinator with exposure to software delivery through collaboration with engineers. Seeking an associate technology role.'"
+        },
+        {
+          "action": "retained",
+          "reason": "Skills list preserved exactly as stated in source; no target skills (e.g., Node.js development, React, MongoDB) were added because the source explicitly states no independently delivered software project and only introductory JavaScript self-study.",
+          "section": "skills",
+          "source_evidence": "SKILLS: 'Excel, requirements notes, user acceptance testing, stakeholder coordination. Introductory JavaScript self-study; no independently delivered software project.'"
+        },
+        {
+          "action": "retained",
+          "reason": "Experience bullets preserved verbatim from source. No coding or development responsibilities were added despite the target role requiring Node.js/JavaScript implementation, because the source explicitly states the candidate did not write production code.",
+          "section": "experience",
+          "source_evidence": "EXPERIENCE: 'Worked with the team behind a Node.js booking service; my contribution was collecting warehouse requirements and checking screens, not writing production code.'"
+        },
+        {
+          "action": "retained",
+          "reason": "Education retained as stated. Target requires Computer Science B.Tech; source shows Diploma in Business Operations. No substitution made.",
+          "section": "education",
+          "source_evidence": "EDUCATION: 'Diploma in Business Operations | Northbridge Institute | 2022'"
+        }
+      ],
+      "evidence_used": [
+        {
+          "claim": "Operations coordinator with exposure to software delivery through collaboration with engineers.",
+          "evidence": "PROFILE section: 'Operations coordinator with exposure to software delivery through collaboration with engineers.'"
+        },
+        {
+          "claim": "Worked with the team behind a Node.js booking service; contribution was collecting warehouse requirements and checking screens, not writing production code.",
+          "evidence": "EXPERIENCE section: 'Worked with the team behind a Node.js booking service; my contribution was collecting warehouse requirements and checking screens, not writing production code.'"
+        },
+        {
+          "claim": "Supported an AWS migration by scheduling user acceptance sessions. Observed deployments but did not provision cloud resources.",
+          "evidence": "EXPERIENCE section: 'Supported an AWS migration by scheduling user acceptance sessions. Observed deployments but did not provision cloud resources.'"
+        },
+        {
+          "claim": "Helped improve weekly reporting; team reported a 20% reduction in handling time, but individual contribution was not measured.",
+          "evidence": "EXPERIENCE section: 'Helped improve weekly reporting; the team reported a 20% reduction in handling time, but my individual contribution was not measured.'"
+        },
+        {
+          "claim": "Occasionally adjusted a spreadsheet macro using a colleague's template.",
+          "evidence": "EXPERIENCE section: 'Occasionally adjusted a spreadsheet macro using a colleague's template.'"
+        },
+        {
+          "claim": "Skills include Excel, requirements notes, user acceptance testing, stakeholder coordination, and introductory JavaScript self-study.",
+          "evidence": "SKILLS section: 'Excel, requirements notes, user acceptance testing, stakeholder coordination. Introductory JavaScript self-study; no independently delivered software project.'"
+        },
+        {
+          "claim": "Diploma in Business Operations from Northbridge Institute, 2022.",
+          "evidence": "EDUCATION section: 'Diploma in Business Operations | Northbridge Institute | 2022'"
+        }
+      ],
+      "target_requirements": [
+        {
+          "coverage": "not_met",
+          "requirement": "Implement Web applications using Node.js and JavaScript ecosystem",
+          "matched_evidence": "Source explicitly states candidate did NOT write production code and has no independently delivered software project. Only introductory JavaScript self-study."
+        },
+        {
+          "coverage": "partial",
+          "requirement": "Translate client requirements to application design and document",
+          "matched_evidence": "Candidate collected warehouse requirements and checked screens for a Node.js booking service, but did not translate to application design."
+        },
+        {
+          "coverage": "not_met",
+          "requirement": "Web application low level design, db design, and UX design",
+          "matched_evidence": "No evidence of low-level design, database design, or UX design in source."
+        },
+        {
+          "coverage": "not_met",
+          "requirement": "Web back end development and SaaS application development",
+          "matched_evidence": "Source explicitly states candidate did not write production code. No back end or SaaS development experience."
+        },
+        {
+          "coverage": "not_met",
+          "requirement": "Node.js, Express.js, MEANJS, Restful services, JSON, NoSQL, MongoDB, MySQL",
+          "matched_evidence": "Candidate worked with a team behind a Node.js booking service but did not write code. No evidence of Express.js, MEANJS, RESTful services, JSON, NoSQL, MongoDB, or MySQL skills."
+        },
+        {
+          "coverage": "minimal",
+          "requirement": "JavaScript, Angular JS, React JS, Java, AWS (desirable)",
+          "matched_evidence": "Introductory JavaScript self-study only. Supported AWS migration by scheduling UAT sessions but did not provision cloud resources. No Angular, React, or Java evidence."
+        },
+        {
+          "coverage": "not_met",
+          "requirement": "Computer Science Graduate, B.Tech preferred",
+          "matched_evidence": "Diploma in Business Operations from Northbridge Institute, 2022. Not a Computer Science degree."
+        },
+        {
+          "coverage": "met",
+          "requirement": "Minimum 2 years, Maximum 8 years experience",
+          "matched_evidence": "Cedar Quay Logistics from Jan 2023 to Aug 2026 (approximately 3.5 years). Meets minimum threshold."
+        }
+      ]
+    }
+  ],
+  "candidate_graphs": [
+    {
+      "id": "939ba96a-c415-4e4e-b054-dd3b9db9c646",
+      "user_id": "01f7187e-4095-4fad-8c77-983056a25069",
+      "resume_id": "8f0381a5-e82a-4f74-80f2-992862a74797",
+      "summary": "Operations Technology Coordinator with exposure to software delivery through collaboration with engineers. Seeking an associate technology role.",
+      "skills": [
+        {
+          "name": "Excel",
+          "evidence": [
+            {
+              "text": "Excel",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Requirements gathering",
+          "evidence": [
+            {
+              "text": "Requirements gathering",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "User acceptance testing",
+          "evidence": [
+            {
+              "text": "User acceptance testing",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Stakeholder coordination",
+          "evidence": [
+            {
+              "text": "Stakeholder coordination",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "JavaScript",
+          "evidence": [
+            {
+              "text": "JavaScript",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Spreadsheet macros",
+          "evidence": [
+            {
+              "text": "Spreadsheet macros",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "AWS migration support",
+          "evidence": [
+            {
+              "text": "AWS migration support",
+              "source": "resume"
+            }
+          ]
+        },
+        {
+          "name": "Reporting",
+          "evidence": [
+            {
+              "text": "Reporting",
+              "source": "resume"
+            }
+          ]
+        }
+      ],
+      "experience_highlights": [
+        "Operations Technology Coordinator at Cedar Quay Logistics",
+        "Collected warehouse requirements and checked screens for a Node.js booking service",
+        "Supported an AWS migration by scheduling user acceptance sessions",
+        "Helped improve weekly reporting with a reported 20% reduction in handling time",
+        "Adjusted spreadsheet macros using a colleague's template"
+      ],
+      "experiences": [
+        {
+          "title": "Operations Technology Coordinator",
+          "company": "Cedar Quay Logistics",
+          "evidence": [
+            {
+              "end": null,
+              "text": "Cedar Quay Logistics | Operations Technology Coordinator | Jan 2023 - Aug 2026",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Worked with the team behind a Node.js booking service; my contribution was collecting warehouse requirements and checking screens, not writing production code.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Supported an AWS migration by scheduling user acceptance sessions. Observed deployments but did not provision cloud resources.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Helped improve weekly reporting; the team reported a 20% reduction in handling time, but my individual contribution was not measured.",
+              "start": null,
+              "source": "resume"
+            },
+            {
+              "end": null,
+              "text": "Occasionally adjusted a spreadsheet macro using a colleague's template.",
+              "start": null,
+              "source": "resume"
+            }
+          ],
+          "description": "Collected warehouse requirements and checked screens for a Node.js booking service. Supported an AWS migration by scheduling user acceptance sessions. Helped improve weekly reporting. Adjusted spreadsheet macros."
+        }
+      ],
+      "education": [
+        {
+          "text": "Diploma in Business Operations | Northbridge Institute | 2022",
+          "source": "resume"
+        }
+      ],
+      "projects": [],
+      "achievements": [],
+      "constraints": {},
+      "preferences": {
+        "location": null,
+        "role_families": [],
+        "remote_preference": null,
+        "work_authorization": null
+      },
+      "source_spans": [
+        {
+          "end": null,
+          "text": "Operations coordinator with exposure to software delivery through collaboration with engineers. Seeking an associate technology role.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Worked with the team behind a Node.js booking service; my contribution was collecting warehouse requirements and checking screens, not writing production code.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Supported an AWS migration by scheduling user acceptance sessions. Observed deployments but did not provision cloud resources.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Helped improve weekly reporting; the team reported a 20% reduction in handling time, but my individual contribution was not measured.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Occasionally adjusted a spreadsheet macro using a colleague's template.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Excel, requirements notes, user acceptance testing, stakeholder coordination. Introductory JavaScript self-study; no independently delivered software project.",
+          "start": null,
+          "source": "resume"
+        },
+        {
+          "end": null,
+          "text": "Diploma in Business Operations | Northbridge Institute | 2022",
+          "start": null,
+          "source": "resume"
+        }
+      ],
+      "user_confirmed": false,
+      "created_at": "2026-09-16 16:52:56.977337+08:00",
+      "updated_at": "2026-09-16 16:52:56.977340+08:00",
+      "publications": []
+    }
+  ],
+  "candidate_job_matches": []
+}

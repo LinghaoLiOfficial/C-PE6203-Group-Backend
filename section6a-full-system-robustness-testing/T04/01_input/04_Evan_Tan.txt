@@ -1,0 +1,19 @@
+Evan Tan
+Operations Technology Coordinator
+evan_tan@example.com | Singapore
+
+PROFILE
+Operations coordinator with exposure to software delivery through collaboration with engineers. Seeking an associate technology role.
+
+EXPERIENCE
+Cedar Quay Logistics | Operations Technology Coordinator | Jan 2023 - Aug 2026
+Worked with the team behind a Node.js booking service; my contribution was collecting warehouse requirements and checking screens, not writing production code.
+Supported an AWS migration by scheduling user acceptance sessions. Observed deployments but did not provision cloud resources.
+Helped improve weekly reporting; the team reported a 20% reduction in handling time, but my individual contribution was not measured.
+Occasionally adjusted a spreadsheet macro using a colleague's template.
+
+SKILLS
+Excel, requirements notes, user acceptance testing, stakeholder coordination. Introductory JavaScript self-study; no independently delivered software project.
+
+EDUCATION
+Diploma in Business Operations | Northbridge Institute | 2022

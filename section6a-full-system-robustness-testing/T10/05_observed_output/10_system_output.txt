@@ -1,0 +1,27 @@
+Sam Rivera
+Software Developer
+Singapore
+
+Summary
+Software Developer with experience in JavaScript, Node.js, and API maintenance. Background includes full-stack personal projects using Node.js and Express, alongside professional experience in software development and QA testing.
+
+Skills
+JavaScript, Node.js, Express.js, SQLite, API development, manual testing
+
+Experience
+Moss Harbor Labs | Full-time Software Developer | Mar 2024 - Oct 2025
+- Worked on Node.js bug fixes.
+
+Birch Signal Studio | Full-time QA Assistant | Feb 2024 - Nov 2025
+- Ran manual test scripts and documented defects.
+
+Moss Harbor Labs | Software Developer | Jan 2025 - Dec 2023
+- Maintained internal API endpoints.
+
+Projects
+Stockroom API | Personal project | 2024
+- Developed using Node.js, Express, and SQLite.
+- Implemented 18 automated tests.
+
+Education
+BSc in Computing (Incomplete / Withdrew 2022) | Westhaven College | 2022
