@@ -545,14 +545,22 @@ class JobPortalService:
             validation = result.validation_results or (
                 self._validate_resume_claims(claims, graph, requirements) if graph else []
             )
+            # Key the variant by the resume it was generated from, not just the
+            # job. Tailoring the same job from a second resume previously re-used
+            # (and overwrote) the first resume's variant by matching on job_id
+            # alone, which replaced the first resume's version and left the first
+            # card empty. Each resume now keeps its own variant for a job.
             variant = self.db.scalar(
                 select(ResumeVariant)
-                .where(ResumeVariant.user_id == task.user_id, ResumeVariant.job_id == task.job_id)
+                .where(
+                    ResumeVariant.user_id == task.user_id,
+                    ResumeVariant.resume_id == resume.id,
+                    ResumeVariant.job_id == job.id,
+                )
                 .order_by(ResumeVariant.created_at.desc())
             )
             if variant is None:
                 variant = ResumeVariant(user_id=task.user_id, resume_id=resume.id, job_id=job.id, rewritten_text=result.rewritten_text)
-            variant.resume_id = resume.id
             variant.plan, variant.claims, variant.validation_results = plan, claims, validation
             variant.rewritten_text = result.rewritten_text
             variant.resume_sections = result.resume
@@ -759,6 +767,7 @@ class JobPortalService:
 
     def delete_resume(self, user_id: UUID, resume_id: UUID) -> None:
         resume = self._get_resume(resume_id, user_id)
+        was_active = resume.is_active
         file_path = Path(resume.file_url)
         # ResumeVariant.resume_id and CandidateJobMatch.resume_id use ON DELETE SET
         # NULL (not CASCADE), so deleting a resume would orphan their rows and a
@@ -768,6 +777,18 @@ class JobPortalService:
         self.db.execute(delete(ResumeVariant).where(ResumeVariant.resume_id == resume_id))
         self.db.execute(delete(CandidateJobMatch).where(CandidateJobMatch.resume_id == resume_id))
         self.db.delete(resume)
+        self.db.flush()
+        if was_active:
+            # Deleting the active resume must not leave the workspace with no
+            # active resume; promote the most recently uploaded remaining resume
+            # so scoring and tailoring keep working without a manual re-select.
+            next_active = self.db.scalar(
+                select(Resume)
+                .where(Resume.user_id == user_id)
+                .order_by(Resume.created_at.desc())
+            )
+            if next_active is not None:
+                next_active.is_active = True
         self.db.commit()
         if file_path.exists():
             file_path.unlink()
@@ -2226,7 +2247,11 @@ class JobPortalService:
             "variant": self._serialize_resume_variant(
                 self.db.scalar(
                     select(ResumeVariant)
-                    .where(ResumeVariant.user_id == task.user_id, ResumeVariant.job_id == task.job_id)
+                    .where(
+                        ResumeVariant.user_id == task.user_id,
+                        ResumeVariant.resume_id == task.resume_id,
+                        ResumeVariant.job_id == task.job_id,
+                    )
                     .order_by(ResumeVariant.created_at.desc())
                 ),
                 include_source_file=True,
@@ -2319,7 +2344,9 @@ class JobPortalService:
         if include_source_file:
             resume = self.db.get(Resume, variant.resume_id) if variant.resume_id else None
             payload["source_file_name"] = resume.file_name if resume else None
-            payload["cached"] = True
+            # A freshly generated tailored resume is not a cached hit; only the
+            # synchronous rewrite path reuses a stored record as "cached".
+            payload["cached"] = False
         return payload
 
     def _get_candidate_graph(
