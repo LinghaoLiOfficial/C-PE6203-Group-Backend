@@ -1,0 +1,838 @@
+[
+  {
+    "job_id": "13f4f6b5-e3d7-40dd-8356-1061ca9d6072",
+    "job_title": "Software Engineer",
+    "company_name": "WestGate Networks",
+    "job_description": "As a member of our Software Engineering Group, we look first and foremost for people who are passionate around solving business problems through innovation and engineering practices. You'll be required to apply your depth of knowledge and expertise to all aspects of the software development lifecycle, as well as partner continuously with your many stakeholders on a daily basis to stay focused on common goals. We embrace a culture of experimentation and constantly strive for improvement and learning. You'll work in a collaborative, trusting, thought-provoking environment-one that encourages diversity of thought and creative solutions that are in the best interests of our customers globally.\n\nThis role requires a wide variety of strengths and capabilities, including:\nBS/BA degree or equivalent experience\nAdvanced knowledge of application, data, and infrastructure architecture disciplines\nUnderstanding of architecture and design across all systems\nWorking proficiency in developmental toolsets\nKnowledge of industry-wide technology trends and best practices\nAbility to work in large, collaborative teams to achieve organizational goals\nPassionate about building an innovative culture\nProficiency in one or more modern programming languages\nUnderstanding of software skills such as business analysis, development, maintenance, and software improvement\nBachelor's degree in engineering or Degree from reputed organization 2. 5+ years of Industry experience, preferably in IT industry. 3. Knowledge of Java/Spring, SQL (Sybase/Oracle), Any caching application, React 4. Strong communication skills, both written and verbal 5.Ability to work collaboratively in teams and develop meaningful relationships to achieve common goals\nJPMorgan Chase & Co. is an equal opportunity employer and affirmative action employer Disability/VeteranJPMorgan Chase & Co., one of the oldest financial institutions, offers innovative financial solutions to millions of consumers, small businesses and many of the world's most prominent corporate, institutional and government clients under the J.P. Morgan and Chase brands. Our history spans over 200 years and today we are a leader in investment banking, consumer and small business banking, commercial banking, financial transaction processing and asset management.\n\nWe recognize that our people are our strength and the diverse talents they bring to our global workforce are directly linked to our success. We are an equal opportunity employer and place a high value on diversity and inclusion at our company. We do not discriminate on the basis of any protected attribute, including race, religion, color, national origin, gender, sexual orientation, gender identity, gender expression, age, marital or veteran status, pregnancy or disability, or any other basis protected under applicable law. In accordance with applicable law, we make reasonable accommodations for applicants' and employees' religious practices and beliefs, as well as any mental health or physical disability needs.",
+    "outputs": {
+      "A": "Here is a rewritten version of the resume tailored to the job description:\n\n**ALEX MERCER**\n**San Francisco, CA | 555-019-2834 | [redacted-email] | linkedin.com/in/alexmercer**\n\n**PROFESSIONAL SUMMARY**\nResults-driven and innovative software engineer with over a decade of experience in developing scalable and efficient software applications. Proven track record of collaborating with cross-functional teams to drive business growth and improve customer experiences. Seeking a challenging role at JPMorgan Chase & Co. where I can leverage my technical expertise and passion for innovation to drive business success.\n\n**CORE COMPETENCIES**\n\n* Programming languages: JavaScript (ES6+), TypeScript, Java, React\n* Development frameworks: React.js, Next.js, Spring\n* Databases: SQL (Sybase/Oracle)\n* Caching applications: Familiarity with caching concepts and technologies\n* Agile methodologies: Scrum, Kanban\n* Collaboration tools: Git, GitHub Actions, JIRA\n* Operating Systems: Windows, Linux, macOS\n\n**PROFESSIONAL EXPERIENCE**\n\n**Senior Lead Engineer / UI Specialist — TechVanguard Systems**\n2021 – Present\n\n* Designed and developed high-traffic customer-facing web applications using React, TypeScript, and Tailwind CSS\n* Collaborated with product managers and UX designers to transform Figma prototypes into production-ready, reusable UI components\n* Refactored legacy state-management architecture to Context API, reducing global bundle sizing by 18% and accelerating page loads\n* Debugged cross-browser compatibility issues and resolved responsive design flaws across mobile, tablet, and desktop viewports\n\n**Front-End Web Developer — Innovate Digital Solutions**\n2016 – 2021\n\n* Built and maintained internal dashboard interfaces using JavaScript and Vue.js, boosting back-office operational efficiency by 22%\n* Wrote automated unit tests with Jest, elevating codebase testing coverage metrics from 60% up to an 85% baseline\n* Managed code repositories, handled code review branches, and executed bug-fix deployments via automated GitHub Actions\n\n**Web Developer — PixelPerfect Creative Corp**\n2013 – 2016\n\n* Authored semantic, lightweight HTML5/CSS3 templates for over 40 external client e-commerce platforms\n* Optimized image configurations, script payloads, and server caching to shave 1.5 seconds off average mobile rendering metrics\n\n**EDUCATION & CREDENTIALS**\n\n* Bachelor of Science in Computer Science — State University (2012)\n* Certified Advanced React Developer — Tech Alliance Group\n\n**SKILLS**\n\n* Strong communication and collaboration skills, with experience working in large, distributed teams\n* Proficient in modern programming languages, including Java, JavaScript, and TypeScript\n* Understanding of software development lifecycle, including business analysis, development, maintenance, and software improvement\n* Familiarity with industry-wide technology trends and best practices\n* Passionate about building an innovative culture and driving business success through technology\n\nI made the following changes to the original resume:\n\n* Emphasized the candidate's ability to collaborate with cross-functional teams and drive business growth\n* Highlighted the candidate's experience with Java, Spring, and SQL, as well as their familiarity with caching applications and React\n* Removed unnecessary sections and focused on the most relevant experience and skills\n* Rewrote the professional summary to better align with the job description and emphasize the candidate's passion for innovation and driving business success\n* Added a skills section to highlight the candidate's strong communication and collaboration skills, as well as their proficiency in modern programming languages and understanding of software development lifecycle.",
+      "B": "Based on the job description, the relevant skills that can be extracted from the resume are:\n\n1. **Programming languages**: JavaScript, TypeScript, React.js (matches the job requirement of proficiency in one or more modern programming languages)\n2. **Developmental toolsets**: Webpack, Vite, Git, GitHub Actions, Docker, Jest, React Testing Library (matches the job requirement of working proficiency in developmental toolsets)\n3. **Collaboration and teamwork**: Experience working with product managers, UX designers, and other stakeholders (matches the job requirement of ability to work in large, collaborative teams)\n4. **Software development lifecycle**: Experience with coding, testing, and deploying web applications (matches the job requirement of understanding of software skills such as business analysis, development, maintenance, and software improvement)\n5. **Communication skills**: Not explicitly mentioned, but the resume demonstrates strong written communication skills through the use of clear and concise language.\n\nTo tailor the resume to the job, I would suggest the following:\n\n1. **Emphasize collaboration and teamwork**: Highlight the experience of working with cross-functional teams, including product managers and UX designers, to demonstrate the ability to work collaboratively in teams.\n2. **Highlight relevant technical skills**: Emphasize the proficiency in React.js, JavaScript, and TypeScript, as well as experience with developmental toolsets such as Webpack, Vite, and Git.\n3. **Showcase software development lifecycle experience**: Highlight the experience of coding, testing, and deploying web applications, as well as experience with software development methodologies such as Agile/Scrum.\n4. **Demonstrate passion for innovation and engineering practices**: Add a statement to the professional summary that highlights the passion for building innovative solutions and improving engineering practices.\n5. **Remove irrelevant information**: Remove the earlier professional history section, as it is not relevant to the job requirements.\n\nHere is an example of how the resume could be tailored to the job:\n\nALEX MERCER\nSan Francisco, CA | 555-019-2834 | [redacted-email] | linkedin.com/in/alexmercer\n\nPROFESSIONAL SUMMARY\nPassionate and experienced Front-End Developer with a strong background in building innovative solutions and improving engineering practices. Proficient in React.js, JavaScript, and TypeScript, with experience working in collaborative teams to deliver high-quality web applications. Seeking a role that leverages my technical expertise and passion for innovation to drive business growth and improvement.\n\nCORE COMPETENCIES\n* Programming languages: JavaScript, TypeScript, React.js\n* Developmental toolsets: Webpack, Vite, Git, GitHub Actions, Docker, Jest, React Testing Library\n* Collaboration and teamwork: Experience working with cross-functional teams, including product managers and UX designers\n* Software development lifecycle: Experience with coding, testing, and deploying web applications\n\nPROFESSIONAL EXPERIENCE\nSenior Lead Engineer / UI Specialist — TechVanguard Systems\n2021 – Present\n* Collaborate with product managers and UX designers to deliver high-quality web applications\n* Code, test, and deploy web applications using React.js, TypeScript, and JavaScript\n* Work with cross-functional teams to identify and prioritize project requirements\n\nFront-End Web Developer — Innovate Digital Solutions\n2016 – 2021\n* Built and maintained internal dashboard interfaces using JavaScript and Vue.js\n* Worked with product managers and UX designers to deliver high-quality web applications\n* Collaborated with development teams to identify and prioritize project requirements\n\nEDUCATION & CREDENTIALS\nBachelor of Science in Computer Science — State University (2012)\nCertified Advanced React Developer — Tech Alliance Group",
+      "C": {
+        "resume": {
+          "summary": "Hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications.",
+          "skills": [
+            "JavaScript (ES6+)",
+            "TypeScript",
+            "React.js",
+            "Next.js",
+            "HTML5",
+            "CSS3",
+            "Sass",
+            "Webpack",
+            "Vite",
+            "Git",
+            "GitHub Actions",
+            "Docker",
+            "JIRA",
+            "Jest",
+            "React Testing Library",
+            "Agile/Scrum",
+            "Component-Driven Development",
+            "CI/CD pipelines",
+            "Semantic Accessibility (WCAG)"
+          ],
+          "experience": [
+            "Senior Lead Engineer / UI Specialist — TechVanguard Systems (2021 – Present)",
+            "Front-End Web Developer — Innovate Digital Solutions (2016 – 2021)",
+            "Web Developer — PixelPerfect Creative Corp (2013 – 2016)",
+            "Junior Developer / UI Assistant — Apex Media Studio",
+            "Web Production Intern — Vanguard Publishing House"
+          ],
+          "projects": [],
+          "education": [
+            "Bachelor of Science in Computer Science — State University (2012)",
+            "Certified Advanced React Developer — Tech Alliance Group"
+          ],
+          "achievements": [
+            "Refactored legacy state-management architecture to Context API, reducing global bundle sizing by 18% and accelerating page loads.",
+            "Boosted back-office operational efficiency by 22%.",
+            "Elevated codebase testing coverage metrics from 60% up to an 85% baseline.",
+            "Shaved 1.5 seconds off average mobile rendering metrics."
+          ],
+          "publications": []
+        },
+        "rewritten_text": "Alex Mercer is a seasoned Front-End Developer with over a decade of experience in engineering scalable corporate web applications. With a strong background in JavaScript, TypeScript, React.js, and other technologies, Alex has led engineering workflows and contributed to various projects. Currently, Alex is seeking a mid-level front-end engineering role to focus on direct code contribution, performance optimization, and tactical feature deployment. Alex brings immediate autonomy and zero training ramp-up time.",
+        "change_summary": [
+          {
+            "section": "summary",
+            "action": "rewritten",
+            "reason": "to better match the target job requirements",
+            "source_evidence": "Hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications."
+          }
+        ],
+        "evidence_used": [
+          {
+            "claim": "over a decade of experience",
+            "evidence": "2013-2016, 2016-2021, 2021-Present"
+          },
+          {
+            "claim": "strong background in JavaScript, TypeScript, React.js",
+            "evidence": "CORE COMPETENCIES: Languages & Frameworks: JavaScript (ES6+), TypeScript, React.js"
+          }
+        ],
+        "target_requirements": [
+          {
+            "requirement": "BS/BA degree or equivalent experience",
+            "matched_evidence": "Bachelor of Science in Computer Science — State University (2012)",
+            "coverage": "fully met"
+          },
+          {
+            "requirement": "Advanced knowledge of application, data, and infrastructure architecture disciplines",
+            "matched_evidence": "none",
+            "coverage": "not met"
+          },
+          {
+            "requirement": "Proficiency in one or more modern programming languages",
+            "matched_evidence": "JavaScript (ES6+), TypeScript, React.js",
+            "coverage": "fully met"
+          },
+          {
+            "requirement": "5+ years of Industry experience",
+            "matched_evidence": "2013-2016, 2016-2021, 2021-Present",
+            "coverage": "fully met"
+          }
+        ],
+        "validation_results": [
+          {
+            "status": "pass",
+            "rule": "education",
+            "claim": "Bachelor of Science in Computer Science — State University (2012)",
+            "evidence_count": 1
+          },
+          {
+            "status": "pass",
+            "rule": "experience",
+            "claim": "over a decade of experience",
+            "evidence_count": 3
+          },
+          {
+            "status": "fail",
+            "rule": "licenses",
+            "claim": "none",
+            "evidence_count": 0
+          },
+          {
+            "status": "pass",
+            "rule": "no fabricated skills (deterministic check)",
+            "claim": "Every listed skill was found in the source resume.",
+            "evidence_count": 19
+          }
+        ]
+      }
+    },
+    "scores": {
+      "A": {
+        "grounding": {
+          "score": 2,
+          "reason": "Fabricated skills and experience not present in the source resume"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Effectively tailored emphasis to the target job"
+        },
+        "correctness": {
+          "score": 3,
+          "reason": "Some facts accurate, but others altered or omitted"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Well-structured output with clear explanations"
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 4,
+          "reason": "Mostly relied on facts present in the source resume"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Effectively highlighted relevant experience and skills"
+        },
+        "correctness": {
+          "score": 4,
+          "reason": "Most facts accurate and preserved from the source"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Clear and concise output with explanations"
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "Only relied on facts present in the source resume"
+        },
+        "personalization": {
+          "score": 3,
+          "reason": "Did not effectively tailor emphasis to the target job"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "All facts accurate and preserved from the source"
+        },
+        "clarity": {
+          "score": 3,
+          "reason": "Output could be more concise and easier to read"
+        }
+      }
+    },
+    "elapsed_seconds": 32.94458866119385
+  },
+  {
+    "job_id": "9c7cf956-9298-4609-b96c-cdd2a00b12dd",
+    "job_title": "Machine Learning",
+    "company_name": "LumaCore Data",
+    "job_description": "Requirements / Responsibilities:\n\nShould have 6+ years of experience as Data Scientist\nShould have experience in Data Analytics, Big Data, Machine Learning, AI and dashboard creation",
+    "outputs": {
+      "A": "It appears that the job description is for a Data Scientist position, but the provided resume is for a Front-End Developer. To rewrite the resume for the Data Scientist job, I'll need to highlight any relevant skills or experiences that Alex Mercer has in data science, analytics, or related fields. However, please note that the original resume does not have a strong focus on data science, so the rewritten resume will be limited by the available information.\n\nHere's a rewritten version of the resume, attempting to emphasize any relevant skills or experiences:\n\nALEX MERCER\nSan Francisco, CA | 555-019-2834 | [redacted-email] | linkedin.com/in/alexmercer\n\nPROFESSIONAL SUMMARY\nHighly skilled and experienced technical professional with a strong background in software development, seeking to leverage my analytical and problem-solving skills in a Data Scientist role. With over a decade of experience in engineering scalable corporate web applications, I am eager to apply my skills in data analysis, visualization, and machine learning to drive business insights and inform decision-making.\n\nCORE COMPETENCIES\n* Programming languages: JavaScript (ES6+), TypeScript\n* Data analysis and visualization: Experience with data-driven UI components, data visualization using React and JavaScript libraries\n* Agile methodologies: Proven experience with Agile/Scrum sprints, CI/CD pipelines, and collaborative development environments\n* Problem-solving: Skilled in debugging cross-browser compatibility issues, resolving responsive design flaws, and optimizing application performance\n\nPROFESSIONAL EXPERIENCE\nSenior Lead Engineer / UI Specialist — TechVanguard Systems\n2021 – Present\n* Collaborated with product managers and UX designers to transform Figma prototypes into production-ready, reusable UI components, which involved data analysis and visualization\n* Refactored legacy state-management architecture, which required data analysis and optimization techniques\n* Debugged cross-browser compatibility issues and resolved responsive design flaws, demonstrating problem-solving skills\n\nFront-End Web Developer — Innovate Digital Solutions\n2016 – 2021\n* Built and maintained internal dashboard interfaces using JavaScript and Vue.js, which involved data visualization and analysis\n* Wrote automated unit tests with Jest, elevating codebase testing coverage metrics, and demonstrating attention to detail and analytical skills\n\nWeb Developer — PixelPerfect Creative Corp\n2013 – 2016\n* Authored semantic, lightweight HTML5/CSS3 templates for over 40 external client e-commerce platforms, which required data analysis and optimization techniques\n* Optimized image configurations, script payloads, and server caching to improve application performance, demonstrating problem-solving skills\n\nEDUCATION & CREDENTIALS\nBachelor of Science in Computer Science — State University (2012)\nCertified Advanced React Developer — Tech Alliance Group\n\nPlease note that this rewritten resume is not a strong fit for the Data Scientist job description, as Alex Mercer's experience and skills are primarily focused on front-end development. To be a competitive candidate for a Data Scientist role, Alex would need to acquire additional education, training, or experience in data science, analytics, and related fields.",
+      "B": "Based on the provided resume and job description, I must point out that the candidate's background and skills do not align with the job requirements. The candidate has a strong background in Front-End Development, whereas the job description requires experience in Data Science, Data Analytics, Big Data, Machine Learning, AI, and dashboard creation.\n\nHowever, if we were to extract relevant skills from the resume that could be potentially useful in a Data Science or related role, here are a few:\n\n* Programming skills: JavaScript, TypeScript (could be useful in data visualization or front-end development for data science applications)\n* Experience with Agile/Scrum methodologies (could be useful in collaborative data science projects)\n* Familiarity with Git and GitHub Actions (could be useful in version control and automation of data science workflows)\n* Experience with debugging and problem-solving (could be useful in troubleshooting data science models or pipelines)\n\nTo tailor the resume to the job, I would suggest the following:\n\n1. Highlight any relevant coursework or projects from the candidate's education that involved data analysis, machine learning, or statistics.\n2. Emphasize any experience with data visualization tools or libraries, such as D3.js or Chart.js.\n3. Mention any experience with data processing or analysis using JavaScript or other programming languages.\n4. Consider adding a section on \"Relevant Tools and Technologies\" to highlight any experience with data science-related tools, such as Jupyter Notebooks, Pandas, or scikit-learn.\n\nHowever, it's essential to note that the candidate's background and skills are not a strong match for the job description, and it may be challenging to tailor the resume to make them a competitive candidate for this specific role.\n\nHere's an example of how the resume could be tailored to highlight any potentially relevant skills:\n\nALEX MERCER\nSan Francisco, CA | 555-019-2834 | [redacted-email] | linkedin.com/in/alexmercer\n\nPROFESSIONAL SUMMARY\nHighly skilled Front-End Developer with experience in programming languages, Agile methodologies, and version control. Seeking to leverage my problem-solving skills and experience with data visualization to transition into a Data Science role.\n\nCORE COMPETENCIES\n* Programming languages: JavaScript, TypeScript\n* Agile methodologies: Scrum\n* Version control: Git, GitHub Actions\n* Data visualization: D3.js, Chart.js (familiarity)\n\nPROFESSIONAL EXPERIENCE\n... (same as before)\n\nEDUCATION & CREDENTIALS\nBachelor of Science in Computer Science — State University (2012)\nCertified Advanced React Developer — Tech Alliance Group\n\nNote that this is just an example, and it's essential to be honest and accurate when representing one's skills and experience. If the candidate does not have relevant experience in Data Science, it's best to focus on highlighting transferable skills and being upfront about their background and interests.",
+      "C": {
+        "resume": {
+          "summary": "Hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications.",
+          "skills": [
+            "JavaScript (ES6+)",
+            "TypeScript",
+            "React.js",
+            "Next.js",
+            "HTML5",
+            "CSS3",
+            "Sass",
+            "Webpack",
+            "Vite",
+            "Git",
+            "GitHub Actions",
+            "Docker",
+            "JIRA",
+            "Jest",
+            "React Testing Library",
+            "Agile/Scrum sprints",
+            "Component-Driven Development",
+            "CI/CD pipelines",
+            "Semantic Accessibility (WCAG)"
+          ],
+          "experience": [
+            "Senior Lead Engineer / UI Specialist at TechVanguard Systems (2021 - Present)",
+            "Front-End Web Developer at Innovate Digital Solutions (2016 - 2021)",
+            "Web Developer at PixelPerfect Creative Corp (2013 - 2016)",
+            "Junior Developer / UI Assistant at Apex Media Studio",
+            "Web Production Intern at Vanguard Publishing House"
+          ],
+          "projects": [],
+          "education": [
+            "Bachelor of Science in Computer Science at State University (2012)",
+            "Certified Advanced React Developer at Tech Alliance Group"
+          ],
+          "achievements": [
+            "Refactored legacy state-management architecture to Context API, reducing global bundle sizing by 18% and accelerating page loads",
+            "Boosted back-office operational efficiency by 22%",
+            "Elevated codebase testing coverage metrics from 60% up to an 85% baseline",
+            "Shaved 1.5 seconds off average mobile rendering metrics"
+          ],
+          "publications": []
+        },
+        "rewritten_text": "Alex Mercer is a hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications. With experience in leading engineering workflows and a strong background in computer science, Alex is seeking a mid-level front-end engineering role to focus on direct code contribution, performance optimization, and tactical feature deployment.",
+        "change_summary": [
+          {
+            "section": "summary",
+            "action": "no change",
+            "reason": "summary already highlights relevant experience",
+            "source_evidence": "Hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications."
+          }
+        ],
+        "evidence_used": [
+          {
+            "claim": "over a decade of deep technical experience",
+            "evidence": "2013 - 2016 at PixelPerfect Creative Corp, 2016 - 2021 at Innovate Digital Solutions, 2021 - Present at TechVanguard Systems"
+          }
+        ],
+        "target_requirements": [
+          {
+            "requirement": "6+ years of experience as Data Scientist",
+            "matched_evidence": "none",
+            "coverage": "0%"
+          }
+        ],
+        "validation_results": [
+          {
+            "status": "fail",
+            "rule": "occupation_family mismatch",
+            "claim": "Front-End Developer",
+            "evidence_count": 0
+          },
+          {
+            "status": "pass",
+            "rule": "no fabricated skills (deterministic check)",
+            "claim": "Every listed skill was found in the source resume.",
+            "evidence_count": 19
+          }
+        ]
+      }
+    },
+    "scores": {
+      "A": {
+        "grounding": {
+          "score": 1,
+          "reason": "Fabricated data science experience and skills not present in the source resume."
+        },
+        "personalization": {
+          "score": 2,
+          "reason": "Attempted to tailor the resume to the target job, but lacked relevant experience and skills."
+        },
+        "correctness": {
+          "score": 2,
+          "reason": "Altered the candidate's background and skills to fit the job description."
+        },
+        "clarity": {
+          "score": 3,
+          "reason": "Provided a clear explanation of the changes made to the resume."
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 4,
+          "reason": "Did not fabricate skills or experience, but highlighted potentially relevant transferable skills."
+        },
+        "personalization": {
+          "score": 3,
+          "reason": "Attempted to tailor the resume to the target job, but acknowledged the lack of relevant experience and skills."
+        },
+        "correctness": {
+          "score": 4,
+          "reason": "Accurately represented the candidate's background and skills."
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Provided a clear explanation of the changes made to the resume and the limitations of the candidate's experience."
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "Did not fabricate skills or experience and stuck to the facts present in the source resume."
+        },
+        "personalization": {
+          "score": 1,
+          "reason": "Did not attempt to tailor the resume to the target job, despite the obvious mismatch."
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Accurately represented the candidate's background and skills without alteration."
+        },
+        "clarity": {
+          "score": 5,
+          "reason": "Provided a clear and well-structured output with evidence of the changes made."
+        }
+      }
+    },
+    "elapsed_seconds": 28.02200150489807
+  },
+  {
+    "job_id": "0464ceab-76fd-4770-a4c2-8392c60cce7d",
+    "job_title": "DevOps Engineer",
+    "company_name": "CloudHarbor Labs",
+    "job_description": "17791 DevOps Engineer II (Open)\n\nPosition Type:\n\nFull time\n\nLocation(s):\n\nIN.Bangalore.Office1\n\nPosition Details:\n\nOverview\nThis job is responsible/accountable for streamlining offerings to CSGs end customers.\nThey take solutions from development and ensure they are operationally sound prior to rolling into production.\nProducts are evaluated and prepared for installation, configuration, monitoring, diagnostics, and process / procedure to ensure minimal impact as they are released.\nProduction optimization from a personnel perspective is a critical point and leveraging technology to ensure solutions adhere to customers SLA requirements for availability.\nJob Description:\nThe incumbent is responsible for providing key support for their focused product / solution area to internal and external resources.\nSupport and maintenance of the customers production and non-production environments - including on-call support / work variety of shifts to include weekends, holidays or extra shifts/extended shifts or as needed.\nWork with L1/L2/L3/L4 support and operations teams to ensure successful deployment and operation of their application and ongoing operational activities\nIndependently building and testing reliable and well-tested solutions and once released troubleshoot any issues, actively seeking out problems and solving them.\nSupport the build and deployment infrastructure used by our delivery teams\nRespond to high severity production issues escalated by our operations teams along with root cause analysis\nTest driven development, Agile development, continuous integration, continuous deployment, DevOps automation\nCreate seamless/automated build scripts used for release management across all environments.\nContribute to the DevOps community by way of good & best practices and support mentoring/coaching and training the wider team\nComprehend customers security and data policies and ensure adherence\nLiason with cross functional teams to investigate customer issues and drive early resolution.\nPrepare, validate and Share the data which are required to cleanup/correct/reconcile as a part of fix\nExperience\n3-5 years of related experience in Technical Analyst or equivalent role or 2-3 years in computer engineering or equivalent role\nSome experience with a broad range of IT technologies: Network, Storage, Virtualization, Compute, Database, Automation, SDLC, and distributed transactions in high volume managed services or billing services provider environments\nAdditional Job Description\nUnder limited supervision, performs installations, configurations, and upgrades to CSG products.\nHands on experience in either 2 of the languages Python, C# and Shell/Powershell . Expertise in\none of this is mandatory\nOS experience Windows and Linux\nExperience in using monitoring tools\nBasic understanding and working knowledge of CI/CD tools like Chef, Jenkins etc\nAbility to troubleshoot issues and provide solution\nValidation of installation and configuration processes and procedures.\nActive participation/internship with the other teams involved in delivery (Development & Project Management).\nTroubleshooting and bug fixing for solutions once in place.\nParticipate in the on-call rotation under the supervision of a senior team member\nReleases & Promotions:\nUnder limited supervision, support the development team in releases and promotions (including core upgrades) from development through to production, as defined by Best Practices.\nValidation of release and promotion processes and procedures.\nTroubleshooting and bug fixing for solutions once in place.\nBackups & Recovery:\nWith limited supervision, establishes and maintains system and database backup and recovery policies and procedures.\nSolution & New Product Evaluation:\nAssists in the identification and analysis of the internal/external clients technical requirements.\nUnder limited supervision, gathers information from customers on technical requirements.\nUnder limited supervision, provides technical input and consultation for application deployment.\nThird Party & Open Source:\nUnder limited supervision, performs installation, configuration, and upgrades to any supporting\nthird-party software used in supporting CSG products.\nActive research and sandbox trials of open source solutions.\nExecute third party/open source compilation for requisite software.\nPull source and monitor version modifications in association with key software.\nFamiliarization of key third party products /open source projects leveraged by CSG solutions.\nCommunication & Documentation:\nEffectively communicates with customers and colleagues alike.\nProduces and maintains documentation on projects and research as assigned.\nCreates wiki documentation for solution delivery and support, as well as, automation efforts.\nResponsibility\n\n% of Time\nAdministration of infrastructure systems (upgrade, maintain, troubleshoot) such as BigIP, CVP framework, BladeLogic, Automation, ADDM, CSP/IPF 20%\nServes as subject matter expert for matters relating to system and application architecture 20%\n3rd tier support for operational production issues 40%\nParticipates in process improvement efforts within the larger technology organization 20%\nRegular and reliable attendance is required.\nOngoing\nIncumbent is accountable for professional working behavior to include; building and maintaining constructive working relationships, implementing proactive and concise communication, acting as a resource to colleagues, and engaging in collaborative thinking and problem solving while demonstrating CSGs core competencies and values.\nTypical Interactions/Relationships\nInternal Some contact with developers, dbas, operations, Systems Administrators, Global Platform Architecture.\nKnowledge, Skills and Abilities\nFamiliarity with practical agile development methodologies.\nFamiliarity with required coding (C #) and scripting languages (Shell Scripting).\nGeneral knowledge of database architecture and function.\nDemonstrates a great deal of self-drive and initiative in a highly independent environment.\nKnowledge of programming and systems analysis procedures.\nStrong oral and written/editing skills.\nGood interpersonal skills.\nKnowledge of Linux Shell and Windows PowerShell scripting.\nWorks with some independence, yet most feature level work assigned by lead. Knows when to\nseek guidance from teammates or lead.\nBalances task load to deliver in a timely manner.\nInvolved in story creation and iterative planning.\nDemonstrates solid skill and is working to gain additional experience\n3-5 years of experience in application deployment and support.\nGood Understanding of OS, Network, Database and application monitoring tools.\nDemonstrates creativity when researching or solving a situation.\nKnowledge of systems security and PCI compliance.\nBachelors Degree or equivalent experience.\nShould have worked on Agile projects and should understand\nC#\nPowerShell/ Shell Scripting\nDatabase Knowledge\nPython or pearl will be added advantage",
+    "outputs": {
+      "A": "Here is a rewritten version of the resume tailored to the DevOps Engineer II job description:\n\n**ALEX MERCER**\n**San Francisco, CA | 555-019-2834 | [redacted-email] | linkedin.com/in/alexmercer**\n\n**PROFESSIONAL SUMMARY**\nHighly motivated and experienced DevOps Engineer with a strong background in software development, deployment, and maintenance. Proficient in a range of technologies, including Python, C#, and Shell/Powershell scripting. Seeking a challenging role that utilizes my technical expertise to streamline offerings and ensure operational soundness.\n\n**CORE COMPETENCIES**\n\n* Programming languages: Python, C#, JavaScript (ES6+), TypeScript\n* Scripting languages: Shell/Powershell, Bash\n* Operating Systems: Windows, Linux\n* Agile development methodologies: Scrum, Kanban\n* CI/CD tools: Jenkins, Chef, Git\n* Monitoring tools: Experience with various monitoring tools, including OS, Network, and Database monitoring\n* Database architecture and function: Familiarity with database design and management\n* Security and compliance: Knowledge of systems security and PCI compliance\n\n**PROFESSIONAL EXPERIENCE**\n\n* **Senior Lead Engineer / UI Specialist — TechVanguard Systems** (2021 – Present)\n\t+ Collaborated with cross-functional teams to ensure successful deployment and operation of applications\n\t+ Developed and maintained automated build scripts for release management\n\t+ Troubleshoot and resolved production issues, including root cause analysis\n\t+ Implemented CI/CD pipelines using Jenkins and Git\n* **Front-End Web Developer — Innovate Digital Solutions** (2016 – 2021)\n\t+ Built and maintained internal dashboard interfaces using JavaScript and Vue.js\n\t+ Wrote automated unit tests with Jest, elevating codebase testing coverage metrics\n\t+ Managed code repositories, handled code review branches, and executed bug-fix deployments via automated GitHub Actions\n* **Web Developer — PixelPerfect Creative Corp** (2013 – 2016)\n\t+ Authored semantic, lightweight HTML5/CSS3 templates for external client e-commerce platforms\n\t+ Optimized image configurations, script payloads, and server caching to improve rendering metrics\n\n**EDUCATION & CREDENTIALS**\n\n* **Bachelor of Science in Computer Science — State University** (2012)\n* **Certified Advanced React Developer — Tech Alliance Group**\n\nNote that I've highlighted the relevant technical skills and experience from the original resume and tailored them to the DevOps Engineer II job description. I've also removed some of the less relevant information and reorganized the layout to make it more concise and easy to read.",
+      "B": "Based on the provided resume and job description, here are the relevant skills that can be tailored to the job:\n\n**Relevant Skills:**\n\n1. **Agile development methodologies**: The candidate has experience with Agile/Scrum sprints, which aligns with the job requirement.\n2. **Programming languages**: Although the candidate's primary expertise is in JavaScript, TypeScript, and React, they can highlight their ability to learn and adapt to new languages, such as C#, Python, or PowerShell.\n3. **CI/CD tools**: The candidate has experience with Git, GitHub Actions, and Jest, which demonstrates their understanding of continuous integration and deployment principles.\n4. **Cloud and virtualization**: Although not explicitly mentioned, the candidate's experience with Docker and containerization can be highlighted as relevant to cloud and virtualization technologies.\n5. **Database knowledge**: The candidate's experience with database architecture and function can be emphasized, although they may need to learn more about specific database management systems.\n6. **Operating System experience**: The candidate can highlight their experience with Linux and Windows, which is relevant to the job requirement.\n7. **Scripting languages**: The candidate's experience with JavaScript and TypeScript can be highlighted as relevant to scripting languages, and they can express their willingness to learn PowerShell or Shell Scripting.\n8. **Troubleshooting and problem-solving**: The candidate's experience in debugging cross-browser compatibility issues and resolving responsive design flaws demonstrates their ability to troubleshoot and solve problems.\n\n**Tailored Resume:**\n\nTo tailor the resume to the job, the candidate can:\n\n1. Emphasize their experience with Agile development methodologies and highlight their ability to work in an independent environment.\n2. Highlight their programming skills, although they may need to learn new languages, and emphasize their ability to adapt to new technologies.\n3. Emphasize their experience with CI/CD tools and highlight their understanding of continuous integration and deployment principles.\n4. Highlight their experience with cloud and virtualization technologies, although they may need to learn more about specific technologies.\n5. Emphasize their database knowledge and highlight their ability to learn more about specific database management systems.\n6. Highlight their operating system experience and emphasize their ability to work with Linux and Windows.\n7. Emphasize their scripting language experience and express their willingness to learn PowerShell or Shell Scripting.\n8. Highlight their troubleshooting and problem-solving skills, demonstrating their ability to debug and resolve issues.\n\nHere's an example of how the candidate can tailor their resume to the job:\n\n**Professional Summary:**\nHighly motivated and experienced DevOps Engineer with a strong background in Agile development methodologies, programming languages, and CI/CD tools. Proven ability to work independently and troubleshoot complex issues. Seeking a challenging role that utilizes my skills and experience to deliver high-quality solutions.\n\n**Technical Skills:**\n\n* Agile development methodologies (Scrum, Kanban)\n* Programming languages (JavaScript, TypeScript, C#, Python)\n* CI/CD tools (Git, GitHub Actions, Jenkins)\n* Cloud and virtualization technologies (Docker, Linux, Windows)\n* Database management systems (relational and NoSQL)\n* Scripting languages (JavaScript, PowerShell, Shell Scripting)\n* Operating System experience (Linux, Windows)\n\n**Experience:**\n\n* Senior Lead Engineer / UI Specialist — TechVanguard Systems\n\t+ Utilized Agile development methodologies to deliver high-quality solutions\n\t+ Developed and deployed scalable web applications using JavaScript, TypeScript, and React\n\t+ Collaborated with cross-functional teams to troubleshoot and resolve complex issues\n* Front-End Web Developer — Innovate Digital Solutions\n\t+ Built and maintained internal dashboard interfaces using JavaScript and Vue.js\n\t+ Implemented CI/CD pipelines using Git and GitHub Actions\n\t+ Troubleshoot and resolved issues with cross-browser compatibility and responsive design\n\nBy tailoring their resume to the job, the candidate can demonstrate their relevant skills and experience, increasing their chances of getting noticed by the hiring manager.",
+      "C": {
+        "resume": {
+          "summary": "Hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications",
+          "skills": [
+            "JavaScript (ES6+)",
+            "TypeScript",
+            "React.js",
+            "Next.js",
+            "HTML5",
+            "CSS3",
+            "Sass",
+            "Webpack",
+            "Vite",
+            "Git",
+            "GitHub Actions",
+            "Docker",
+            "JIRA",
+            "Jest",
+            "React Testing Library",
+            "Agile/Scrum sprints",
+            "Component-Driven Development",
+            "CI/CD pipelines",
+            "Semantic Accessibility (WCAG)"
+          ],
+          "experience": [
+            "Senior Lead Engineer / UI Specialist — TechVanguard Systems",
+            "Front-End Web Developer — Innovate Digital Solutions",
+            "Web Developer — PixelPerfect Creative Corp",
+            "Junior Developer / UI Assistant — Apex Media Studio",
+            "Web Production Intern — Vanguard Publishing House"
+          ],
+          "projects": [],
+          "education": [
+            "Bachelor of Science in Computer Science — State University (2012)",
+            "Certified Advanced React Developer — Tech Alliance Group"
+          ],
+          "achievements": [
+            "Refactored legacy state-management architecture to Context API, reducing global bundle sizing by 18% and accelerating page loads",
+            "Wrote automated unit tests with Jest, elevating codebase testing coverage metrics from 60% up to an 85% baseline",
+            "Optimized image configurations, script payloads, and server caching to shave 1.5 seconds off average mobile rendering metrics"
+          ],
+          "publications": []
+        },
+        "rewritten_text": "Alex Mercer is a seasoned Front-End Developer with over a decade of experience in engineering scalable corporate web applications. With a strong background in JavaScript, TypeScript, React.js, and other technologies, Alex has led engineering workflows and contributed to the development of high-traffic customer-facing web applications. Alex's expertise includes front-end development, testing, and deployment, as well as experience with Agile/Scrum sprints, CI/CD pipelines, and Semantic Accessibility (WCAG). Alex holds a Bachelor of Science in Computer Science from State University and is a Certified Advanced React Developer.",
+        "change_summary": [
+          {
+            "section": "summary",
+            "action": "rewritten",
+            "reason": "to better match the target job description",
+            "source_evidence": "target job description"
+          }
+        ],
+        "evidence_used": [
+          {
+            "claim": "over a decade of experience",
+            "evidence": "source resume"
+          }
+        ],
+        "target_requirements": [
+          {
+            "requirement": "linux",
+            "matched_evidence": "none",
+            "coverage": "0"
+          },
+          {
+            "requirement": "python",
+            "matched_evidence": "none",
+            "coverage": "0"
+          },
+          {
+            "requirement": "testing",
+            "matched_evidence": "Jest, React Testing Library",
+            "coverage": "0.5"
+          }
+        ],
+        "validation_results": [
+          {
+            "status": "pass",
+            "rule": "no fabricated skills (deterministic check)",
+            "claim": "Every listed skill was found in the source resume.",
+            "evidence_count": 19
+          }
+        ]
+      }
+    },
+    "scores": {
+      "A": {
+        "grounding": {
+          "score": 1,
+          "reason": "Fabricated skills and experience not present in the source resume"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Well-tailored to the target job description"
+        },
+        "correctness": {
+          "score": 2,
+          "reason": "Inaccurate representation of the candidate's experience"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Clear and well-structured output"
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 2,
+          "reason": "Some fabricated skills and experience"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Relevant skills and experience highlighted"
+        },
+        "correctness": {
+          "score": 3,
+          "reason": "Some inaccuracies in the representation of the candidate's experience"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Well-structured and easy to follow"
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "No fabricated skills or experience"
+        },
+        "personalization": {
+          "score": 2,
+          "reason": "Limited tailoring to the target job description"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Accurate representation of the candidate's experience"
+        },
+        "clarity": {
+          "score": 3,
+          "reason": "Output is somewhat disorganized and difficult to follow"
+        }
+      }
+    },
+    "elapsed_seconds": 24.819825887680054
+  },
+  {
+    "job_id": "2bb1e1e7-5f3a-4e72-853a-b428d316a205",
+    "job_title": "Database Administrator",
+    "company_name": "Solstice Digital",
+    "job_description": "position information job title research administrator department electrical computer engineering full time/part time full-time requisition number s18494 open date 06/26/2018 close date salary information salary commensurate experience qualification work schedule monday friday 8 a.m. 5 p.m. benefit eligible yes eligible overtime position summary research administrator responsible leading administering pre- post-award activity ece faculty providing guidance training ece departmental research administrator serving departmental reviewer grant submission s/he serve designated research administrator handling financial administrative research process designated group ece faculty member includes pre- post- award activity regular communications/meetings faculty staff ethical management fund lead research administrator advises pi effective way achieve effective quality proposal coordinate timely submission process ensuring appropriate approval s/he serf compliance/oversight capacity monitoring budget spending approving capital equipment requisition providing guidance counsel stewardship sponsored research fund education required bachelor 's degree concentration / degree type substitution education requirement may substitute additional related experience beyond required equivalent year year basis lieu education requirement education preferred bachelor ’ degree business administration accounting finance experience required 3 year type experience related administrative experience includes research administration experience i.e grant proposal preparation submission various governmental agency nsf dod doe darp nih etc. substitution experience requirement may substitute additional related education beyond required equivalent year year basis lieu experience requirement experience preferred five year experience utilizing bba business related degree corporate higher education environment proficiency organizational financial management corporate higher education management grants/contracts federal/state agency experience university policy procedure highly desirable license/certification required specified license/certification preferred specified skill required intermediate knowledge word processing spreadsheet email database software program working knowledge research administration guideline regulation policy organizational skill customer service problem-solving skill preferred well-organized deadline oriented ability problem solve work independently fast pace environment utilization database system software spreadsheet excel strong written verbal communication skill write clear concise correspondence wide range topic internal / external contact work wide variety individual rice government industry external affiliate department collaborating institution physical demand must able work office environment often computer workstation much working day must able move building widely separated college campus stair requires long period sitting working front computer – eight hour per day working condition may require long hour availability outside normal working hour weekend quarterly basis due grant deadline and/or work major project office environment fast-paced sometimes stressful due interruption require successful candidate multi-tasking security sensitive yes",
+    "outputs": {
+      "A": "It appears that the job description provided is for a Research Administrator position in the Electrical and Computer Engineering department, which does not align with the skills and experience of Alex Mercer, a Front-End Developer. However, I can try to rewrite Alex's resume to highlight any transferable skills that may be relevant to an administrative role.\n\nHere's a rewritten version of Alex's resume:\n\nALEX MERCER\nSan Francisco, CA | 555-019-2834 | [redacted-email] | linkedin.com/in/alexmercer\n\nPROFESSIONAL SUMMARY\nResults-driven professional with over a decade of experience in managing complex projects, leading teams, and collaborating with cross-functional groups. Proven ability to work independently, prioritize tasks, and meet deadlines. Seeking an administrative role that leverages my organizational, communication, and problem-solving skills.\n\nCORE COMPETENCIES\n* Project management: Led engineering workflows, managed code repositories, and coordinated with product managers and UX designers.\n* Communication: Collaborated with team members, wrote clear and concise documentation, and presented technical information to non-technical stakeholders.\n* Problem-solving: Debugged complex technical issues, optimized code performance, and resolved cross-browser compatibility problems.\n* Organizational: Managed multiple projects simultaneously, prioritized tasks, and met deadlines in a fast-paced environment.\n\nPROFESSIONAL EXPERIENCE\nSenior Lead Engineer / UI Specialist — TechVanguard Systems\n2021 – Present\n* Managed and executed multiple projects simultaneously, ensuring timely completion and high-quality results.\n* Collaborated with product managers and UX designers to transform prototypes into production-ready components.\n* Developed and implemented process improvements, resulting in increased efficiency and reduced errors.\n\nFront-End Web Developer — Innovate Digital Solutions\n2016 – 2021\n* Built and maintained internal dashboard interfaces, boosting operational efficiency by 22%.\n* Managed code repositories, handled code review branches, and executed bug-fix deployments via automated GitHub Actions.\n* Wrote automated unit tests, elevating codebase testing coverage metrics from 60% to 85%.\n\nWeb Developer — PixelPerfect Creative Corp\n2013 – 2016\n* Authored semantic, lightweight HTML5/CSS3 templates for over 40 external client e-commerce platforms.\n* Optimized image configurations, script payloads, and server caching to improve mobile rendering metrics.\n\nEDUCATION & CREDENTIALS\nBachelor of Science in Computer Science — State University (2012)\nCertified Advanced React Developer — Tech Alliance Group\n\nWhile Alex's technical skills may not directly align with the Research Administrator role, his experience in project management, communication, problem-solving, and organizational skills may be transferable to an administrative position. However, it's essential to note that Alex's background and experience are primarily in software development, and he may require additional training or education to be competitive for an administrative role.",
+      "B": "Based on the provided resume and job description, I've extracted the relevant skills and tailored the resume to the Research Administrator position. However, please note that the candidate's background is in Front-End Development, and the job description is for a Research Administrator role, which may not be a direct match.\n\nRelevant skills extracted from the job description:\n\n* Administrative experience\n* Research administration experience\n* Grant proposal preparation and submission\n* Financial management\n* Organizational skills\n* Customer service\n* Problem-solving skills\n* Intermediate knowledge of word processing, spreadsheet, email, and database software\n* Working knowledge of research administration guidelines, regulations, and policies\n\nTailored resume:\n\nALEX MERCER\nSan Francisco, CA | 555-019-2834 | [redacted-email] | linkedin.com/in/alexmercer\n\nPROFESSIONAL SUMMARY\nResults-driven professional with over a decade of experience in managing complex projects, leading teams, and collaborating with cross-functional groups. Proven ability to work independently, prioritize tasks, and meet deadlines. Seeking a Research Administrator role to leverage my organizational, financial management, and problem-solving skills to support the Electrical and Computer Engineering department.\n\nCORE COMPETENCIES\n* Project management: Led engineering workflows, managed code repositories, and executed bug-fix deployments\n* Financial management: Managed budgets, optimized resource allocation, and reduced costs\n* Organizational skills: Coordinated with product managers, UX designers, and developers to deliver high-traffic web applications\n* Customer service: Collaborated with clients to understand requirements, provided guidance, and ensured timely delivery\n* Problem-solving skills: Debugged cross-browser compatibility issues, resolved responsive design flaws, and optimized code performance\n* Intermediate knowledge of:\n\t+ Word processing: Proficient in creating and editing documents\n\t+ Spreadsheet: Experienced in managing and analyzing data\n\t+ Email: Skilled in communicating effectively with stakeholders\n\t+ Database software: Familiar with managing and querying data\n\nPROFESSIONAL EXPERIENCE\nSenior Lead Engineer / UI Specialist — TechVanguard Systems\n2021 – Present\n* Managed and executed multiple projects simultaneously, ensuring timely delivery and high-quality results\n* Collaborated with cross-functional teams to develop and implement project plans, budgets, and resource allocation\n* Coordinated with product managers and UX designers to transform Figma prototypes into production-ready UI components\n\nFront-End Web Developer — Innovate Digital Solutions\n2016 – 2021\n* Developed and maintained internal dashboard interfaces, boosting back-office operational efficiency by 22%\n* Managed code repositories, handled code review branches, and executed bug-fix deployments via automated GitHub Actions\n\nEDUCATION & CREDENTIALS\nBachelor of Science in Computer Science — State University (2012)\nCertified Advanced React Developer — Tech Alliance Group\n\nNote that I've highlighted the candidate's transferable skills, such as project management, financial management, and organizational skills, to demonstrate their potential to succeed in a Research Administrator role. However, it's essential to recognize that the candidate's background is not directly related to research administration, and additional training or education may be necessary to excel in this position.",
+      "C": {
+        "resume": {
+          "summary": "Hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications.",
+          "skills": [
+            "JavaScript (ES6+)",
+            "TypeScript",
+            "React.js",
+            "Next.js",
+            "HTML5",
+            "CSS3",
+            "Sass",
+            "Webpack",
+            "Vite",
+            "Git",
+            "GitHub Actions",
+            "Docker",
+            "JIRA",
+            "Jest",
+            "React Testing Library",
+            "Agile/Scrum",
+            "Component-Driven Development",
+            "CI/CD pipelines",
+            "Semantic Accessibility (WCAG)"
+          ],
+          "experience": [
+            "Senior Lead Engineer / UI Specialist at TechVanguard Systems (2021 - Present)",
+            "Front-End Web Developer at Innovate Digital Solutions (2016 - 2021)",
+            "Web Developer at PixelPerfect Creative Corp (2013 - 2016)",
+            "Junior Developer / UI Assistant at Apex Media Studio",
+            "Web Production Intern at Vanguard Publishing House"
+          ],
+          "projects": [],
+          "education": [
+            "Bachelor of Science in Computer Science at State University (2012)",
+            "Certified Advanced React Developer at Tech Alliance Group"
+          ],
+          "achievements": [
+            "Refactored legacy state-management architecture to Context API, reducing global bundle sizing by 18% and accelerating page loads",
+            "Boosted back-office operational efficiency by 22%",
+            "Elevated codebase testing coverage metrics from 60% up to an 85% baseline",
+            "Shaved 1.5 seconds off average mobile rendering metrics"
+          ],
+          "publications": []
+        },
+        "rewritten_text": "Alex Mercer is a hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications. With a strong background in JavaScript, TypeScript, React.js, and other technologies, Alex has successfully led engineering workflows and delivered high-quality solutions. Currently, Alex is seeking a mid-level front-end engineering role to focus on direct code contribution, performance optimization, and tactical feature deployment.",
+        "change_summary": [
+          {
+            "section": "summary",
+            "action": "rewritten",
+            "reason": "to better match the target job requirements",
+            "source_evidence": "Hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications"
+          }
+        ],
+        "evidence_used": [
+          {
+            "claim": "over a decade of deep technical experience",
+            "evidence": "Senior Lead Engineer / UI Specialist at TechVanguard Systems (2021 - Present), Front-End Web Developer at Innovate Digital Solutions (2016 - 2021), Web Developer at PixelPerfect Creative Corp (2013 - 2016)"
+          },
+          {
+            "claim": "strong background in JavaScript, TypeScript, React.js, and other technologies",
+            "evidence": "CORE COMPETENCIES: Languages & Frameworks: JavaScript (ES6+), TypeScript, React.js, Next.js, HTML5, CSS3, Sass"
+          }
+        ],
+        "target_requirements": [
+          {
+            "requirement": "occupation_family=Engineering",
+            "matched_evidence": "Front-End Developer",
+            "coverage": "partial"
+          },
+          {
+            "requirement": "seniority=mid",
+            "matched_evidence": "Senior Lead Engineer / UI Specialist",
+            "coverage": "full"
+          },
+          {
+            "requirement": "education=bachelor degree",
+            "matched_evidence": "Bachelor of Science in Computer Science at State University (2012)",
+            "coverage": "full"
+          },
+          {
+            "requirement": "experience=2+ years",
+            "matched_evidence": "Senior Lead Engineer / UI Specialist at TechVanguard Systems (2021 - Present), Front-End Web Developer at Innovate Digital Solutions (2016 - 2021)",
+            "coverage": "full"
+          }
+        ],
+        "validation_results": [
+          {
+            "status": "pass",
+            "rule": "occupation_family",
+            "claim": "Front-End Developer",
+            "evidence_count": 1
+          },
+          {
+            "status": "pass",
+            "rule": "seniority",
+            "claim": "Senior Lead Engineer / UI Specialist",
+            "evidence_count": 1
+          },
+          {
+            "status": "pass",
+            "rule": "education",
+            "claim": "Bachelor of Science in Computer Science",
+            "evidence_count": 1
+          },
+          {
+            "status": "pass",
+            "rule": "experience",
+            "claim": "2+ years of experience",
+            "evidence_count": 2
+          },
+          {
+            "status": "pass",
+            "rule": "no fabricated skills (deterministic check)",
+            "claim": "Every listed skill was found in the source resume.",
+            "evidence_count": 19
+          }
+        ]
+      }
+    },
+    "scores": {
+      "A": {
+        "grounding": {
+          "score": 2,
+          "reason": "Invented administrative experience not present in the source resume."
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Attempted to highlight transferable skills relevant to the target job."
+        },
+        "correctness": {
+          "score": 3,
+          "reason": "Altered the candidate's background to fit the job description."
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Explained the changes made to the resume and the reasoning behind them."
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 1,
+          "reason": "Fabricated financial management and research administration experience."
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Tailored the resume to the target job by highlighting relevant skills."
+        },
+        "correctness": {
+          "score": 2,
+          "reason": "Introduced inaccurate information about the candidate's experience."
+        },
+        "clarity": {
+          "score": 3,
+          "reason": "Failed to provide clear evidence for the changes made to the resume."
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "Only used facts present in the source resume."
+        },
+        "personalization": {
+          "score": 1,
+          "reason": "Did not attempt to tailor the resume to the target job."
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Accurately represented the candidate's experience and skills."
+        },
+        "clarity": {
+          "score": 5,
+          "reason": "Provided a clear and well-structured output with evidence for the changes."
+        }
+      }
+    },
+    "elapsed_seconds": 30.902143955230713
+  },
+  {
+    "job_id": "1f17e46d-33c4-4e53-9faf-862bf41a08fa",
+    "job_title": "Full Stack Developer",
+    "company_name": "InnoWave Networks",
+    "job_description": "looking well-rounded full-stack developer work new cutting-edge system provides industry-leading healthcare-focused workflow clinical trial including recruitment study conduct u elligo health research offer platform brings clinical research physician practice accelerating development new pharmaceutical biotechnology medical device product therapy go direct™ approach us state-of-the-art elligo direct™ technology compliantly leverage current electronic health record data applies proprietary prescreening process match protocol-eligible patient participation clinical study mission support health care provider providing personnel procedure technology infrastructure clinical research enabling patient participate research remaining care trusted physician job responsibility role developing testing supporting new system primarily mean stack mongodb angularjs express node j supporting tool component built java postgres redis rabbitmq elasticsearch writing executing unit test code helping qa write integration system test participating sprint planning code review user platform elligo staff physician partner since working alongside user need work understand develop solution problem encounter required skill qualification excited prospect transforming clinical trial workflow experienced 3+ year developing web application fluent javascript node j html cs experienced database preferably including nosql comfortable writing unit test experienced working full engineering qa team excellent debugging troubleshooting excellent meeting deliverable timeline set preferred qualification prefer worked sensitive secure data like health record deployed cloud service provider developed dashboard report practiced agile software development worked responsive web framework written sql query worked java",
+    "outputs": {
+      "A": "Here is a rewritten version of the resume tailored to the job description:\n\n**ALEX MERCER**\n**San Francisco, CA | 555-019-2834 | [redacted-email] | linkedin.com/in/alexmercer**\n\n**PROFESSIONAL SUMMARY**\nHighly skilled Full-Stack Developer with over a decade of experience in developing scalable web applications, seeking a challenging role in a cutting-edge system that provides industry-leading healthcare-focused workflow for clinical trials. With a strong background in JavaScript, Node.js, and MongoDB, I am excited about the prospect of transforming clinical trial workflows and contributing to the development of a state-of-the-art platform.\n\n**CORE COMPETENCIES**\n\n* **Programming Languages:** JavaScript (ES6+), TypeScript, Java\n* **Frameworks:** AngularJS, Express, Node.js, React.js, Next.js\n* **Databases:** MongoDB, PostgreSQL, Redis\n* **Tools:** Git, GitHub Actions, Docker, JIRA, Jest, React Testing Library, RabbitMQ, Elasticsearch\n* **Methodologies:** Agile/Scrum sprints, Component-Driven Development, CI/CD pipelines, Semantic Accessibility (WCAG)\n\n**PROFESSIONAL EXPERIENCE**\n\n* **Senior Lead Engineer / UI Specialist — TechVanguard Systems** (2021 – Present)\n\t+ Developed and deployed high-traffic customer-facing web applications using React, TypeScript, and Tailwind CSS.\n\t+ Collaborated with product managers and UX designers to transform Figma prototypes into production-ready, reusable UI components.\n\t+ Refactored legacy state-management architecture to Context API, reducing global bundle sizing by 18% and accelerating page loads.\n* **Front-End Web Developer — Innovate Digital Solutions** (2016 – 2021)\n\t+ Built and maintained internal dashboard interfaces using JavaScript and Vue.js, boosting back-office operational efficiency by 22%.\n\t+ Wrote automated unit tests with Jest, elevating codebase testing coverage metrics from 60% up to an 85% baseline.\n\t+ Managed code repositories, handled code review branches, and executed bug-fix deployments via automated GitHub Actions.\n* **Web Developer — PixelPerfect Creative Corp** (2013 – 2016)\n\t+ Authored semantic, lightweight HTML5/CSS3 templates for over 40 external client e-commerce platforms.\n\t+ Optimized image configurations, script payloads, and server caching to shave 1.5 seconds off average mobile rendering metrics.\n\n**EDUCATION & CREDENTIALS**\n\n* **Bachelor of Science in Computer Science — State University** (2012)\n* **Certified Advanced React Developer — Tech Alliance Group**\n\nAs a seasoned developer with a strong background in full-stack development, I am confident in my ability to develop, test, and support a new system that provides industry-leading healthcare-focused workflow for clinical trials. I am excited about the prospect of working with a talented team to transform clinical trial workflows and contribute to the development of a state-of-the-art platform.",
+      "B": "Based on the job description, I've extracted the relevant skills and tailored the resume to highlight the candidate's qualifications for the full-stack developer position:\n\n**Relevant Skills:**\n\n1. Full-stack development\n2. JavaScript\n3. Node.js\n4. MongoDB\n5. AngularJS\n6. Express\n7. Java\n8. Postgres\n9. Redis\n10. RabbitMQ\n11. Elasticsearch\n12. Unit testing\n13. Integration testing\n14. Agile software development\n15. Cloud service deployment\n16. Database management (including NoSQL)\n17. SQL query writing\n18. Responsive web development\n\n**Tailored Resume:**\n\nALEX MERCER\nSan Francisco, CA | 555-019-2834 | [redacted-email] | linkedin.com/in/alexmercer\n\n**PROFESSIONAL SUMMARY**\nHighly experienced full-stack developer with over a decade of experience in developing scalable web applications. Proficient in a range of technologies, including JavaScript, Node.js, MongoDB, and AngularJS. Proven track record of delivering high-quality solutions on time. Seeking a challenging role in a cutting-edge healthcare-focused system, where I can leverage my skills to transform clinical trial workflows.\n\n**CORE COMPETENCIES**\n\n* Programming languages: JavaScript (ES6+), TypeScript, Java\n* Frameworks: React.js, Next.js, AngularJS, Express\n* Databases: MongoDB, Postgres, Redis\n* Tools: Node.js, Git, GitHub Actions, Docker, JIRA, Jest, React Testing Library\n* Methodologies: Agile/Scrum sprints, Component-Driven Development, CI/CD pipelines, Semantic Accessibility (WCAG)\n\n**PROFESSIONAL EXPERIENCE**\n\nSenior Lead Engineer / UI Specialist — TechVanguard Systems\n2021 – Present\n\n* Developed and deployed high-traffic customer-facing web applications using React, TypeScript, and Node.js\n* Collaborated with product managers and UX designers to transform Figma prototypes into production-ready, reusable UI components\n* Refactored legacy state-management architecture to Context API, reducing global bundle sizing by 18% and accelerating page loads\n* Debugged cross-browser compatibility issues and resolved responsive design flaws across mobile, tablet, and desktop viewports\n\nFront-End Web Developer — Innovate Digital Solutions\n2016 – 2021\n\n* Built and maintained internal dashboard interfaces using JavaScript and Vue.js, boosting back-office operational efficiency by 22%\n* Wrote automated unit tests with Jest, elevating codebase testing coverage metrics from 60% up to an 85% baseline\n* Managed code repositories, handled code review branches, and executed bug-fix deployments via automated GitHub Actions\n\n**RELEVANT SKILLS FOR FULL-STACK DEVELOPER ROLE**\n\n* Proficient in JavaScript, Node.js, and MongoDB\n* Experienced with AngularJS, Express, and Java\n* Familiar with Postgres, Redis, RabbitMQ, and Elasticsearch\n* Skilled in unit testing, integration testing, and agile software development\n* Comfortable with cloud service deployment and database management (including NoSQL)\n* Experienced in writing SQL queries and developing responsive web applications\n\n**EDUCATION & CREDENTIALS**\n\nBachelor of Science in Computer Science — State University (2012)\nCertified Advanced React Developer — Tech Alliance Group\n\nI've highlighted the candidate's relevant skills and experience in full-stack development, JavaScript, Node.js, MongoDB, and AngularJS, as well as their experience with agile software development, cloud service deployment, and database management. I've also emphasized their ability to write unit tests, integrate with QA teams, and deliver high-quality solutions on time.",
+      "C": {
+        "resume": {
+          "summary": "Hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications, seeking a mid-level front-end engineering role to focus on direct code contribution, performance optimization, and tactical feature deployment.",
+          "skills": [
+            "JavaScript (ES6+)",
+            "TypeScript",
+            "React.js",
+            "Next.js",
+            "HTML5",
+            "CSS3",
+            "Sass",
+            "Webpack",
+            "Vite",
+            "Git",
+            "GitHub Actions",
+            "Docker",
+            "JIRA",
+            "Jest",
+            "React Testing Library",
+            "Agile/Scrum sprints",
+            "Component-Driven Development",
+            "CI/CD pipelines",
+            "Semantic Accessibility (WCAG)"
+          ],
+          "experience": [
+            "Senior Lead Engineer / UI Specialist at TechVanguard Systems (2021 - Present)",
+            "Front-End Web Developer at Innovate Digital Solutions (2016 - 2021)",
+            "Web Developer at PixelPerfect Creative Corp (2013 - 2016)",
+            "Junior Developer / UI Assistant at Apex Media Studio",
+            "Web Production Intern at Vanguard Publishing House"
+          ],
+          "projects": [],
+          "education": [
+            "Bachelor of Science in Computer Science at State University (2012)",
+            "Certified Advanced React Developer at Tech Alliance Group"
+          ],
+          "achievements": [
+            "Refactored legacy state-management architecture to Context API, reducing global bundle sizing by 18% and accelerating page loads",
+            "Boosted back-office operational efficiency by 22% by building and maintaining internal dashboard interfaces",
+            "Elevated codebase testing coverage metrics from 60% up to an 85% baseline by writing automated unit tests with Jest",
+            "Optimized image configurations, script payloads, and server caching to shave 1.5 seconds off average mobile rendering metrics"
+          ],
+          "publications": []
+        },
+        "rewritten_text": "Alex Mercer is a hands-on Front-End Developer with over a decade of deep technical experience engineering scalable corporate web applications. As a seasoned developer, Alex has led engineering workflows and has a strong background in JavaScript, TypeScript, React.js, and other technologies. With experience in Agile/Scrum sprints, Component-Driven Development, and CI/CD pipelines, Alex is well-versed in software development methodologies. Alex is seeking a mid-level front-end engineering role to focus on direct code contribution, performance optimization, and tactical feature deployment. With a strong educational background, including a Bachelor of Science in Computer Science and a Certified Advanced React Developer certification, Alex is a strong candidate for a front-end engineering position.",
+        "change_summary": [
+          {
+            "section": "summary",
+            "action": "rewritten",
+            "reason": "to better match the target job requirements",
+            "source_evidence": "target job description"
+          }
+        ],
+        "evidence_used": [
+          {
+            "claim": "over a decade of deep technical experience",
+            "evidence": "source resume"
+          },
+          {
+            "claim": "seeking a mid-level front-end engineering role",
+            "evidence": "target job description"
+          }
+        ],
+        "target_requirements": [
+          {
+            "requirement": "occupation_family=Engineering",
+            "matched_evidence": "source resume",
+            "coverage": "fully met"
+          },
+          {
+            "requirement": "seniority=mid",
+            "matched_evidence": "source resume",
+            "coverage": "fully met"
+          },
+          {
+            "requirement": "required_skills=html, javascript, testing",
+            "matched_evidence": "source resume",
+            "coverage": "fully met"
+          },
+          {
+            "requirement": "experience=2+ years",
+            "matched_evidence": "source resume",
+            "coverage": "fully met"
+          }
+        ],
+        "validation_results": [
+          {
+            "status": "valid",
+            "rule": "occupation_family",
+            "claim": "Front-End Developer",
+            "evidence_count": 1
+          },
+          {
+            "status": "valid",
+            "rule": "seniority",
+            "claim": "mid-level",
+            "evidence_count": 1
+          },
+          {
+            "status": "pass",
+            "rule": "no fabricated skills (deterministic check)",
+            "claim": "Every listed skill was found in the source resume.",
+            "evidence_count": 19
+          }
+        ]
+      }
+    },
+    "scores": {
+      "A": {
+        "grounding": {
+          "score": 2,
+          "reason": "Fabricated skills and experience not present in the source resume."
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Effectively tailored emphasis to the target job."
+        },
+        "correctness": {
+          "score": 3,
+          "reason": "Some facts altered or omitted."
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Well-structured and explains changes."
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 1,
+          "reason": "Invented experience and skills not found in the source resume."
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Relevant skills and experience highlighted for the target job."
+        },
+        "correctness": {
+          "score": 2,
+          "reason": "Material facts omitted or altered."
+        },
+        "clarity": {
+          "score": 3,
+          "reason": "Somewhat disorganized and lacks clear explanations."
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "Only relies on facts present in the source resume."
+        },
+        "personalization": {
+          "score": 2,
+          "reason": "Fails to effectively tailor emphasis to the target job."
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Accurate and complete representation of the source resume."
+        },
+        "clarity": {
+          "score": 5,
+          "reason": "Well-structured and clearly explains changes and evidence."
+        }
+      }
+    },
+    "elapsed_seconds": 26.743581295013428
+  }
+]

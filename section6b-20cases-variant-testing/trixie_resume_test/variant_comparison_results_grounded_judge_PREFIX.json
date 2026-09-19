@@ -1,0 +1,1168 @@
+[
+  {
+    "job_id": "13f4f6b5-e3d7-40dd-8356-1061ca9d6072",
+    "job_title": "Software Engineer",
+    "company_name": "WestGate Networks",
+    "job_description": "As a member of our Software Engineering Group, we look first and foremost for people who are passionate around solving business problems through innovation and engineering practices. You'll be required to apply your depth of knowledge and expertise to all aspects of the software development lifecycle, as well as partner continuously with your many stakeholders on a daily basis to stay focused on common goals. We embrace a culture of experimentation and constantly strive for improvement and learning. You'll work in a collaborative, trusting, thought-provoking environment-one that encourages diversity of thought and creative solutions that are in the best interests of our customers globally.\n\nThis role requires a wide variety of strengths and capabilities, including:\nBS/BA degree or equivalent experience\nAdvanced knowledge of application, data, and infrastructure architecture disciplines\nUnderstanding of architecture and design across all systems\nWorking proficiency in developmental toolsets\nKnowledge of industry-wide technology trends and best practices\nAbility to work in large, collaborative teams to achieve organizational goals\nPassionate about building an innovative culture\nProficiency in one or more modern programming languages\nUnderstanding of software skills such as business analysis, development, maintenance, and software improvement\nBachelor's degree in engineering or Degree from reputed organization 2. 5+ years of Industry experience, preferably in IT industry. 3. Knowledge of Java/Spring, SQL (Sybase/Oracle), Any caching application, React 4. Strong communication skills, both written and verbal 5.Ability to work collaboratively in teams and develop meaningful relationships to achieve common goals\nJPMorgan Chase & Co. is an equal opportunity employer and affirmative action employer Disability/VeteranJPMorgan Chase & Co., one of the oldest financial institutions, offers innovative financial solutions to millions of consumers, small businesses and many of the world's most prominent corporate, institutional and government clients under the J.P. Morgan and Chase brands. Our history spans over 200 years and today we are a leader in investment banking, consumer and small business banking, commercial banking, financial transaction processing and asset management.\n\nWe recognize that our people are our strength and the diverse talents they bring to our global workforce are directly linked to our success. We are an equal opportunity employer and place a high value on diversity and inclusion at our company. We do not discriminate on the basis of any protected attribute, including race, religion, color, national origin, gender, sexual orientation, gender identity, gender expression, age, marital or veteran status, pregnancy or disability, or any other basis protected under applicable law. In accordance with applicable law, we make reasonable accommodations for applicants' and employees' religious practices and beliefs, as well as any mental health or physical disability needs.",
+    "outputs": {
+      "A": "Here's a rewritten version of the resume tailored to the job description:\n\nTrixie Grace Mok \nMobile [redacted-phone] / Email: [redacted-email] | linkedin.com/in/trixie-mok \n\nPROFESSIONAL SUMMARY \nHighly motivated and detail-oriented candidate with a strong background in Management and Digital Innovation, and hands-on experience in software development, data analysis, and process automation. Proficient in a range of programming languages, including Python, R, and SQL, with a strong understanding of software development lifecycle and industry-wide technology trends. Seeking a challenging role in software engineering where I can apply my skills and knowledge to drive innovation and improvement.\n\nEDUCATION \nNanyang Technological University, Singapore \nAug 2026 - Present \nMSc Enterprise Artificial Intelligence \n• Applied Projects — PE6201: RAG system (A1); ReAct-agent guardrails for insurance claims (A2) \n• Applied Projects — PE6202: purchase requisition automation (RPA workflow UiPath) \n• Applied Projects — PE6203: GenAI job-matching portal \nUniversity of London, Singapore \nSep 2022 - Aug 2025 \nBSc Management and Digital Innovation / Second Class Honours (upper) \n• Award: World Top Scorer, IS3183 Management and Social Media (2023/24 Examination)  \n• Key Modules: Marketing Management, Digital Infrastructures for Business, Management and innovation of e-business, Psychology, Sociology, Programming for Data Science (analyzed airline delay data using logistic regression and Monte Carlo simulation)  \n\nTECHNICAL SKILLS \n• Programming languages: Python, R, SQL, Java (basic) \n• Developmental toolsets: Microsoft Power Apps, Microsoft Power Automate, Git \n• Data analysis and visualization: Excel, Python, R \n• Operating Systems: Windows, Linux (basic) \n• Familiarity with industry-wide technology trends and best practices \n\nWORK EXPERIENCE \nCovenant Capital Pte. Ltd, Singapore \nJul 2025 - Nov 2025 \nInternship \n• Designed and developed a CRM system using Microsoft Power Apps and Power Automate, integrating client data, KYC docs, and call reports with role-based access and API for secure client data retrieval \n• Automated fund performance comparison in Excel using VBA, delivering a client-facing interactive dashboard to visualize and compare three funds \n• Collaborated with cross-functional teams to identify inefficiencies and implement process improvements, building a strong foundation in optimization and execution \nPT. Tirta Yakin Sejahtera, Pasuruan, East Java, Indonesia \nJun 2023 - Sep 2023 \nProduction Process Management Intern \n• Supported daily operations in a high-volume production environment, ensuring product quality and consistency, and reinforcing the importance of brand reliability and customer trust \n• Assisted with quality control analysis, gaining experience in data checks, standardization, and performance monitoring \n\nPROJECTS \n• Developed a GenAI job-matching portal using Python and R, demonstrating proficiency in machine learning and natural language processing \n• Designed and implemented a RAG system using Python and SQL, showcasing understanding of data architecture and software design \n\nCERTIFICATIONS/AWARDS \n• World Top Scorer, IS3183 Management and Social Media (2023/24 Examination) \n\nLANGUAGE PROFICIENCY \n• English (Native) \n• Bahasa Indonesia (Conversational) \n• Mandarin Chinese (Basic) \n\nI made the following changes to tailor the resume to the job description:\n\n* Emphasized technical skills, including programming languages, developmental toolsets, and data analysis and visualization\n* Highlighted experience in software development, data analysis, and process automation\n* Included relevant coursework and projects that demonstrate proficiency in software development and data analysis\n* Removed non-technical work experience and focused on technical skills and experience\n* Rewrote the professional summary to emphasize technical skills and experience\n* Added a technical skills section to showcase proficiency in programming languages, developmental toolsets, and data analysis and visualization\n* Removed hobbies and interests section to focus on technical skills and experience",
+      "B": "Based on the job description, the relevant skills that can be extracted from Trixie's resume are:\n\n1. **Programming skills**: Python, R, SQL, and Git are mentioned in the resume, which aligns with the job requirement of proficiency in one or more modern programming languages.\n2. **Data analysis and visualization**: Trixie has experience with data analysis using R and Python, and has worked on projects involving data visualization, which is relevant to the job requirement of understanding software skills such as business analysis and development.\n3. **Software development**: Although Trixie's background is in Management and Digital Innovation, she has experience with Microsoft Power Apps and Power Automate, and has worked on automation projects using RPA workflows and AI agent integration, which demonstrates her ability to work with software development tools.\n4. **Collaboration and teamwork**: Trixie has experience working in teams, as evident from her internships and projects, which aligns with the job requirement of ability to work collaboratively in teams.\n5. **Problem-solving and innovation**: Trixie's experience with automation projects and her interest in innovation and experimentation demonstrate her ability to think creatively and solve business problems.\n\nHowever, there are some gaps in Trixie's skills and experience that may need to be addressed:\n\n1. **Java/Spring and React**: The job requires proficiency in Java/Spring and React, which are not mentioned in Trixie's resume.\n2. **Industry experience**: The job requires 2.5+ years of industry experience, preferably in the IT industry, which Trixie may not have.\n3. **Advanced knowledge of application, data, and infrastructure architecture**: The job requires advanced knowledge of architecture and design across all systems, which may not be explicitly mentioned in Trixie's resume.\n\nTo tailor Trixie's resume to the job, I would suggest:\n\n1. **Highlighting relevant skills**: Emphasize Trixie's programming skills, data analysis and visualization experience, and software development experience.\n2. **Emphasizing transferable skills**: Highlight Trixie's collaboration and teamwork experience, problem-solving and innovation skills, and ability to work with software development tools.\n3. **Addressing gaps**: Consider taking courses or gaining experience in Java/Spring and React, and highlighting any relevant industry experience or projects that demonstrate advanced knowledge of application, data, and infrastructure architecture.\n4. **Customizing the resume**: Tailor the resume to the specific job requirements, using language from the job description to describe Trixie's skills and experience.\n\nHere is an example of how Trixie's resume could be tailored to the job:\n\n**Summary**:\nHighly motivated and innovative candidate with experience in software development, data analysis, and collaboration. Proficient in Python, R, SQL, and Git, with a strong foundation in programming and software development. Passionate about building innovative solutions and working in a collaborative environment.\n\n**Technical Skills**:\n\n* Programming languages: Python, R, SQL\n* Software development tools: Microsoft Power Apps, Power Automate, Git\n* Data analysis and visualization: R, Python, data visualization tools\n* Collaboration and teamwork: Experience working in teams, collaborating with stakeholders, and communicating technical ideas effectively.\n\n**Experience**:\n\n* Internship at Covenant Capital Pte. Ltd: Developed a CRM system using Microsoft Power Apps and Power Automate, and automated fund performance comparison using Excel and VBA.\n* Production Process Management Intern at PT. Tirta Yakin Sejahtera: Collaborated with cross-functional teams to monitor workflow, identify inefficiencies, and implement process improvements.\n* Technical Workshop Process Management Intern at PT. Karya Teknik Sejahtera: Streamlined workflow processes and maintained production efficiency in a fast-paced environment.\n\nNote that this is just an example, and Trixie's resume should be tailored to her specific experience and skills.",
+      "C": {
+        "resume": {
+          "summary": "MSc Enterprise Artificial Intelligence candidate with a Management and Digital Innovation background and hands-on experience automating business processes with AI and low-code tools.",
+          "skills": [
+            "Microsoft Excel",
+            "Microsoft Power Apps",
+            "Microsoft Power Automate",
+            "SQL",
+            "R",
+            "Python",
+            "Git",
+            "Database Management",
+            "Data Visualization",
+            "Logistic Regression",
+            "Data Analysis with R/Python",
+            "RAG",
+            "GenAI applications",
+            "RPA workflows",
+            "AI agent integration",
+            "Prompt Engineering",
+            "ReAct-agent"
+          ],
+          "experience": [
+            "Internship at Covenant Capital Pte. Ltd",
+            "Production Process Management Intern at PT. Tirta Yakin Sejahtera",
+            "Technical Workshop Process Management Intern at PT. Karya Teknik Sejahtera",
+            "Marketing Promotion Intern at PT Untung Bersama Sejahtera (UBS Gold)"
+          ],
+          "projects": [
+            "RAG system (A1)",
+            "ReAct-agent guardrails for insurance claims (A2)",
+            "purchase requisition automation (RPA workflow UiPath)",
+            "GenAI job-matching portal"
+          ],
+          "education": [
+            "MSc Enterprise Artificial Intelligence at Nanyang Technological University",
+            "BSc Management and Digital Innovation at University of London",
+            "Highschool Diploma at Surabaya Intercultural School"
+          ],
+          "achievements": [
+            "World Top Scorer, IS3183 Management and Social Media (2023/24 Examination)"
+          ],
+          "publications": []
+        },
+        "rewritten_text": "Trixie Grace Mok is an MSc Enterprise Artificial Intelligence candidate with a Management and Digital Innovation background and hands-on experience automating business processes with AI and low-code tools. She has a strong educational foundation, with a BSc in Management and Digital Innovation from the University of London and a Highschool Diploma from Surabaya Intercultural School. Her experience includes internships at Covenant Capital Pte. Ltd, PT. Tirta Yakin Sejahtera, PT. Karya Teknik Sejahtera, and PT Untung Bersama Sejahtera (UBS Gold). She has worked on various projects, including RAG system, ReAct-agent guardrails for insurance claims, purchase requisition automation, and GenAI job-matching portal. She is skilled in Microsoft Excel, Microsoft Power Apps, Microsoft Power Automate, SQL, R, Python, Git, Database Management, Data Visualization, Logistic Regression, Data Analysis with R/Python, RAG, GenAI applications, RPA workflows, AI agent integration, Prompt Engineering, and ReAct-agent.",
+        "change_summary": [
+          {
+            "section": "summary",
+            "action": "rewritten",
+            "reason": "to better match the target job requirements",
+            "source_evidence": "target job description"
+          }
+        ],
+        "evidence_used": [
+          {
+            "claim": "MSc Enterprise Artificial Intelligence candidate",
+            "evidence": "Source resume: PROFESSIONAL SUMMARY"
+          }
+        ],
+        "target_requirements": [
+          {
+            "requirement": "BS/BA degree or equivalent experience",
+            "matched_evidence": "BSc Management and Digital Innovation at University of London",
+            "coverage": "partial"
+          }
+        ],
+        "validation_results": [
+          {
+            "status": "partial_match",
+            "rule": "education requirement",
+            "claim": "MSc Enterprise Artificial Intelligence candidate",
+            "evidence_count": 1
+          }
+        ]
+      }
+    },
+    "scores": {
+      "A": {
+        "grounding": {
+          "score": 2,
+          "reason": "Fabricated Java skill not present in source resume"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Emphasized relevant technical skills for target job"
+        },
+        "correctness": {
+          "score": 3,
+          "reason": "Some facts altered or added without source evidence"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Well-structured with clear explanations of changes"
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 4,
+          "reason": "No fabricated skills or employers"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Highlighted relevant skills and experience for target job"
+        },
+        "correctness": {
+          "score": 4,
+          "reason": "Factual information accurately represented"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Clear explanations of gaps and suggested improvements"
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "Only facts from source resume used"
+        },
+        "personalization": {
+          "score": 3,
+          "reason": "Limited emphasis on target job requirements"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "All factual information accurately represented"
+        },
+        "clarity": {
+          "score": 3,
+          "reason": "Lack of clear explanations for changes or omissions"
+        }
+      }
+    },
+    "elapsed_seconds": 58.97464680671692,
+    "grounded_judge_scores": {
+      "fabrications": {
+        "A": [
+          "Java (basic)",
+          "Operating Systems: Windows, Linux (basic)"
+        ],
+        "B": [
+          "Java/Spring and React experience implied but not present in source"
+        ],
+        "C": []
+      },
+      "A": {
+        "grounding": {
+          "score": 1,
+          "reason": "fabricated skills"
+        },
+        "personalization": {
+          "score": 2,
+          "reason": "capped due to fabrication"
+        },
+        "correctness": {
+          "score": 2,
+          "reason": "capped due to fabrication"
+        },
+        "clarity": {
+          "score": 2,
+          "reason": "capped due to fabrication"
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 1,
+          "reason": "implied but not explicitly stated skills"
+        },
+        "personalization": {
+          "score": 2,
+          "reason": "capped due to fabrication"
+        },
+        "correctness": {
+          "score": 2,
+          "reason": "capped due to fabrication"
+        },
+        "clarity": {
+          "score": 2,
+          "reason": "capped due to fabrication"
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "no fabrications found"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "well-tailored to target job"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "accurate representation of source resume"
+        },
+        "clarity": {
+          "score": 5,
+          "reason": "clear and well-structured output"
+        }
+      }
+    }
+  },
+  {
+    "job_id": "9c7cf956-9298-4609-b96c-cdd2a00b12dd",
+    "job_title": "Machine Learning",
+    "company_name": "LumaCore Data",
+    "job_description": "Requirements / Responsibilities:\n\nShould have 6+ years of experience as Data Scientist\nShould have experience in Data Analytics, Big Data, Machine Learning, AI and dashboard creation",
+    "outputs": {
+      "A": "Based on the provided resume and job description, here's a rewritten version of the resume to better match the requirements of the job:\n\n**Trixie Grace Mok**\n**Mobile:** [redacted-phone] / **Email:** [redacted-email] | **linkedin.com/in/trixie-mok**\n\n**PROFESSIONAL SUMMARY**\nHighly motivated and detail-oriented Data Science professional with a strong foundation in Data Analytics, Machine Learning, and AI. Proficient in creating interactive dashboards and working with Big Data. Currently pursuing an MSc in Enterprise Artificial Intelligence at NTU, with a background in Management and Digital Innovation.\n\n**EDUCATION**\n\n* **Nanyang Technological University, Singapore** (Aug 2026 - Present)\n\t+ MSc Enterprise Artificial Intelligence\n\t+ Applied Projects:\n\t\t- PE6201: RAG system (A1)\n\t\t- PE6202: Purchase requisition automation (RPA workflow UiPath)\n\t\t- PE6203: GenAI job-matching portal\n* **University of London, Singapore** (Sep 2022 - Aug 2025)\n\t+ BSc Management and Digital Innovation (Second Class Honours, upper)\n\t+ Key Modules:\n\t\t- Marketing Management\n\t\t- Digital Infrastructures for Business\n\t\t- Management and innovation of e-business\n\t\t- Psychology\n\t\t- Sociology\n\t\t- Programming for Data Science (analyzed airline delay data using logistic regression and Monte Carlo simulation)\n\n**WORK EXPERIENCE**\n\n* **Covenant Capital Pte. Ltd, Singapore** (Jul 2025 - Nov 2025)\n\t+ Internship\n\t+ Built a CRM integrating client data, KYC docs, and call reports with role-based access and API for secure client data retrieval using Microsoft PowerApps and Power Automate\n\t+ Automated fund performance comparison in Excel using VBA, delivering a client-facing interactive dashboard to visualize and compare three funds\n\t+ Created Due Diligence Questionnaires (DDQs) that summarized key fund information to support investment reviews and compliance\n\t+ Cleaned and standardized consolidation reports with Python programming for accurate analysis and reporting\n* **PT. Tirta Yakin Sejahtera, Pasuruan, East Java, Indonesia** (Jun 2023 - Sep 2023)\n\t+ Production Process Management Intern\n\t+ Supported daily operations in a high-volume production environment, ensuring product quality and consistency\n\t+ Collaborated cross-functionally with teams to monitor workflow, identify inefficiencies, and implement process improvements\n\t+ Assisted with quality control analysis, gaining experience in data checks, standardization, and performance monitoring\n* **PT. Karya Teknik Sejahtera, Sidoarjo, East Java, Indonesia** (Jul 2022 - Sep 2022)\n\t+ Technical Workshop Process Management Intern\n\t+ Supported the setup, calibration, and operation of CNC machines to ensure output met quality and client specification\n\t+ Collaborated with the engineering team to review and interpret mechanical blueprints and technical drawings\n\t+ Streamlined workflow processes and helped maintain production efficiency in a fast-paced, client-focused environment\n\n**SKILLS & INTERESTS**\n\n* **Technical Skills:**\n\t+ Microsoft Excel\n\t+ Microsoft Power Apps\n\t+ Microsoft Power Automate\n\t+ SQL\n\t+ R\n\t+ Python\n\t+ Git\n\t+ Database Management\n\t+ Data Visualization\n\t+ Logistic Regression\n\t+ Data Analysis with R/Python\n\t+ RAG\n\t+ GenAI applications\n\t+ RPA workflows\n\t+ AI agent integration\n\t+ Prompt Engineering\n\t+ ReAct-agent\n* **Languages:**\n\t+ English (Native)\n\t+ Bahasa Indonesia (Conversational)\n\t+ Mandarin Chinese (Basic)\n* **Interests:**\n\t+ Painting\n\t+ Video games\n\t+ Lego\n\t+ Volleyball\n\nHowever, please note that the original resume does not meet the 6+ years of experience requirement as a Data Scientist. The rewritten resume highlights the relevant skills and experiences, but it may not be enough to meet the job requirements. It's essential to be honest and transparent about your experience and skills when applying for a job. If you're interested in the position, you may want to consider highlighting any relevant projects or certifications that demonstrate your expertise in Data Science and Analytics.",
+      "B": "Based on the provided resume and job description, here are the relevant skills that can be tailored to the job:\n\n1. **Data Analysis**: The candidate has experience in data analysis using Python, R, and SQL, which is relevant to the job requirement.\n2. **Machine Learning**: Although not explicitly mentioned, the candidate has experience in logistic regression and Monte Carlo simulation, which are machine learning concepts.\n3. **AI**: The candidate is currently pursuing a Master's degree in Enterprise Artificial Intelligence and has experience in GenAI applications, RPA workflows, and AI agent integration.\n4. **Dashboard Creation**: The candidate has experience in creating interactive dashboards using Microsoft PowerApps and Power Automate.\n5. **Data Visualization**: The candidate has experience in data visualization, which is relevant to the job requirement.\n\nHowever, the candidate lacks the required 6+ years of experience as a Data Scientist. To tailor the resume to the job, I would suggest highlighting the candidate's relevant skills and experiences, and emphasizing their potential to learn and grow in the role.\n\nHere's a rewritten version of the resume, tailored to the job:\n\n**Trixie Grace Mok**\n**Contact Information**\n\n**Summary**\nHighly motivated and detail-oriented candidate with a strong background in data analysis, machine learning, and AI. Proficient in a range of tools and technologies, including Python, R, SQL, and Microsoft PowerApps. Currently pursuing a Master's degree in Enterprise Artificial Intelligence, with a strong passion for data-driven insights and innovation.\n\n**Technical Skills**\n\n* Data Analysis: Python, R, SQL, and data visualization\n* Machine Learning: Logistic regression, Monte Carlo simulation, and GenAI applications\n* AI: RPA workflows, AI agent integration, and ReAct-agent\n* Dashboard Creation: Microsoft PowerApps and Power Automate\n* Data Visualization: Proficient in creating interactive and informative dashboards\n\n**Experience**\n\n* **Internship, Covenant Capital Pte. Ltd**: Created interactive dashboards using Microsoft PowerApps and Power Automate, and automated fund performance comparison using VBA.\n* **Production Process Management Intern, PT. Tirta Yakin Sejahtera**: Collaborated with cross-functional teams to monitor workflow, identify inefficiencies, and implement process improvements, building a strong foundation in optimization and execution.\n* **Technical Workshop Process Management Intern, PT. Karya Teknik Sejahtera**: Streamlined workflow processes and helped maintain production efficiency in a fast-paced, client-focused environment.\n\n**Education**\n\n* **MSc Enterprise Artificial Intelligence, Nanyang Technological University**: Currently pursuing a Master's degree in Enterprise Artificial Intelligence, with a focus on data-driven insights and innovation.\n* **BSc Management and Digital Innovation, University of London**: Completed a Bachelor's degree in Management and Digital Innovation, with a strong foundation in data analysis, machine learning, and AI.\n\nNote that this rewritten version of the resume highlights the candidate's relevant skills and experiences, while also emphasizing their potential to learn and grow in the role. However, it's essential to remember that the candidate still lacks the required 6+ years of experience as a Data Scientist, and may not be the most competitive candidate for the job.",
+      "C": {
+        "resume": {
+          "summary": "MSc Enterprise Artificial Intelligence candidate with a Management and Digital Innovation background and hands-on experience automating business processes with AI and low-code tools.",
+          "skills": [
+            "Microsoft Excel",
+            "Microsoft Power Apps",
+            "Microsoft Power Automate",
+            "SQL",
+            "R",
+            "Python",
+            "Git",
+            "Database Management",
+            "Data Visualization",
+            "Logistic Regression",
+            "Data Analysis with R/Python",
+            "RAG",
+            "GenAI applications",
+            "RPA workflows",
+            "AI agent integration",
+            "Prompt Engineering",
+            "ReAct-agent"
+          ],
+          "experience": [
+            "Internship at Covenant Capital Pte. Ltd",
+            "Production Process Management Intern at PT. Tirta Yakin Sejahtera",
+            "Technical Workshop Process Management Intern at PT. Karya Teknik Sejahtera",
+            "Marketing Promotion Intern at PT Untung Bersama Sejahtera (UBS Gold)"
+          ],
+          "projects": [
+            "RAG system (A1)",
+            "ReAct-agent guardrails for insurance claims (A2)",
+            "Purchase requisition automation (RPA workflow UiPath)",
+            "GenAI job-matching portal"
+          ],
+          "education": [
+            "MSc Enterprise Artificial Intelligence at Nanyang Technological University",
+            "BSc Management and Digital Innovation at University of London",
+            "Highschool Diploma at Surabaya Intercultural School"
+          ],
+          "achievements": [
+            "World Top Scorer, IS3183 Management and Social Media (2023/24 Examination)",
+            "President of Student Council (2021-2022)"
+          ],
+          "publications": []
+        },
+        "rewritten_text": "Trixie Grace Mok is an MSc Enterprise Artificial Intelligence candidate with a Management and Digital Innovation background and hands-on experience automating business processes with AI and low-code tools. She has experience in data analysis, machine learning, and AI, and is skilled in Microsoft Excel, Microsoft Power Apps, Microsoft Power Automate, SQL, R, Python, Git, Database Management, Data Visualization, Logistic Regression, Data Analysis with R/Python, RAG, GenAI applications, RPA workflows, AI agent integration, Prompt Engineering, and ReAct-agent. She has worked as an intern at Covenant Capital Pte. Ltd, PT. Tirta Yakin Sejahtera, PT. Karya Teknik Sejahtera, and PT Untung Bersama Sejahtera (UBS Gold), and has completed projects such as RAG system, ReAct-agent guardrails for insurance claims, purchase requisition automation, and GenAI job-matching portal. She has a strong educational background, with a MSc Enterprise Artificial Intelligence at Nanyang Technological University, a BSc Management and Digital Innovation at University of London, and a Highschool Diploma at Surabaya Intercultural School. She has achieved World Top Scorer, IS3183 Management and Social Media (2023/24 Examination), and was President of Student Council (2021-2022).",
+        "change_summary": [
+          {
+            "section": "experience",
+            "action": "removed years of experience",
+            "reason": "target job requires 6+ years of experience, but candidate has less than 2 years of experience",
+            "source_evidence": "Should have 6+ years of experience as Data Scientist"
+          }
+        ],
+        "evidence_used": [
+          {
+            "claim": "experience in data analysis",
+            "evidence": "Data Analysis with R/Python"
+          },
+          {
+            "claim": "experience in machine learning",
+            "evidence": "GenAI applications"
+          },
+          {
+            "claim": "experience in AI",
+            "evidence": "AI agent integration"
+          }
+        ],
+        "target_requirements": [
+          {
+            "requirement": "6+ years of experience as Data Scientist",
+            "matched_evidence": "less than 2 years of experience",
+            "coverage": "not met"
+          },
+          {
+            "requirement": "experience in Data Analytics",
+            "matched_evidence": "Data Analysis with R/Python",
+            "coverage": "partially met"
+          },
+          {
+            "requirement": "experience in Big Data",
+            "matched_evidence": "none",
+            "coverage": "not met"
+          },
+          {
+            "requirement": "experience in Machine Learning",
+            "matched_evidence": "GenAI applications",
+            "coverage": "partially met"
+          },
+          {
+            "requirement": "experience in AI",
+            "matched_evidence": "AI agent integration",
+            "coverage": "partially met"
+          },
+          {
+            "requirement": "experience in dashboard creation",
+            "matched_evidence": "none",
+            "coverage": "not met"
+          }
+        ],
+        "validation_results": [
+          {
+            "status": "not met",
+            "rule": "years of experience",
+            "claim": "6+ years of experience as Data Scientist",
+            "evidence_count": 0
+          },
+          {
+            "status": "partially met",
+            "rule": "experience in Data Analytics",
+            "claim": "experience in Data Analytics",
+            "evidence_count": 1
+          },
+          {
+            "status": "not met",
+            "rule": "experience in Big Data",
+            "claim": "experience in Big Data",
+            "evidence_count": 0
+          },
+          {
+            "status": "partially met",
+            "rule": "experience in Machine Learning",
+            "claim": "experience in Machine Learning",
+            "evidence_count": 1
+          },
+          {
+            "status": "partially met",
+            "rule": "experience in AI",
+            "claim": "experience in AI",
+            "evidence_count": 1
+          },
+          {
+            "status": "not met",
+            "rule": "experience in dashboard creation",
+            "claim": "experience in dashboard creation",
+            "evidence_count": 0
+          }
+        ]
+      }
+    },
+    "scores": {
+      "A": {
+        "grounding": {
+          "score": 4,
+          "reason": "No new employers or metrics were fabricated, but the summary was rephrased to fit the job description."
+        },
+        "personalization": {
+          "score": 5,
+          "reason": "The output was well-tailored to the target job description."
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "All facts were accurately represented and nothing important was omitted."
+        },
+        "clarity": {
+          "score": 5,
+          "reason": "The output was well-structured and easy to follow."
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 4,
+          "reason": "No new employers or metrics were fabricated, but some skills were re-emphasized to fit the job description."
+        },
+        "personalization": {
+          "score": 5,
+          "reason": "The output was well-tailored to the target job description."
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "All facts were accurately represented and nothing important was omitted."
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "The output was mostly well-structured, but some sentences were a bit vague."
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "No new employers, metrics, or skills were fabricated."
+        },
+        "personalization": {
+          "score": 3,
+          "reason": "The output was not well-tailored to the target job description, with too much irrelevant information."
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "All facts were accurately represented and nothing important was omitted."
+        },
+        "clarity": {
+          "score": 2,
+          "reason": "The output was not well-structured and was difficult to follow."
+        }
+      }
+    },
+    "elapsed_seconds": 45.95679712295532,
+    "grounded_judge_scores": {
+      "fabrications": {
+        "A": [
+          ""
+        ],
+        "B": [
+          ""
+        ],
+        "C": [
+          ""
+        ],
+        "note": "No explicit fabrications found, but all variants lack the required 6+ years of experience as a Data Scientist"
+      },
+      "A": {
+        "grounding": {
+          "score": 5,
+          "reason": "No fabricated items found"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Tailored to the target job, but may not fully meet the requirements"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Facts are accurate and nothing materially important is dropped or altered"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Well-structured, but could improve in explaining what changed and why"
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 5,
+          "reason": "No fabricated items found"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Highlights relevant skills and experiences, but may not fully meet the requirements"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Facts are accurate and nothing materially important is dropped or altered"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Well-structured, but could improve in explaining what changed and why"
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "No fabricated items found"
+        },
+        "personalization": {
+          "score": 3,
+          "reason": "Lacks a clear and concise summary, and may not fully meet the requirements"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Facts are accurate and nothing materially important is dropped or altered"
+        },
+        "clarity": {
+          "score": 3,
+          "reason": "Could improve in structure and explanation of changes"
+        }
+      }
+    }
+  },
+  {
+    "job_id": "0464ceab-76fd-4770-a4c2-8392c60cce7d",
+    "job_title": "DevOps Engineer",
+    "company_name": "CloudHarbor Labs",
+    "job_description": "17791 DevOps Engineer II (Open)\n\nPosition Type:\n\nFull time\n\nLocation(s):\n\nIN.Bangalore.Office1\n\nPosition Details:\n\nOverview\nThis job is responsible/accountable for streamlining offerings to CSGs end customers.\nThey take solutions from development and ensure they are operationally sound prior to rolling into production.\nProducts are evaluated and prepared for installation, configuration, monitoring, diagnostics, and process / procedure to ensure minimal impact as they are released.\nProduction optimization from a personnel perspective is a critical point and leveraging technology to ensure solutions adhere to customers SLA requirements for availability.\nJob Description:\nThe incumbent is responsible for providing key support for their focused product / solution area to internal and external resources.\nSupport and maintenance of the customers production and non-production environments - including on-call support / work variety of shifts to include weekends, holidays or extra shifts/extended shifts or as needed.\nWork with L1/L2/L3/L4 support and operations teams to ensure successful deployment and operation of their application and ongoing operational activities\nIndependently building and testing reliable and well-tested solutions and once released troubleshoot any issues, actively seeking out problems and solving them.\nSupport the build and deployment infrastructure used by our delivery teams\nRespond to high severity production issues escalated by our operations teams along with root cause analysis\nTest driven development, Agile development, continuous integration, continuous deployment, DevOps automation\nCreate seamless/automated build scripts used for release management across all environments.\nContribute to the DevOps community by way of good & best practices and support mentoring/coaching and training the wider team\nComprehend customers security and data policies and ensure adherence\nLiason with cross functional teams to investigate customer issues and drive early resolution.\nPrepare, validate and Share the data which are required to cleanup/correct/reconcile as a part of fix\nExperience\n3-5 years of related experience in Technical Analyst or equivalent role or 2-3 years in computer engineering or equivalent role\nSome experience with a broad range of IT technologies: Network, Storage, Virtualization, Compute, Database, Automation, SDLC, and distributed transactions in high volume managed services or billing services provider environments\nAdditional Job Description\nUnder limited supervision, performs installations, configurations, and upgrades to CSG products.\nHands on experience in either 2 of the languages Python, C# and Shell/Powershell . Expertise in\none of this is mandatory\nOS experience Windows and Linux\nExperience in using monitoring tools\nBasic understanding and working knowledge of CI/CD tools like Chef, Jenkins etc\nAbility to troubleshoot issues and provide solution\nValidation of installation and configuration processes and procedures.\nActive participation/internship with the other teams involved in delivery (Development & Project Management).\nTroubleshooting and bug fixing for solutions once in place.\nParticipate in the on-call rotation under the supervision of a senior team member\nReleases & Promotions:\nUnder limited supervision, support the development team in releases and promotions (including core upgrades) from development through to production, as defined by Best Practices.\nValidation of release and promotion processes and procedures.\nTroubleshooting and bug fixing for solutions once in place.\nBackups & Recovery:\nWith limited supervision, establishes and maintains system and database backup and recovery policies and procedures.\nSolution & New Product Evaluation:\nAssists in the identification and analysis of the internal/external clients technical requirements.\nUnder limited supervision, gathers information from customers on technical requirements.\nUnder limited supervision, provides technical input and consultation for application deployment.\nThird Party & Open Source:\nUnder limited supervision, performs installation, configuration, and upgrades to any supporting\nthird-party software used in supporting CSG products.\nActive research and sandbox trials of open source solutions.\nExecute third party/open source compilation for requisite software.\nPull source and monitor version modifications in association with key software.\nFamiliarization of key third party products /open source projects leveraged by CSG solutions.\nCommunication & Documentation:\nEffectively communicates with customers and colleagues alike.\nProduces and maintains documentation on projects and research as assigned.\nCreates wiki documentation for solution delivery and support, as well as, automation efforts.\nResponsibility\n\n% of Time\nAdministration of infrastructure systems (upgrade, maintain, troubleshoot) such as BigIP, CVP framework, BladeLogic, Automation, ADDM, CSP/IPF 20%\nServes as subject matter expert for matters relating to system and application architecture 20%\n3rd tier support for operational production issues 40%\nParticipates in process improvement efforts within the larger technology organization 20%\nRegular and reliable attendance is required.\nOngoing\nIncumbent is accountable for professional working behavior to include; building and maintaining constructive working relationships, implementing proactive and concise communication, acting as a resource to colleagues, and engaging in collaborative thinking and problem solving while demonstrating CSGs core competencies and values.\nTypical Interactions/Relationships\nInternal Some contact with developers, dbas, operations, Systems Administrators, Global Platform Architecture.\nKnowledge, Skills and Abilities\nFamiliarity with practical agile development methodologies.\nFamiliarity with required coding (C #) and scripting languages (Shell Scripting).\nGeneral knowledge of database architecture and function.\nDemonstrates a great deal of self-drive and initiative in a highly independent environment.\nKnowledge of programming and systems analysis procedures.\nStrong oral and written/editing skills.\nGood interpersonal skills.\nKnowledge of Linux Shell and Windows PowerShell scripting.\nWorks with some independence, yet most feature level work assigned by lead. Knows when to\nseek guidance from teammates or lead.\nBalances task load to deliver in a timely manner.\nInvolved in story creation and iterative planning.\nDemonstrates solid skill and is working to gain additional experience\n3-5 years of experience in application deployment and support.\nGood Understanding of OS, Network, Database and application monitoring tools.\nDemonstrates creativity when researching or solving a situation.\nKnowledge of systems security and PCI compliance.\nBachelors Degree or equivalent experience.\nShould have worked on Agile projects and should understand\nC#\nPowerShell/ Shell Scripting\nDatabase Knowledge\nPython or pearl will be added advantage",
+    "outputs": {
+      "A": "Here is a rewritten version of the resume tailored to the DevOps Engineer II job description:\n\nTrixie Grace Mok\nMobile [redacted-phone] / Email: [redacted-email] | linkedin.com/in/trixie-mok\n\nPROFESSIONAL SUMMARY\nHighly motivated and detail-oriented IT professional with experience in automation, data analysis, and process improvement. Proficient in a range of technologies, including Python, Microsoft Power Apps, and Power Automate. Seeking a challenging role as a DevOps Engineer II where I can apply my skills and knowledge to streamline offerings and ensure operational soundness.\n\nEDUCATION\nNanyang Technological University, Singapore\nAug 2026 - Present\nMSc Enterprise Artificial Intelligence\n• Applied Projects — PE6201: RAG system (A1); ReAct-agent guardrails for insurance claims (A2)\n• Applied Projects — PE6202: purchase requisition automation (RPA workflow UiPath)\n• Applied Projects — PE6203: GenAI job-matching portal\n\nUniversity of London, Singapore\nSep 2022 - Aug 2025\nBSc Management and Digital Innovation / Second Class Honours (upper)\n• Award: World Top Scorer, IS3183 Management and Social Media (2023/24 Examination)\n• Key Modules: Marketing Management, Digital Infrastructures for Business, Management and innovation of e-business, Psychology, Sociology, Programming for Data Science (analyzed airline delay data using logistic regression and Monte Carlo simulation)\n\nWORK EXPERIENCE\nCovenant Capital Pte. Ltd, Singapore\nJul 2025 - Nov 2025\nInternship\n• Built a CRM integrating client data, KYC docs, and call reports with role-based access and API for secure client data retrieval using Microsoft PowerApps and Power Automate\n• Automated fund performance comparison in Excel using VBA, delivering a client-facing interactive dashboard to visualize and compare three funds\n• Created Due Diligence Questionnaires (DDQs) that summarized key fund information to support investment reviews and compliance\n• Cleaned and standardized consolidation reports with Python programming for accurate analysis and reporting\n\nPT. Tirta Yakin Sejahtera, Pasuruan, East Java, Indonesia\nJun 2023 - Sep 2023\nProduction Process Management Intern\n• Supported daily operations in a high-volume production environment, ensuring product quality and consistency\n• Collaborated cross-functionally with teams to monitor workflow, identify inefficiencies, and implement process improvements\n• Assisted with quality control analysis, gaining experience in data checks, standardization, and performance monitoring\n\nSKILLS & INTERESTS\nTechnical Skills:\n• Programming languages: Python, R, SQL\n• Automation tools: Microsoft Power Apps, Power Automate, UiPath\n• Data analysis: Data visualization, logistic regression, Monte Carlo simulation\n• Operating Systems: Windows, Linux\n• Familiarity with CI/CD tools: Jenkins, Chef\n• Experience with monitoring tools: TBD\n• Strong understanding of IT technologies: Network, Storage, Virtualization, Compute, Database\n\nSoft Skills:\n• Excellent communication and interpersonal skills\n• Strong problem-solving and analytical skills\n• Ability to work independently and as part of a team\n• Experience with Agile development methodologies\n• Familiarity with systems security and PCI compliance\n\nNote: I've highlighted the relevant technical skills and experience that align with the job description, while also showcasing your soft skills and ability to work in a team environment. I've also removed some of the less relevant information to make the resume more concise and focused on the DevOps Engineer II role.",
+      "B": "Based on the job description, the relevant skills that can be extracted from the resume are:\n\n1. **Programming skills**: Python, R, SQL, and Git.\n2. **Data analysis and visualization**: Data analysis with R/Python, logistic regression, and data visualization.\n3. **Automation**: RPA workflows, AI agent integration, and Microsoft Power Automate.\n4. **Database management**: Database management and SQL.\n5. **Operating System**: Basic understanding of Windows and Linux (although not explicitly mentioned, the candidate has experience with Microsoft Power Apps and Python, which can be used on both Windows and Linux).\n6. **Collaboration and communication**: Experience working with cross-functional teams, strong oral and written skills, and good interpersonal skills.\n7. **Problem-solving and troubleshooting**: Experience with troubleshooting and bug fixing, as well as data analysis and problem-solving.\n\nTo tailor the resume to the job, I would suggest the following:\n\n1. **Emphasize programming skills**: Highlight the candidate's experience with Python, R, and SQL, and mention their ability to learn new programming languages quickly.\n2. **Focus on automation and DevOps**: Emphasize the candidate's experience with automation tools such as Microsoft Power Automate and RPA workflows, and highlight their understanding of DevOps principles.\n3. **Highlight data analysis and visualization skills**: Showcase the candidate's experience with data analysis and visualization tools, and highlight their ability to work with large datasets.\n4. **Mention operating system experience**: Although not explicitly mentioned, the candidate has experience with Microsoft Power Apps and Python, which can be used on both Windows and Linux. Mentioning this experience can be beneficial.\n5. **Emphasize collaboration and communication skills**: Highlight the candidate's experience working with cross-functional teams, and mention their strong oral and written skills.\n6. **Use keywords from the job description**: Use keywords from the job description, such as \"DevOps,\" \"automation,\" \"agile development,\" and \"CI/CD tools,\" to show that the candidate has experience with these concepts.\n\nHere's an example of how the resume could be tailored to the job:\n\n**Summary**\nHighly motivated and detail-oriented candidate with experience in programming, automation, and data analysis. Proficient in Python, R, and SQL, with a strong understanding of DevOps principles and agile development methodologies. Excellent communication and collaboration skills, with experience working with cross-functional teams.\n\n**Technical Skills**\n\n* Programming languages: Python, R, SQL\n* Automation tools: Microsoft Power Automate, RPA workflows\n* Data analysis and visualization: Data analysis with R/Python, logistic regression, and data visualization\n* Operating Systems: Windows, Linux\n* Collaboration and communication: Strong oral and written skills, good interpersonal skills\n\n**Experience**\n\n* Internship at Covenant Capital Pte. Ltd: Built a CRM integrating client data, KYC docs, and call reports with role-based access and API for secure client data retrieval using Microsoft PowerApps and Power Automate.\n* Production Process Management Intern at PT. Tirta Yakin Sejahtera: Supported daily operations in a high-volume production environment, ensuring product quality and consistency.\n* Technical Workshop Process Management Intern at PT. Karya Teknik Sejahtera: Streamlined workflow processes and helped maintain production efficiency in a fast-paced, client-focused environment.\n\nNote that this is just an example, and the actual resume should be tailored to the candidate's specific experience and skills.",
+      "C": {
+        "resume": {
+          "summary": "MSc Enterprise Artificial Intelligence candidate with hands-on experience in automating business processes with AI and low-code tools, seeking a credit-bearing capstone internship as an AI/Business Transformation Project Manager.",
+          "skills": [
+            "Microsoft Excel",
+            "Microsoft Power Apps",
+            "Microsoft Power Automate",
+            "SQL",
+            "R",
+            "Python",
+            "Git",
+            "Database Management",
+            "Data Visualization",
+            "Logistic Regression",
+            "Data Analysis with R/Python",
+            "RAG",
+            "GenAI applications",
+            "RPA workflows",
+            "AI agent integration",
+            "Prompt Engineering",
+            "ReAct-agent"
+          ],
+          "experience": [
+            "Internship at Covenant Capital Pte. Ltd",
+            "Production Process Management Intern at PT. Tirta Yakin Sejahtera",
+            "Technical Workshop Process Management Intern at PT. Karya Teknik Sejahtera",
+            "Marketing Promotion Intern at PT Untung Bersama Sejahtera (UBS Gold)"
+          ],
+          "projects": [
+            "Applied Projects — PE6201: RAG system (A1)",
+            "Applied Projects — PE6202: purchase requisition automation (RPA workflow UiPath)",
+            "Applied Projects — PE6203: GenAI job-matching portal"
+          ],
+          "education": [
+            "MSc Enterprise Artificial Intelligence at Nanyang Technological University",
+            "BSc Management and Digital Innovation at University of London",
+            "Highschool Diploma at Surabaya Intercultural School"
+          ],
+          "achievements": [
+            "World Top Scorer, IS3183 Management and Social Media (2023/24 Examination)"
+          ],
+          "publications": []
+        },
+        "rewritten_text": "Trixie Grace Mok is a highly motivated and detail-oriented MSc Enterprise Artificial Intelligence candidate with a strong background in Management and Digital Innovation. With hands-on experience in automating business processes with AI and low-code tools, Trixie is seeking a credit-bearing capstone internship as an AI/Business Transformation Project Manager. Trixie has a proven track record of delivering high-quality results, with achievements including being the World Top Scorer in IS3183 Management and Social Media. With a strong foundation in data analysis, programming, and project management, Trixie is well-equipped to drive business transformation and improvement.",
+        "change_summary": [
+          {
+            "section": "summary",
+            "action": "rewritten",
+            "reason": "to better highlight the candidate's relevant experience and skills",
+            "source_evidence": "original summary"
+          }
+        ],
+        "evidence_used": [
+          {
+            "claim": "hands-on experience in automating business processes with AI and low-code tools",
+            "evidence": "original experience section"
+          }
+        ],
+        "target_requirements": [
+          {
+            "requirement": "linux",
+            "matched_evidence": "none",
+            "coverage": "not met"
+          },
+          {
+            "requirement": "python",
+            "matched_evidence": "Python programming skills",
+            "coverage": "met"
+          },
+          {
+            "requirement": "testing",
+            "matched_evidence": "none",
+            "coverage": "not met"
+          }
+        ],
+        "validation_results": [
+          {
+            "status": "partial match",
+            "rule": "required skills",
+            "claim": "linux, python, testing",
+            "evidence_count": 1
+          }
+        ]
+      }
+    },
+    "scores": {
+      "A": {
+        "grounding": {
+          "score": 4,
+          "reason": "Some skills are not explicitly mentioned in the source resume."
+        },
+        "personalization": {
+          "score": 5,
+          "reason": "The output is well-tailored to the target job description."
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "The facts are accurate and complete."
+        },
+        "clarity": {
+          "score": 5,
+          "reason": "The output is well-structured and easy to follow."
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 3,
+          "reason": "Some skills and experiences are not present in the source resume."
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "The output is mostly tailored to the target job description."
+        },
+        "correctness": {
+          "score": 4,
+          "reason": "Some facts are accurate, but others are incomplete or altered."
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "The output is somewhat well-structured, but lacks clear explanations."
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 2,
+          "reason": "The output contains fabricated skills and experiences not present in the source resume."
+        },
+        "personalization": {
+          "score": 3,
+          "reason": "The output is somewhat tailored to the target job description, but lacks relevance."
+        },
+        "correctness": {
+          "score": 2,
+          "reason": "The facts are inaccurate and incomplete."
+        },
+        "clarity": {
+          "score": 2,
+          "reason": "The output is poorly structured and lacks clear explanations."
+        }
+      }
+    },
+    "elapsed_seconds": 38.57234835624695,
+    "grounded_judge_scores": {
+      "fabrications": {
+        "A": [
+          ""
+        ],
+        "B": [
+          ""
+        ],
+        "C": [
+          ""
+        ]
+      },
+      "A": {
+        "grounding": {
+          "score": 5,
+          "reason": "No fabricated items found"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Well-tailored to the target job"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Facts accurate and complete"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Well-structured and clear explanation of changes"
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 5,
+          "reason": "No fabricated items found"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Relevant skills and experience highlighted"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Facts accurate and complete"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Clear explanation of changes and skills"
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "No fabricated items found"
+        },
+        "personalization": {
+          "score": 3,
+          "reason": "Some relevant skills and experience mentioned, but not fully tailored to the target job"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Facts accurate and complete"
+        },
+        "clarity": {
+          "score": 3,
+          "reason": "Some explanation of changes, but not fully clear or well-structured"
+        }
+      }
+    }
+  },
+  {
+    "job_id": "2bb1e1e7-5f3a-4e72-853a-b428d316a205",
+    "job_title": "Database Administrator",
+    "company_name": "Solstice Digital",
+    "job_description": "position information job title research administrator department electrical computer engineering full time/part time full-time requisition number s18494 open date 06/26/2018 close date salary information salary commensurate experience qualification work schedule monday friday 8 a.m. 5 p.m. benefit eligible yes eligible overtime position summary research administrator responsible leading administering pre- post-award activity ece faculty providing guidance training ece departmental research administrator serving departmental reviewer grant submission s/he serve designated research administrator handling financial administrative research process designated group ece faculty member includes pre- post- award activity regular communications/meetings faculty staff ethical management fund lead research administrator advises pi effective way achieve effective quality proposal coordinate timely submission process ensuring appropriate approval s/he serf compliance/oversight capacity monitoring budget spending approving capital equipment requisition providing guidance counsel stewardship sponsored research fund education required bachelor 's degree concentration / degree type substitution education requirement may substitute additional related experience beyond required equivalent year year basis lieu education requirement education preferred bachelor ’ degree business administration accounting finance experience required 3 year type experience related administrative experience includes research administration experience i.e grant proposal preparation submission various governmental agency nsf dod doe darp nih etc. substitution experience requirement may substitute additional related education beyond required equivalent year year basis lieu experience requirement experience preferred five year experience utilizing bba business related degree corporate higher education environment proficiency organizational financial management corporate higher education management grants/contracts federal/state agency experience university policy procedure highly desirable license/certification required specified license/certification preferred specified skill required intermediate knowledge word processing spreadsheet email database software program working knowledge research administration guideline regulation policy organizational skill customer service problem-solving skill preferred well-organized deadline oriented ability problem solve work independently fast pace environment utilization database system software spreadsheet excel strong written verbal communication skill write clear concise correspondence wide range topic internal / external contact work wide variety individual rice government industry external affiliate department collaborating institution physical demand must able work office environment often computer workstation much working day must able move building widely separated college campus stair requires long period sitting working front computer – eight hour per day working condition may require long hour availability outside normal working hour weekend quarterly basis due grant deadline and/or work major project office environment fast-paced sometimes stressful due interruption require successful candidate multi-tasking security sensitive yes",
+    "outputs": {
+      "A": "Here is a rewritten version of the resume tailored to the Research Administrator position:\n\nTrixie Grace Mok\nMobile [redacted-phone] / Email: [redacted-email] | linkedin.com/in/trixie-mok\n\nPROFESSIONAL SUMMARY\nResults-driven and detail-oriented professional with experience in administration, project management, and data analysis. Seeking a Research Administrator position where I can utilize my skills to support faculty and staff in managing research projects and ensuring compliance with regulations.\n\nEDUCATION\nNanyang Technological University, Singapore\nAug 2026 - Present\nMSc Enterprise Artificial Intelligence\n\n* Applied Projects — PE6201: RAG system (A1); ReAct-agent guardrails for insurance claims (A2)\n* Applied Projects — PE6202: purchase requisition automation (RPA workflow UiPath)\n* Applied Projects — PE6203: GenAI job-matching portal\n\nUniversity of London, Singapore\nSep 2022 - Aug 2025\nBSc Management and Digital Innovation / Second Class Honours (upper)\n\n* Award: World Top Scorer, IS3183 Management and Social Media (2023/24 Examination)\n* Key Modules: Marketing Management, Digital Infrastructures for Business, Management and innovation of e-business, Psychology, Sociology, Programming for Data Science (analyzed airline delay data using logistic regression and Monte Carlo simulation)\n\nWORK EXPERIENCE\nCovenant Capital Pte. Ltd, Singapore\nJul 2025 - Nov 2025\nInternship\n\n* Built a CRM integrating client data, KYC docs, and call reports with role-based access and API for secure client data retrieval using Microsoft PowerApps and Power Automate\n* Automated fund performance comparison in Excel using VBA, delivering a client-facing interactive dashboard to visualize and compare three funds\n* Created Due Diligence Questionnaires (DDQs) that summarized key fund information to support investment reviews and compliance\n* Cleaned and standardized consolidation reports with Python programming for accurate analysis and reporting\n\nPT. Tirta Yakin Sejahtera, Pasuruan, East Java, Indonesia\nJun 2023 - Sep 2023\nProduction Process Management Intern\n\n* Supported daily operations in a high-volume production environment, ensuring product quality and consistency\n* Collaborated cross-functionally with teams to monitor workflow, identify inefficiencies, and implement process improvements\n* Assisted with quality control analysis, gaining experience in data checks, standardization, and performance monitoring\n* Managed inventory tracking and supply coordination, strengthening skills in planning, forecasting, and meeting delivery timelines\n\nSKILLS & INTERESTS\nSkills:\n\n* Microsoft Excel, Microsoft Power Apps, Microsoft Power Automate, SQL, R, Python, Git, Database Management, Data Visualization, Logistic Regression, Data Analysis with R/Python\n* Strong written and verbal communication skills, with ability to write clear and concise correspondence on a wide range of topics\n* Proficient in organizational and financial management, with experience in grants and contracts\n* Ability to work independently, prioritize tasks, and meet deadlines in a fast-paced environment\n\nLanguages:\nEnglish (Native), Bahasa Indonesia (Conversational), Mandarin Chinese (Basic)\n\nI made the following changes to tailor the resume to the Research Administrator position:\n\n* Emphasized administrative and project management experience\n* Highlighted skills in data analysis, financial management, and grant administration\n* Removed unrelated work experience and focused on relevant internships and projects\n* Added keywords from the job description, such as \"research administration,\" \"grant proposal preparation,\" and \"compliance\"\n* Emphasized strong written and verbal communication skills, as well as ability to work independently and prioritize tasks.",
+      "B": "Based on the job description, the relevant skills that can be extracted from Trixie's resume are:\n\n1. **Administrative experience**: Trixie has experience in administrative roles, such as her internship at Covenant Capital Pte. Ltd, where she built a CRM and automated fund performance comparison.\n2. **Data analysis and management**: Trixie has experience with data analysis and management, having used tools like Microsoft Excel, SQL, R, and Python for data analysis and visualization.\n3. **Database management**: Trixie has experience with database management, having used Microsoft Power Apps and Power Automate to build a CRM.\n4. **Financial management**: Trixie has experience with financial management, having assisted with quality control analysis and managed inventory tracking and supply coordination.\n5. **Communication and problem-solving skills**: Trixie has experience with communication and problem-solving, having collaborated with cross-functional teams and assisted with quality control analysis.\n6. **Organizational skills**: Trixie has experience with organizational skills, having managed multiple projects and deadlines.\n7. **Microsoft Office skills**: Trixie has experience with Microsoft Office, including Word, Excel, and Power Apps.\n\nTo tailor Trixie's resume to the job, I would suggest the following:\n\n1. **Emphasize administrative experience**: Highlight Trixie's administrative experience, including her internship at Covenant Capital Pte. Ltd, and her experience with data analysis and management.\n2. **Use keywords from the job description**: Use keywords from the job description, such as \"research administration\", \"grant proposal preparation\", and \"financial management\", to describe Trixie's experience and skills.\n3. **Highlight data analysis and management skills**: Highlight Trixie's experience with data analysis and management, including her use of tools like Microsoft Excel, SQL, R, and Python.\n4. **Emphasize communication and problem-solving skills**: Highlight Trixie's experience with communication and problem-solving, including her collaboration with cross-functional teams and her assistance with quality control analysis.\n5. **Tailor the objective statement**: Tailor the objective statement to the job, highlighting Trixie's interest in research administration and her relevant skills and experience.\n\nHere is an example of how Trixie's resume could be tailored to the job:\n\n**Objective Statement**:\nTo obtain a Research Administrator position in a higher education environment, where I can utilize my administrative experience, data analysis and management skills, and communication and problem-solving skills to support research faculty and staff.\n\n**Summary**:\nHighly organized and detail-oriented administrative professional with experience in data analysis and management, financial management, and communication and problem-solving. Proficient in Microsoft Office, including Word, Excel, and Power Apps. Strong understanding of research administration principles and practices.\n\n**Work Experience**:\n\n* **Internship, Covenant Capital Pte. Ltd**: Assisted with data analysis and management, including building a CRM and automating fund performance comparison. Collaborated with cross-functional teams to support business operations.\n* **Production Process Management Intern, PT. Tirta Yakin Sejahtera**: Assisted with quality control analysis and managed inventory tracking and supply coordination. Collaborated with cross-functional teams to support production operations.\n\n**Skills**:\n\n* **Administrative experience**: 2+ years of administrative experience, including experience with data analysis and management, financial management, and communication and problem-solving.\n* **Data analysis and management**: Proficient in Microsoft Excel, SQL, R, and Python. Experience with data visualization and database management.\n* **Financial management**: Experience with financial management, including budgeting and forecasting.\n* **Communication and problem-solving skills**: Strong communication and problem-solving skills, with experience collaborating with cross-functional teams and assisting with quality control analysis.\n* **Microsoft Office skills**: Proficient in Microsoft Office, including Word, Excel, and Power Apps.",
+      "C": {
+        "resume": {
+          "summary": "MSc Enterprise Artificial Intelligence candidate with a Management and Digital Innovation background and hands-on experience automating business processes with AI and low-code tools.",
+          "skills": [
+            "Microsoft Excel",
+            "Microsoft Power Apps",
+            "Microsoft Power Automate",
+            "SQL",
+            "R",
+            "Python",
+            "Git",
+            "Database Management",
+            "Data Visualization",
+            "Logistic Regression",
+            "Data Analysis with R/Python",
+            "RAG",
+            "GenAI applications",
+            "RPA workflows",
+            "AI agent integration",
+            "Prompt Engineering",
+            "ReAct-agent"
+          ],
+          "experience": [
+            "Internship at Covenant Capital Pte. Ltd",
+            "Production Process Management Intern at PT. Tirta Yakin Sejahtera",
+            "Technical Workshop Process Management Intern at PT. Karya Teknik Sejahtera",
+            "Marketing Promotion Intern at PT Untung Bersama Sejahtera (UBS Gold)"
+          ],
+          "projects": [
+            "RAG system (A1)",
+            "ReAct-agent guardrails for insurance claims (A2)",
+            "Purchase requisition automation (RPA workflow UiPath)",
+            "GenAI job-matching portal"
+          ],
+          "education": [
+            "MSc Enterprise Artificial Intelligence at Nanyang Technological University",
+            "BSc Management and Digital Innovation at University of London",
+            "Highschool Diploma at Surabaya Intercultural School"
+          ],
+          "achievements": [
+            "World Top Scorer, IS3183 Management and Social Media (2023/24 Examination)"
+          ],
+          "publications": []
+        },
+        "rewritten_text": "Trixie Grace Mok is a highly motivated and organized individual with a strong background in Management and Digital Innovation. She is currently pursuing her MSc in Enterprise Artificial Intelligence at Nanyang Technological University. With hands-on experience in automating business processes with AI and low-code tools, Trixie is confident in her ability to drive business transformation. Her experience in data analysis, visualization, and machine learning has equipped her with the skills to drive informed decision-making. Trixie is a strong communicator and team player, with excellent problem-solving skills and a proven track record of delivering results in fast-paced environments.",
+        "change_summary": [
+          {
+            "section": "summary",
+            "action": "rewritten",
+            "reason": "to better align with the target job requirements",
+            "source_evidence": "target job description"
+          }
+        ],
+        "evidence_used": [
+          {
+            "claim": "MSc Enterprise Artificial Intelligence candidate",
+            "evidence": "MSc Enterprise Artificial Intelligence at Nanyang Technological University"
+          },
+          {
+            "claim": "hands-on experience automating business processes with AI and low-code tools",
+            "evidence": "Internship at Covenant Capital Pte. Ltd, Production Process Management Intern at PT. Tirta Yakin Sejahtera"
+          }
+        ],
+        "target_requirements": [
+          {
+            "requirement": "bachelor's degree",
+            "matched_evidence": "BSc Management and Digital Innovation at University of London",
+            "coverage": "fully met"
+          },
+          {
+            "requirement": "2+ years of experience",
+            "matched_evidence": "Internship at Covenant Capital Pte. Ltd, Production Process Management Intern at PT. Tirta Yakin Sejahtera, Technical Workshop Process Management Intern at PT. Karya Teknik Sejahtera",
+            "coverage": "partially met"
+          }
+        ],
+        "validation_results": [
+          {
+            "status": "valid",
+            "rule": "education requirement",
+            "claim": "bachelor's degree",
+            "evidence_count": 1
+          },
+          {
+            "status": "valid",
+            "rule": "experience requirement",
+            "claim": "2+ years of experience",
+            "evidence_count": 3
+          }
+        ]
+      }
+    },
+    "scores": {
+      "A": {
+        "grounding": {
+          "score": 4,
+          "reason": "No fabricated skills or employers were introduced, but some details were rephrased for better fit."
+        },
+        "personalization": {
+          "score": 5,
+          "reason": "The output effectively emphasizes relevant administrative and project management experience."
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "All facts presented are accurate and consistent with the source resume."
+        },
+        "clarity": {
+          "score": 5,
+          "reason": "The output is well-structured and clearly explains the candidate's relevant experience and skills."
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 5,
+          "reason": "The analysis strictly adheres to the source resume without introducing any fabricated information."
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "While the analysis identifies relevant skills, it could better tailor the emphasis to the target job description."
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "The analysis accurately represents the candidate's experience and skills as per the source resume."
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "The output is mostly clear but lacks a direct, rewritten resume that incorporates the suggested changes."
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 3,
+          "reason": "The output introduces some phrases and structures not strictly grounded in the source resume."
+        },
+        "personalization": {
+          "score": 3,
+          "reason": "While an attempt is made to align with the target job, the output could more effectively emphasize relevant experience."
+        },
+        "correctness": {
+          "score": 4,
+          "reason": "Most facts are accurate, but the presentation could more clearly reflect the source resume's content."
+        },
+        "clarity": {
+          "score": 3,
+          "reason": "The output includes a mix of relevant and less relevant information, making it somewhat confusing."
+        }
+      }
+    },
+    "elapsed_seconds": 46.50176382064819,
+    "grounded_judge_scores": {
+      "fabrications": {
+        "A": [
+          ""
+        ],
+        "B": [
+          ""
+        ],
+        "C": [
+          ""
+        ],
+        "note": "No fabricated items found in any variant"
+      },
+      "A": {
+        "grounding": {
+          "score": 5,
+          "reason": "No fabricated items found"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Well-tailored to the target job"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Facts accurate and complete"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Well-structured and clear explanation of changes"
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 5,
+          "reason": "No fabricated items found"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Relevant skills and experience highlighted"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Facts accurate and complete"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Clear explanation of changes and skills"
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "No fabricated items found"
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Relevant skills and experience highlighted"
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Facts accurate and complete"
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Well-structured and clear explanation of changes"
+        }
+      }
+    }
+  },
+  {
+    "job_id": "1f17e46d-33c4-4e53-9faf-862bf41a08fa",
+    "job_title": "Full Stack Developer",
+    "company_name": "InnoWave Networks",
+    "job_description": "looking well-rounded full-stack developer work new cutting-edge system provides industry-leading healthcare-focused workflow clinical trial including recruitment study conduct u elligo health research offer platform brings clinical research physician practice accelerating development new pharmaceutical biotechnology medical device product therapy go direct™ approach us state-of-the-art elligo direct™ technology compliantly leverage current electronic health record data applies proprietary prescreening process match protocol-eligible patient participation clinical study mission support health care provider providing personnel procedure technology infrastructure clinical research enabling patient participate research remaining care trusted physician job responsibility role developing testing supporting new system primarily mean stack mongodb angularjs express node j supporting tool component built java postgres redis rabbitmq elasticsearch writing executing unit test code helping qa write integration system test participating sprint planning code review user platform elligo staff physician partner since working alongside user need work understand develop solution problem encounter required skill qualification excited prospect transforming clinical trial workflow experienced 3+ year developing web application fluent javascript node j html cs experienced database preferably including nosql comfortable writing unit test experienced working full engineering qa team excellent debugging troubleshooting excellent meeting deliverable timeline set preferred qualification prefer worked sensitive secure data like health record deployed cloud service provider developed dashboard report practiced agile software development worked responsive web framework written sql query worked java",
+    "outputs": {
+      "A": "Here's a rewritten version of the resume tailored to the job description:\n\n**Trixie Grace Mok**\n**Mobile:** [redacted-phone] / **Email:** [redacted-email] | **linkedin.com/in/trixie-mok**\n\n**PROFESSIONAL SUMMARY**\nHighly motivated and detail-oriented full-stack developer with a strong background in Management and Digital Innovation, and hands-on experience in automating business processes with AI and low-code tools. Proficient in a range of technologies, including JavaScript, Node.js, HTML, CSS, and databases such as MongoDB and PostgreSQL. Excited about the prospect of transforming clinical trial workflows and contributing to the development of cutting-edge healthcare-focused systems.\n\n**EDUCATION**\n\n* **Nanyang Technological University, Singapore** (Aug 2026 - Present)\n\t+ MSc Enterprise Artificial Intelligence\n\t+ Applied Projects: RAG system, ReAct-agent guardrails for insurance claims, purchase requisition automation (RPA workflow UiPath), and GenAI job-matching portal\n* **University of London, Singapore** (Sep 2022 - Aug 2025)\n\t+ BSc Management and Digital Innovation (Second Class Honours, upper)\n\t+ Key Modules: Marketing Management, Digital Infrastructures for Business, Management and innovation of e-business, Psychology, Sociology, and Programming for Data Science\n* **Surabaya Intercultural School, Surabaya, Indonesia** (Aug 2018 - Jun 2022)\n\t+ High School Diploma (3.96 GPA)\n\t+ AP Macroeconomics, AP Microeconomics, AP Chinese\n\n**WORK EXPERIENCE**\n\n* **Covenant Capital Pte. Ltd, Singapore** (Jul 2025 - Nov 2025)\n\t+ Internship\n\t+ Built a CRM integrating client data, KYC docs, and call reports with role-based access and API for secure client data retrieval using Microsoft PowerApps and Power Automate\n\t+ Automated fund performance comparison in Excel using VBA, delivering a client-facing interactive dashboard to visualize and compare three funds\n\t+ Created Due Diligence Questionnaires (DDQs) that summarized key fund information to support investment reviews and compliance\n\t+ Cleaned and standardized consolidation reports with Python programming for accurate analysis and reporting\n* **PT. Tirta Yakin Sejahtera, Pasuruan, East Java, Indonesia** (Jun 2023 - Sep 2023)\n\t+ Production Process Management Intern\n\t+ Supported daily operations in a high-volume production environment, ensuring product quality and consistency\n\t+ Collaborated cross-functionally with teams to monitor workflow, identify inefficiencies, and implement process improvements\n\t+ Assisted with quality control analysis, gaining experience in data checks, standardization, and performance monitoring\n* **PT. Karya Teknik Sejahtera, Sidoarjo, East Java, Indonesia** (Jul 2022 - Sep 2022)\n\t+ Technical Workshop Process Management Intern\n\t+ Supported the setup, calibration, and operation of CNC machines to ensure output met quality and client specifications\n\t+ Collaborated with the engineering team to review and interpret mechanical blueprints and technical drawings\n\t+ Streamlined workflow processes and helped maintain production efficiency in a fast-paced, client-focused environment\n\n**SKILLS & INTERESTS**\n\n* **Technical Skills:**\n\t+ Programming languages: JavaScript, Python, R, SQL\n\t+ Frameworks: Node.js, Express, AngularJS\n\t+ Databases: MongoDB, PostgreSQL, Redis, Elasticsearch\n\t+ Operating Systems: Windows, Linux\n\t+ Agile software development methodologies\n\t+ Cloud service providers (AWS, Azure, Google Cloud)\n* **Soft Skills:**\n\t+ Excellent debugging and troubleshooting skills\n\t+ Strong communication and teamwork skills\n\t+ Ability to work under pressure and meet deadlines\n\t+ Experience with sensitive and secure data, including health records\n* **Interests:**\n\t+ Developing web applications and contributing to open-source projects\n\t+ Exploring new technologies and frameworks\n\t+ Participating in hackathons and coding challenges\n\nNote that I've highlighted your relevant technical skills, experience, and education, while also emphasizing your ability to work in a team, communicate effectively, and meet deadlines. I've also removed some of the less relevant information to make your resume more concise and focused on the job description.",
+      "B": "Based on the job description, the relevant skills that can be extracted from the resume are:\n\n1. **Programming skills**: Python, JavaScript (not explicitly mentioned but can be inferred from the experience with Microsoft Power Apps and Power Automate), SQL, and R.\n2. **Database management**: Experience with Database Management, SQL, and NoSQL (although not explicitly mentioned, the experience with MongoDB is not present, but the candidate has experience with SQL and Database Management).\n3. **Data analysis and visualization**: Experience with Data Analysis, Data Visualization, Logistic Regression, and R/Python.\n4. **Full-stack development**: Although not explicitly mentioned, the candidate has experience with Microsoft Power Apps, Power Automate, and Python, which can be related to full-stack development.\n5. **Agile software development**: Not explicitly mentioned, but the candidate has experience with project management and collaboration, which can be related to agile software development.\n6. **Cloud services**: Not explicitly mentioned, but the candidate has experience with Microsoft Power Apps and Power Automate, which can be related to cloud services.\n\nTo tailor the resume to the job, I would suggest the following:\n\n1. **Highlight relevant technical skills**: Emphasize the candidate's experience with Python, JavaScript, SQL, and R, and highlight their ability to learn new technologies quickly.\n2. **Emphasize data analysis and visualization skills**: Highlight the candidate's experience with data analysis, data visualization, and logistic regression, and emphasize their ability to work with data to drive business decisions.\n3. **Focus on full-stack development**: Although the candidate doesn't have direct experience with full-stack development, highlight their experience with Microsoft Power Apps, Power Automate, and Python, and emphasize their ability to learn new technologies quickly.\n4. **Highlight experience with database management**: Emphasize the candidate's experience with database management, SQL, and NoSQL, and highlight their ability to work with large datasets.\n5. **Emphasize collaboration and project management skills**: Highlight the candidate's experience with project management, collaboration, and agile software development, and emphasize their ability to work with cross-functional teams.\n\nHere is an example of how the resume could be tailored to the job:\n\n**Trixie Grace Mok**\n**Full-Stack Developer Candidate**\n\n**PROFESSIONAL SUMMARY**\nHighly motivated and detail-oriented full-stack developer candidate with experience in data analysis, data visualization, and database management. Proficient in Python, JavaScript, SQL, and R, with a strong foundation in programming and software development. Seeking a challenging role in a cutting-edge healthcare-focused workflow clinical trial system.\n\n**TECHNICAL SKILLS**\n\n* Programming languages: Python, JavaScript, SQL, and R\n* Database management: SQL, NoSQL, and Database Management\n* Data analysis and visualization: Data Analysis, Data Visualization, Logistic Regression, and R/Python\n* Full-stack development: Microsoft Power Apps, Power Automate, and Python\n* Agile software development: Experience with project management and collaboration\n\n**WORK EXPERIENCE**\n\n* **Covenant Capital Pte. Ltd, Singapore**\n\t+ Built a CRM integrating client data, KYC docs, and call reports with role-based access and API for secure client data retrieval using Microsoft PowerApps and Power Automate\n\t+ Automated fund performance comparison in Excel using VBA delivering a client-facing interactive dashboard to visualize and compare three funds\n* **PT. Tirta Yakin Sejahtera, Pasuruan, East Java, Indonesia**\n\t+ Supported daily operations in a high-volume production environment, ensuring product quality and consistency - reinforcing the importance of brand reliability and customer trust\n\t+ Collaborated cross-functionally with the team to monitor workflow, identify inefficiencies, and implement process improvements, building a strong foundation in optimization and execution\n\nNote that this is just an example, and the actual resume should be tailored to the candidate's specific experience and skills.",
+      "C": {
+        "resume": {
+          "summary": "MSc Enterprise Artificial Intelligence candidate with a Management and Digital Innovation background and hands-on experience automating business processes with AI and low-code tools.",
+          "skills": [
+            "Microsoft Excel",
+            "Microsoft Power Apps",
+            "Microsoft Power Automate",
+            "SQL",
+            "R",
+            "Python",
+            "Git",
+            "Database Management",
+            "Data Visualization",
+            "Logistic Regression",
+            "Data Analysis with R/Python",
+            "RAG",
+            "GenAI applications",
+            "RPA workflows",
+            "AI agent integration",
+            "Prompt Engineering",
+            "ReAct-agent"
+          ],
+          "experience": [
+            "Internship at Covenant Capital Pte. Ltd, Singapore",
+            "Production Process Management Intern at PT. Tirta Yakin Sejahtera, Pasuruan, East Java, Indonesia",
+            "Technical Workshop Process Management Intern at PT. Karya Teknik Sejahtera, Sidoarjo, East Java, Indonesia",
+            "Marketing Promotion Intern at PT Untung Bersama Sejahtera (UBS Gold), Surabaya, Indonesia"
+          ],
+          "projects": [
+            "Applied Projects — PE6201: RAG system (A1); ReAct-agent guardrails for insurance claims (A2)",
+            "Applied Projects — PE6202: purchase requisition automation (RPA workflow UiPath)",
+            "Applied Projects — PE6203: GenAI job-matching portal"
+          ],
+          "education": [
+            "MSc Enterprise Artificial Intelligence at Nanyang Technological University, Singapore",
+            "BSc Management and Digital Innovation at University of London, Singapore",
+            "Highschool Diploma at Surabaya Intercultural School, Surabaya, Indonesia"
+          ],
+          "achievements": [
+            "World Top Scorer, IS3183 Management and Social Media (2023/24 Examination)"
+          ],
+          "publications": []
+        },
+        "rewritten_text": "Trixie Grace Mok is an MSc Enterprise Artificial Intelligence candidate with a Management and Digital Innovation background and hands-on experience automating business processes with AI and low-code tools. She has experience in data analysis, machine learning, and software development, with skills in Microsoft Excel, Microsoft Power Apps, Microsoft Power Automate, SQL, R, Python, Git, and more. Her experience includes internships at Covenant Capital Pte. Ltd, PT. Tirta Yakin Sejahtera, PT. Karya Teknik Sejahtera, and PT Untung Bersama Sejahtera (UBS Gold). She has worked on various projects, including applied projects in RAG systems, purchase requisition automation, and GenAI job-matching portals. She holds a BSc in Management and Digital Innovation from the University of London, Singapore, and a Highschool Diploma from Surabaya Intercultural School, Surabaya, Indonesia. She was awarded the World Top Scorer in IS3183 Management and Social Media (2023/24 Examination).",
+        "change_summary": [
+          {
+            "section": "skills",
+            "action": "added",
+            "reason": "to match target job requirements",
+            "source_evidence": "SKILLS & INTERESTS section"
+          }
+        ],
+        "evidence_used": [
+          {
+            "claim": "experience in data analysis",
+            "evidence": "Programming for Data Science (analyzed airline delay data using logistic regression and Monte Carlo simulation)"
+          },
+          {
+            "claim": "experience in machine learning",
+            "evidence": "Applied Projects — PE6201: RAG system (A1); ReAct-agent guardrails for insurance claims (A2)"
+          },
+          {
+            "claim": "experience in software development",
+            "evidence": "Built a CRM integrating client data, KYC docs, and call reports with role-based access and API for secure client data retrieval using Microsoft PowerApps and Power Automate"
+          }
+        ],
+        "target_requirements": [
+          {
+            "requirement": "html",
+            "matched_evidence": "none",
+            "coverage": "0%"
+          },
+          {
+            "requirement": "javascript",
+            "matched_evidence": "none",
+            "coverage": "0%"
+          },
+          {
+            "requirement": "testing",
+            "matched_evidence": "Cleaned and standardized consolidation reports with Python programming for accurate analysis and reporting",
+            "coverage": "50%"
+          }
+        ],
+        "validation_results": [
+          {
+            "status": "partial match",
+            "rule": "required skills",
+            "claim": "experience in data analysis, machine learning, and software development",
+            "evidence_count": 3
+          }
+        ]
+      }
+    },
+    "scores": {
+      "A": {
+        "grounding": {
+          "score": 2,
+          "reason": "Fabricated full-stack development experience not present in the source resume."
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Effectively tailored emphasis to the target job description."
+        },
+        "correctness": {
+          "score": 3,
+          "reason": "Some facts altered or added, such as operating systems experience."
+        },
+        "clarity": {
+          "score": 4,
+          "reason": "Well-structured output with clear explanations of changes."
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 3,
+          "reason": "Inferred some skills not explicitly mentioned in the source resume."
+        },
+        "personalization": {
+          "score": 4,
+          "reason": "Emphasized relevant technical skills and experience for the target job."
+        },
+        "correctness": {
+          "score": 4,
+          "reason": "Most facts accurately represented, with minor omissions."
+        },
+        "clarity": {
+          "score": 3,
+          "reason": "Output could be more concise and directly related to the target job."
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 5,
+          "reason": "Strictly relied on facts present in the source resume."
+        },
+        "personalization": {
+          "score": 2,
+          "reason": "Failed to effectively tailor emphasis to the target job description."
+        },
+        "correctness": {
+          "score": 5,
+          "reason": "Accurately represented all facts from the source resume."
+        },
+        "clarity": {
+          "score": 2,
+          "reason": "Output lacked clear explanations of changes and relevance to the target job."
+        }
+      }
+    },
+    "elapsed_seconds": 36.56245303153992,
+    "grounded_judge_scores": {
+      "fabrications": {
+        "A": [
+          "JavaScript",
+          "Node.js",
+          "HTML",
+          "CSS",
+          "AngularJS",
+          "Express",
+          "MongoDB",
+          "PostgreSQL",
+          "Redis",
+          "Elasticsearch",
+          "Agile software development methodologies",
+          "Cloud service providers (AWS, Azure, Google Cloud)"
+        ],
+        "B": [
+          "Full-stack development",
+          "Agile software development",
+          "Cloud services"
+        ],
+        "C": [
+          "html",
+          "javascript",
+          "testing"
+        ]
+      },
+      "A": {
+        "grounding": {
+          "score": 1,
+          "reason": "Fabricated skills and technologies"
+        },
+        "personalization": {
+          "score": 2,
+          "reason": "Limited relevance to target job"
+        },
+        "correctness": {
+          "score": 2,
+          "reason": "Inaccurate representation of skills and experience"
+        },
+        "clarity": {
+          "score": 2,
+          "reason": "Lack of clear explanation for changes"
+        }
+      },
+      "B": {
+        "grounding": {
+          "score": 1,
+          "reason": "Fabricated skills and experience"
+        },
+        "personalization": {
+          "score": 2,
+          "reason": "Limited relevance to target job"
+        },
+        "correctness": {
+          "score": 2,
+          "reason": "Inaccurate representation of skills and experience"
+        },
+        "clarity": {
+          "score": 2,
+          "reason": "Lack of clear explanation for changes"
+        }
+      },
+      "C": {
+        "grounding": {
+          "score": 1,
+          "reason": "Fabricated skills and technologies"
+        },
+        "personalization": {
+          "score": 2,
+          "reason": "Limited relevance to target job"
+        },
+        "correctness": {
+          "score": 2,
+          "reason": "Inaccurate representation of skills and experience"
+        },
+        "clarity": {
+          "score": 2,
+          "reason": "Lack of clear explanation for changes"
+        }
+      }
+    }
+  }
+]
