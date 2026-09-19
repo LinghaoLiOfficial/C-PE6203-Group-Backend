@@ -4,6 +4,7 @@ import io
 import logging
 import math
 import re
+import unicodedata
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
@@ -52,21 +53,109 @@ SKILL_KEYWORDS = {
     "fastapi",
     "sqlalchemy",
     "postgresql",
+    "mysql",
+    "mongodb",
+    "redis",
     "react",
     "nextjs",
+    "vue",
+    "angular",
     "javascript",
     "typescript",
+    "node.js",
+    "nodejs",
+    "express",
+    "java",
+    "c++",
+    "c#",
+    "django",
+    "flask",
     "docker",
+    "kubernetes",
     "aws",
+    "azure",
+    "gcp",
+    "terraform",
     "linux",
     "rest",
+    "restful",
     "graphql",
     "html",
     "css",
     "tailwind",
     "git",
     "testing",
+    "selenium",
+    "pytest",
+    "kafka",
+    "numpy",
+    "pandas",
+    "pytorch",
+    "tensorflow",
+    "excel",
+    "tableau",
+    "figma",
+    "jira",
+    "agile",
 }
+
+# Job postings and resumes name the same skill differently ("Node.js" / "nodejs" /
+# "Node JS"; "REST APIs" / "restful"). Both sides of the match comparison are
+# canonicalised through this map, because an unnormalised mismatch reads as a
+# zero-skill candidate and drags the fit score to zero for everyone.
+SKILL_ALIASES = {
+    "node": "node.js",
+    "nodejs": "node.js",
+    "node js": "node.js",
+    "express.js": "express",
+    "express js": "express",
+    "mongo": "mongodb",
+    "postgres": "postgresql",
+    "react.js": "react",
+    "reactjs": "react",
+    "next.js": "nextjs",
+    "next js": "nextjs",
+    "vue.js": "vue",
+    "vuejs": "vue",
+    "rest api": "rest",
+    "rest apis": "rest",
+    "restful": "rest",
+    "restful api": "rest",
+    "restful apis": "rest",
+    "k8s": "kubernetes",
+    "tailwindcss": "tailwind",
+    "js": "javascript",
+    "ts": "typescript",
+}
+
+
+def canonical_skill(value: object) -> str:
+    """Reduce a skill label to a comparable token.
+
+    Job requirements are scanned out of the posting text while candidate skills come
+    from the resume parser, so the same skill arrives spelled several ways. Anything
+    that cannot be compared has to be normalised before the two sets are intersected.
+    """
+    text = unicodedata.normalize("NFKC", str(value or "")).strip().lower()
+    if not text:
+        return ""
+    text = re.sub(r"[^a-z0-9+#.\s]", " ", text)
+    text = re.sub(r"\s+", " ", text).strip().strip(".")
+    if not text:
+        return ""
+    return SKILL_ALIASES.get(text, text)
+
+
+def _skill_in_text(skill: str, lowered_text: str) -> bool:
+    """Whole-token keyword match.
+
+    Substring matching made the short keywords unreliable in one direction only:
+    "rest" fired on "interest" and "latest", and "git" on "digital". Requiring token
+    boundaries keeps short keywords usable and stops "java" from matching "javascript".
+    """
+    pattern = rf"(?<![a-z0-9+#]){re.escape(skill)}(?![a-z0-9+#])"
+    return re.search(pattern, lowered_text) is not None
+
 
 SECTION_KEYWORDS = {
     "education": {"education", "academic background", "education and training"},
@@ -1190,7 +1279,11 @@ class JobPortalService:
 
     def _extract_skills(self, text: str) -> list[str]:
         lowered = text.lower()
-        return [skill for skill in sorted(SKILL_KEYWORDS) if skill in lowered]
+        return [
+            canonical_skill(skill)
+            for skill in sorted(SKILL_KEYWORDS)
+            if _skill_in_text(skill, lowered)
+        ]
 
     def _match_score(self, resume_embedding: list[float] | None, job_embedding: list[float] | None) -> float:
         if not resume_embedding or not job_embedding:
@@ -1554,15 +1647,18 @@ class JobPortalService:
         if not spans and resume.parsed_text:
             spans = [{"source": "resume", "text": resume.parsed_text[:500]}]
         selected: list[dict[str, object]] = []
-        required_skills = set(requirement_summary.get("required_skills") or [])
+        required_skills = {
+            canonical_skill(skill) for skill in (requirement_summary.get("required_skills") or [])
+        } - {""}
         for item in candidate_graph.skills or []:
-            name = str(item.get("name") or "").lower()
+            raw_name = str(item.get("name") or "")
+            name = canonical_skill(raw_name)
             if name and (not required_skills or name in required_skills):
                 evidence = item.get("evidence") or spans[:1]
                 selected.append(
                     {
                         "source": "candidate_graph",
-                        "text": name,
+                        "text": raw_name,
                         "evidence": evidence,
                         "transformation": "evidence_selected",
                     }
@@ -1785,8 +1881,16 @@ class JobPortalService:
 
     def _extract_job_requirements(self, job_title: str, job_description: str) -> dict[str, object]:
         lowered = f"{job_title} {job_description}".lower()
-        required = [skill for skill in sorted(SKILL_KEYWORDS) if skill in lowered]
-        preferred = [skill for skill in ["docker", "aws", "graphql", "testing", "typescript"] if skill in lowered and skill not in required]
+        required = [
+            canonical_skill(skill)
+            for skill in sorted(SKILL_KEYWORDS)
+            if _skill_in_text(skill, lowered)
+        ]
+        preferred = [
+            canonical_skill(skill)
+            for skill in ["docker", "aws", "graphql", "testing", "typescript"]
+            if _skill_in_text(skill, lowered) and canonical_skill(skill) not in required
+        ]
         return {
             "occupation_family": "Engineering" if "engineer" in lowered or "developer" in lowered else "General",
             "seniority": "mid" if "senior" not in lowered else "senior",
@@ -1820,16 +1924,41 @@ class JobPortalService:
     def _score_job(self, user_id: UUID, job: Job, resume: Resume) -> _OpportunityParts:
         graph = self._get_candidate_graph(user_id, resume.id)
         market = self.db.scalar(select(JobMarketProfile).where(JobMarketProfile.job_id == job.id))
-        candidate_skills = {item["name"].lower() for item in (graph.skills or []) if item.get("name")}
-        required_skills = {skill.lower() for skill in ((market.required_skills if market else None) or job.skill_tags or [])}
-        preferred_skills = {skill.lower() for skill in ((market.preferred_skills if market else None) or [])}
+        candidate_skills = {
+            canonical_skill(item["name"]) for item in (graph.skills or []) if item.get("name")
+        } - {""}
+        if not candidate_skills:
+            # _get_candidate_graph creates a blank graph on demand, so a resume that was
+            # parsed but has no graph row here would score as if the candidate had no
+            # skills at all -- against every posting at once. Fall back to the skills the
+            # resume itself carries, which is what the UI shows the user.
+            candidate_skills = {
+                canonical_skill(skill) for skill in (resume.extracted_skills or [])
+            } - {""}
+        required_skills = {
+            canonical_skill(skill)
+            for skill in ((market.required_skills if market else None) or job.skill_tags or [])
+        } - {""}
+        preferred_skills = {
+            canonical_skill(skill) for skill in ((market.preferred_skills if market else None) or [])
+        } - {""}
         exact_skills = sorted(candidate_skills & required_skills)
         transferable_skills = sorted(candidate_skills & preferred_skills)
         missing_skills = sorted(required_skills - candidate_skills)
         exact = len(exact_skills)
         transferable = len(transferable_skills)
         total_required = max(len(required_skills), 1)
-        attainability = min(1.0, (exact + transferable * 0.6) / total_required)
+        # A comparison needs both sides. When either the posting's requirements or the
+        # candidate's skills failed to resolve, a zero would assert "you cannot do this
+        # job" for every candidate alike -- which is how a well-matched and a zero-overlap
+        # candidate both came back at 0%. Fall back to the gate's midpoint and disclose it.
+        has_candidate_data = bool(candidate_skills)
+        has_requirement_data = bool(required_skills or preferred_skills)
+        comparable = has_candidate_data and has_requirement_data
+        if comparable:
+            attainability = min(1.0, (exact + transferable * 0.6) / total_required)
+        else:
+            attainability = 0.5
         salary = self._annualized_salary(job.mid_salary_sgd, job.pay_period) or 0.0
         salary_advantage = min(1.0, salary / 120000.0) if salary else 0.25
         demand = 0.85 if market and market.freshness_score > 0.8 else 0.65
@@ -1837,6 +1966,8 @@ class JobPortalService:
         career_option = 0.7 if market and market.occupation_family == "Engineering" else 0.6
         preference_fit = 0.8 if not graph.preferences or not graph.preferences.get("location") else 0.7
         data_confidence = market.trust_score if market else 0.7
+        if not comparable:
+            data_confidence = min(data_confidence, 0.4)
         # Opportunity fit = skill match (attainability) acting as a multiplicative
         # gate over job quality. A strong job can amplify a real match but can no
         # longer mask a poor one: zero skill match now yields zero fit instead of
@@ -1857,11 +1988,15 @@ class JobPortalService:
         )
         transition_difficulty = "low" if entry_barrier < 0.25 else "moderate" if entry_barrier < 0.55 else "high"
         rationale = []
-        if exact_skills:
+        if not has_candidate_data:
+            rationale.append("No parsed skills available for this resume; fit reflects job signals only")
+        elif not has_requirement_data:
+            rationale.append("No structured skill requirements in this posting; fit reflects job signals only")
+        elif exact_skills:
             rationale.append(f"{exact} direct skill match" + ("es" if exact > 1 else ""))
         else:
             rationale.append("No direct skill match")
-        if transferable_skills:
+        if comparable and transferable_skills:
             rationale.append(f"{transferable} adjacent skill" + ("s" if transferable > 1 else "") + " transfer")
         if salary:
             rationale.append(f"Salary signal around SGD {salary:,.0f}")
@@ -1905,7 +2040,11 @@ class JobPortalService:
 
     def _heuristic_resume_analysis(self, cleaned_text: str) -> ResumeAnalysisResult:
         lowered = cleaned_text.lower()
-        skills = [skill for skill in sorted(SKILL_KEYWORDS) if skill in lowered]
+        skills = [
+            canonical_skill(skill)
+            for skill in sorted(SKILL_KEYWORDS)
+            if _skill_in_text(skill, lowered)
+        ]
         summary = self._derive_heuristic_summary(cleaned_text)
         evidence_text = cleaned_text[:400]
         return ResumeAnalysisResult(
