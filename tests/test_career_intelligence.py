@@ -3,7 +3,7 @@ from uuid import uuid4
 from fastapi.testclient import TestClient
 from sqlalchemy.orm import Session
 
-from app.models.career_intelligence import CandidateGraph, JobMarketProfile, ResumeTailoringTask
+from app.models.career_intelligence import CandidateGraph, JobMarketProfile, ResumeTailoringTask, ResumeVariant
 from app.models.job import Job
 from app.models.resume import Resume
 from app.models.resume_parse_task import ResumeParseTask
@@ -338,3 +338,87 @@ def test_tailored_list_includes_queued_task_and_deduplicates_running_task(
     assert listed.status_code == 200
     assert len(listed.json()) == 1
     assert listed.json()[0]["status"] == "queued"
+
+
+def test_delete_active_resume_promotes_remaining_resume(
+    client: TestClient, db_session: Session, test_user
+) -> None:
+    older = Resume(
+        user_id=test_user.id, file_name="older.pdf", file_url="/tmp/older.pdf",
+        parsed_text="Python", is_active=False,
+    )
+    active = Resume(
+        user_id=test_user.id, file_name="active.pdf", file_url="/tmp/active.pdf",
+        parsed_text="FastAPI", is_active=True,
+    )
+    db_session.add_all([older, active])
+    db_session.commit()
+    db_session.refresh(older)
+    db_session.refresh(active)
+
+    delete_response = client.delete(f"/api/v1/resumes/{active.id}")
+    assert delete_response.status_code == 204
+
+    db_session.refresh(older)
+    assert older.is_active is True
+
+
+def test_same_job_two_resumes_keeps_distinct_variants(
+    client: TestClient, db_session: Session, test_user, monkeypatch
+) -> None:
+    from app.services import job_portal_service
+    from app.schemas.ai import TailoredResumeResult
+
+    monkeypatch.setattr(
+        job_portal_service.JobPortalService,
+        "_generate_tailored_resume",
+        lambda *_: TailoredResumeResult(
+            rewritten_text="Tailored\nPython",
+            resume={"summary": "Tailored"},
+            change_summary=[{"section": "summary", "action": "rephrased", "reason": "Aligned", "source_evidence": ["Python"]}],
+            evidence_used=[{"source": "resume", "text": "Python"}],
+            target_requirements=[{"requirement": "Python", "matched_evidence": ["Python"], "coverage": "strong"}],
+        ),
+    )
+    monkeypatch.setattr(job_portal_service, "embed_text", lambda _: _vector())
+
+    job = Job(
+        id=uuid4(), job_title="Backend Engineer", job_description="Build Python services",
+        company_name="Example", location="Remote", source="test", external_id="two-resumes",
+        external_apply_url="https://example.com/jobs/two-resumes", is_active=True,
+    )
+    first = Resume(
+        user_id=test_user.id, file_name="first.txt", file_url="/tmp/first.txt",
+        parsed_text="Python FastAPI", extracted_skills=["python", "fastapi"], is_active=True,
+    )
+    db_session.add_all([job, first])
+    db_session.commit()
+
+    from app.services.generation_queue_service import GenerationQueueService
+
+    r1 = client.post(f"/api/v1/jobs/{job.id}/rewrite")
+    assert r1.status_code == 202
+    assert GenerationQueueService(db_session).run_once("test-worker") == r1.json()["id"]
+
+    # Switch the active resume and tailor the same job again; both resumes must
+    # keep their own tailored variant instead of the second overwriting the first.
+    first.is_active = False
+    second = Resume(
+        user_id=test_user.id, file_name="second.txt", file_url="/tmp/second.txt",
+        parsed_text="Python Django", extracted_skills=["python", "django"], is_active=True,
+    )
+    db_session.add(second)
+    db_session.commit()
+
+    r2 = client.post(f"/api/v1/jobs/{job.id}/rewrite")
+    assert r2.status_code == 202
+    assert GenerationQueueService(db_session).run_once("test-worker") == r2.json()["id"]
+
+    variants = (
+        db_session.query(ResumeVariant)
+        .filter(ResumeVariant.job_id == job.id)
+        .order_by(ResumeVariant.created_at)
+        .all()
+    )
+    assert len(variants) == 2
+    assert {variant.resume_id for variant in variants} == {first.id, second.id}

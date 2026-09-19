@@ -4,15 +4,16 @@ import io
 import logging
 import math
 import re
+import unicodedata
 from collections import defaultdict
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from uuid import UUID, uuid4
 
 import httpx
 from fastapi import HTTPException, UploadFile, status
-from sqlalchemy import func, or_, select
+from sqlalchemy import delete, func, or_, select
 from sqlalchemy.orm import Session
 
 from app.core.config import settings
@@ -52,21 +53,109 @@ SKILL_KEYWORDS = {
     "fastapi",
     "sqlalchemy",
     "postgresql",
+    "mysql",
+    "mongodb",
+    "redis",
     "react",
     "nextjs",
+    "vue",
+    "angular",
     "javascript",
     "typescript",
+    "node.js",
+    "nodejs",
+    "express",
+    "java",
+    "c++",
+    "c#",
+    "django",
+    "flask",
     "docker",
+    "kubernetes",
     "aws",
+    "azure",
+    "gcp",
+    "terraform",
     "linux",
     "rest",
+    "restful",
     "graphql",
     "html",
     "css",
     "tailwind",
     "git",
     "testing",
+    "selenium",
+    "pytest",
+    "kafka",
+    "numpy",
+    "pandas",
+    "pytorch",
+    "tensorflow",
+    "excel",
+    "tableau",
+    "figma",
+    "jira",
+    "agile",
 }
+
+# Job postings and resumes name the same skill differently ("Node.js" / "nodejs" /
+# "Node JS"; "REST APIs" / "restful"). Both sides of the match comparison are
+# canonicalised through this map, because an unnormalised mismatch reads as a
+# zero-skill candidate and drags the fit score to zero for everyone.
+SKILL_ALIASES = {
+    "node": "node.js",
+    "nodejs": "node.js",
+    "node js": "node.js",
+    "express.js": "express",
+    "express js": "express",
+    "mongo": "mongodb",
+    "postgres": "postgresql",
+    "react.js": "react",
+    "reactjs": "react",
+    "next.js": "nextjs",
+    "next js": "nextjs",
+    "vue.js": "vue",
+    "vuejs": "vue",
+    "rest api": "rest",
+    "rest apis": "rest",
+    "restful": "rest",
+    "restful api": "rest",
+    "restful apis": "rest",
+    "k8s": "kubernetes",
+    "tailwindcss": "tailwind",
+    "js": "javascript",
+    "ts": "typescript",
+}
+
+
+def canonical_skill(value: object) -> str:
+    """Reduce a skill label to a comparable token.
+
+    Job requirements are scanned out of the posting text while candidate skills come
+    from the resume parser, so the same skill arrives spelled several ways. Anything
+    that cannot be compared has to be normalised before the two sets are intersected.
+    """
+    text = unicodedata.normalize("NFKC", str(value or "")).strip().lower()
+    if not text:
+        return ""
+    text = re.sub(r"[^a-z0-9+#.\s]", " ", text)
+    text = re.sub(r"\s+", " ", text).strip().strip(".")
+    if not text:
+        return ""
+    return SKILL_ALIASES.get(text, text)
+
+
+def _skill_in_text(skill: str, lowered_text: str) -> bool:
+    """Whole-token keyword match.
+
+    Substring matching made the short keywords unreliable in one direction only:
+    "rest" fired on "interest" and "latest", and "git" on "digital". Requiring token
+    boundaries keeps short keywords usable and stops "java" from matching "javascript".
+    """
+    pattern = rf"(?<![a-z0-9+#]){re.escape(skill)}(?![a-z0-9+#])"
+    return re.search(pattern, lowered_text) is not None
+
 
 SECTION_KEYWORDS = {
     "education": {"education", "academic background", "education and training"},
@@ -122,6 +211,10 @@ class _OpportunityParts:
     rationale: list[str]
     transition_difficulty: str
     data_confidence: float
+    exact_skills: list[str] = field(default_factory=list)
+    transferable_skills: list[str] = field(default_factory=list)
+    missing_skills: list[str] = field(default_factory=list)
+    required_skills: list[str] = field(default_factory=list)
 
 
 @dataclass(slots=True)
@@ -219,7 +312,7 @@ class JobPortalService:
         variants = list(
             self.db.scalars(
                 select(ResumeVariant)
-                .where(ResumeVariant.user_id == user_id)
+                .where(ResumeVariant.user_id == user_id, ResumeVariant.resume_id.is_not(None))
                 .order_by(ResumeVariant.created_at.desc())
             )
         )
@@ -452,14 +545,22 @@ class JobPortalService:
             validation = result.validation_results or (
                 self._validate_resume_claims(claims, graph, requirements) if graph else []
             )
+            # Key the variant by the resume it was generated from, not just the
+            # job. Tailoring the same job from a second resume previously re-used
+            # (and overwrote) the first resume's variant by matching on job_id
+            # alone, which replaced the first resume's version and left the first
+            # card empty. Each resume now keeps its own variant for a job.
             variant = self.db.scalar(
                 select(ResumeVariant)
-                .where(ResumeVariant.user_id == task.user_id, ResumeVariant.job_id == task.job_id)
+                .where(
+                    ResumeVariant.user_id == task.user_id,
+                    ResumeVariant.resume_id == resume.id,
+                    ResumeVariant.job_id == job.id,
+                )
                 .order_by(ResumeVariant.created_at.desc())
             )
             if variant is None:
                 variant = ResumeVariant(user_id=task.user_id, resume_id=resume.id, job_id=job.id, rewritten_text=result.rewritten_text)
-            variant.resume_id = resume.id
             variant.plan, variant.claims, variant.validation_results = plan, claims, validation
             variant.rewritten_text = result.rewritten_text
             variant.resume_sections = result.resume
@@ -496,12 +597,13 @@ class JobPortalService:
             "Return ONLY a JSON object with exactly these keys:\n"
             "{\n"
             '  "resume": {"summary": "", "skills": [""], "experience": [""], "projects": [""], "education": [""], "achievements": [""], "publications": [""]},\n'
-            '  "rewritten_text": "the complete polished resume",\n'
             '  "change_summary": [{"section": "", "action": "", "reason": "", "source_evidence": ""}],\n'
             '  "evidence_used": [{"claim": "", "evidence": ""}],\n'
             '  "target_requirements": [{"requirement": "", "matched_evidence": "", "coverage": ""}],\n'
             '  "validation_results": [{"status": "", "rule": "", "claim": "", "evidence_count": 0}]\n'
             "}\n"
+            "Do NOT emit a separate prose resume or ``rewritten_text``; the structured sections above "
+            "are the only resume content and the prose form is assembled afterwards. "
             "Do not include markdown, commentary, or hidden chain-of-thought.\n\n"
             f"Source resume:\n{resume_text}\n\nTarget job:\n{job_description}\n\n"
             f"Requirements:\n{self._format_requirement_context(requirement_summary)}"
@@ -512,10 +614,60 @@ class JobPortalService:
                 result = TailoredResumeResult.model_validate(generate_structured_json(
                     "You produce truthful, evidence-grounded tailored resumes.", prompt, response_model=TailoredResumeResult
                 ))
-                return self._enforce_fidelity(resume_text, result)
+                result = self._enforce_fidelity(resume_text, result)
+                result.rewritten_text = self._derive_rewritten_text(result.resume)
+                return result
             except (LLMConfigurationError, LLMRequestError, LLMResponseFormatError, ValueError) as exc:
                 last_error = exc
         raise RuntimeError("Structured tailored resume generation failed after two attempts.") from last_error
+
+    def _derive_rewritten_text(self, resume: dict[str, object]) -> str:
+        """Assemble the plain-text resume from the structured sections.
+
+        The tailoring model previously emitted a separate prose resume alongside the
+        structured sections, which duplicated content and overflowed the model's output
+        budget on dense two-page resumes. The structured sections are now the single source
+        of truth and the prose resume is assembled deterministically here.
+        """
+        def _items(value: object) -> list[str]:
+            if value is None:
+                return []
+            if isinstance(value, str):
+                return [value.strip()] if value.strip() else []
+            items: list[str] = []
+            for entry in value:
+                if isinstance(entry, dict):
+                    text = str(
+                        entry.get("name") or entry.get("title") or entry.get("text") or ""
+                    ).strip()
+                    if not text:
+                        text = " — ".join(str(v) for v in entry.values() if v).strip()
+                else:
+                    text = str(entry).strip()
+                if text:
+                    items.append(text)
+            return items
+
+        sections: list[tuple[str, list[str]]] = [
+            ("Summary", _items(resume.get("summary"))),
+            ("Skills", _items(resume.get("skills"))),
+            ("Experience", _items(resume.get("experience"))),
+            ("Projects", _items(resume.get("projects"))),
+            ("Education", _items(resume.get("education"))),
+            ("Achievements", _items(resume.get("achievements"))),
+            ("Publications", _items(resume.get("publications"))),
+        ]
+        parts: list[str] = []
+        for heading, items in sections:
+            if not items:
+                continue
+            if heading == "Summary":
+                parts.append(items[0])
+            elif heading == "Skills":
+                parts.append(f"{heading}: {', '.join(items)}")
+            else:
+                parts.append(f"{heading}:\n" + "\n".join(f"- {item}" for item in items))
+        return "\n\n".join(parts).strip()
 
     def _skill_in_source(self, skill: str, source_lower: str) -> bool:
         """Return True when a skill has at least one significant token in the source.
@@ -615,8 +767,28 @@ class JobPortalService:
 
     def delete_resume(self, user_id: UUID, resume_id: UUID) -> None:
         resume = self._get_resume(resume_id, user_id)
+        was_active = resume.is_active
         file_path = Path(resume.file_url)
+        # ResumeVariant.resume_id and CandidateJobMatch.resume_id use ON DELETE SET
+        # NULL (not CASCADE), so deleting a resume would orphan their rows and a
+        # NULL resume_id then crashes list_tailored_resumes on Pydantic UUID
+        # validation. Delete the dependent rows explicitly so a resume deletion
+        # also cleans up its tailored variants and job-match scores.
+        self.db.execute(delete(ResumeVariant).where(ResumeVariant.resume_id == resume_id))
+        self.db.execute(delete(CandidateJobMatch).where(CandidateJobMatch.resume_id == resume_id))
         self.db.delete(resume)
+        self.db.flush()
+        if was_active:
+            # Deleting the active resume must not leave the workspace with no
+            # active resume; promote the most recently uploaded remaining resume
+            # so scoring and tailoring keep working without a manual re-select.
+            next_active = self.db.scalar(
+                select(Resume)
+                .where(Resume.user_id == user_id)
+                .order_by(Resume.created_at.desc())
+            )
+            if next_active is not None:
+                next_active.is_active = True
         self.db.commit()
         if file_path.exists():
             file_path.unlink()
@@ -1128,7 +1300,11 @@ class JobPortalService:
 
     def _extract_skills(self, text: str) -> list[str]:
         lowered = text.lower()
-        return [skill for skill in sorted(SKILL_KEYWORDS) if skill in lowered]
+        return [
+            canonical_skill(skill)
+            for skill in sorted(SKILL_KEYWORDS)
+            if _skill_in_text(skill, lowered)
+        ]
 
     def _match_score(self, resume_embedding: list[float] | None, job_embedding: list[float] | None) -> float:
         if not resume_embedding or not job_embedding:
@@ -1263,7 +1439,10 @@ class JobPortalService:
             "You extract structured resume information for a career opportunity engine.",
             prompt,
             response_model=ResumeAnalysisResult,
-            extra_params={"max_tokens": 4096},
+            # A hardcoded 4096 output budget truncated dense multi-page CVs and
+            # pushed the whole parse into the low-quality heuristic fallback.
+            # Reuse the configurable output budget instead (default 8192).
+            extra_params={"max_tokens": settings.llm_max_output_tokens},
         )
         return ResumeAnalysisResult.model_validate(payload)
 
@@ -1489,15 +1668,18 @@ class JobPortalService:
         if not spans and resume.parsed_text:
             spans = [{"source": "resume", "text": resume.parsed_text[:500]}]
         selected: list[dict[str, object]] = []
-        required_skills = set(requirement_summary.get("required_skills") or [])
+        required_skills = {
+            canonical_skill(skill) for skill in (requirement_summary.get("required_skills") or [])
+        } - {""}
         for item in candidate_graph.skills or []:
-            name = str(item.get("name") or "").lower()
+            raw_name = str(item.get("name") or "")
+            name = canonical_skill(raw_name)
             if name and (not required_skills or name in required_skills):
                 evidence = item.get("evidence") or spans[:1]
                 selected.append(
                     {
                         "source": "candidate_graph",
-                        "text": name,
+                        "text": raw_name,
                         "evidence": evidence,
                         "transformation": "evidence_selected",
                     }
@@ -1720,8 +1902,16 @@ class JobPortalService:
 
     def _extract_job_requirements(self, job_title: str, job_description: str) -> dict[str, object]:
         lowered = f"{job_title} {job_description}".lower()
-        required = [skill for skill in sorted(SKILL_KEYWORDS) if skill in lowered]
-        preferred = [skill for skill in ["docker", "aws", "graphql", "testing", "typescript"] if skill in lowered and skill not in required]
+        required = [
+            canonical_skill(skill)
+            for skill in sorted(SKILL_KEYWORDS)
+            if _skill_in_text(skill, lowered)
+        ]
+        preferred = [
+            canonical_skill(skill)
+            for skill in ["docker", "aws", "graphql", "testing", "typescript"]
+            if _skill_in_text(skill, lowered) and canonical_skill(skill) not in required
+        ]
         return {
             "occupation_family": "Engineering" if "engineer" in lowered or "developer" in lowered else "General",
             "seniority": "mid" if "senior" not in lowered else "senior",
@@ -1755,13 +1945,54 @@ class JobPortalService:
     def _score_job(self, user_id: UUID, job: Job, resume: Resume) -> _OpportunityParts:
         graph = self._get_candidate_graph(user_id, resume.id)
         market = self.db.scalar(select(JobMarketProfile).where(JobMarketProfile.job_id == job.id))
-        candidate_skills = {item["name"].lower() for item in (graph.skills or []) if item.get("name")}
-        required_skills = set(market.required_skills or job.skill_tags or [])
-        preferred_skills = set(market.preferred_skills or [])
-        exact = len(candidate_skills & required_skills)
-        transferable = len(candidate_skills & preferred_skills)
+        candidate_skills = {
+            canonical_skill(item["name"]) for item in (graph.skills or []) if item.get("name")
+        } - {""}
+        if not candidate_skills:
+            # _get_candidate_graph creates a blank graph on demand, so a resume that was
+            # parsed but has no graph row here would score as if the candidate had no
+            # skills at all -- against every posting at once. Fall back to the skills the
+            # resume itself carries, which is what the UI shows the user.
+            candidate_skills = {
+                canonical_skill(skill) for skill in (resume.extracted_skills or [])
+            } - {""}
+        required_skills = {
+            canonical_skill(skill)
+            for skill in ((market.required_skills if market else None) or job.skill_tags or [])
+        } - {""}
+        preferred_skills = {
+            canonical_skill(skill) for skill in ((market.preferred_skills if market else None) or [])
+        } - {""}
+        if not required_skills and not preferred_skills:
+            # The posting carries no persisted requirement data -- no canonical profile
+            # row and no skill tags (e.g. a job persisted before the extractor existed).
+            # Re-extract from the description itself, so the score compares the candidate
+            # against the job's actual skills instead of falling into the missing-
+            # requirements midpoint, which made every candidate score identically.
+            extracted = self._extract_job_requirements(job.job_title, job.job_description)
+            required_skills = {
+                canonical_skill(skill) for skill in (extracted.get("required_skills") or [])
+            } - {""}
+            preferred_skills = {
+                canonical_skill(skill) for skill in (extracted.get("preferred_skills") or [])
+            } - {""}
+        exact_skills = sorted(candidate_skills & required_skills)
+        transferable_skills = sorted(candidate_skills & preferred_skills)
+        missing_skills = sorted(required_skills - candidate_skills)
+        exact = len(exact_skills)
+        transferable = len(transferable_skills)
         total_required = max(len(required_skills), 1)
-        attainability = min(1.0, (exact + transferable * 0.6) / total_required)
+        # A comparison needs both sides. When either the posting's requirements or the
+        # candidate's skills failed to resolve, a zero would assert "you cannot do this
+        # job" for every candidate alike -- which is how a well-matched and a zero-overlap
+        # candidate both came back at 0%. Fall back to the gate's midpoint and disclose it.
+        has_candidate_data = bool(candidate_skills)
+        has_requirement_data = bool(required_skills or preferred_skills)
+        comparable = has_candidate_data and has_requirement_data
+        if comparable:
+            attainability = min(1.0, (exact + transferable * 0.6) / total_required)
+        else:
+            attainability = 0.5
         salary = self._annualized_salary(job.mid_salary_sgd, job.pay_period) or 0.0
         salary_advantage = min(1.0, salary / 120000.0) if salary else 0.25
         demand = 0.85 if market and market.freshness_score > 0.8 else 0.65
@@ -1769,22 +2000,38 @@ class JobPortalService:
         career_option = 0.7 if market and market.occupation_family == "Engineering" else 0.6
         preference_fit = 0.8 if not graph.preferences or not graph.preferences.get("location") else 0.7
         data_confidence = market.trust_score if market else 0.7
-        fit = (
-            0.30 * salary_advantage
-            + 0.25 * attainability
-            + 0.15 * demand
-            + 0.10 * (1.0 - entry_barrier)
-            + 0.10 * career_option
-            + 0.05 * preference_fit
-            + 0.05 * data_confidence
+        if not comparable:
+            data_confidence = min(data_confidence, 0.4)
+        # Opportunity fit = skill match (attainability) acting as a multiplicative
+        # gate over job quality. A strong job can amplify a real match but can no
+        # longer mask a poor one: zero skill match now yields zero fit instead of
+        # ~53% from the old additive formula that overweighted salary/demand.
+        job_quality = (
+            0.45 * salary_advantage
+            + 0.25 * demand
+            + 0.20 * career_option
+            + 0.10 * data_confidence
         )
-        category = "easy_win" if fit >= 0.75 and entry_barrier < 0.35 else "high_potential" if fit >= 0.58 else "stretch"
+        fit = attainability * (0.55 + 0.45 * job_quality)
+        category = (
+            "easy_win"
+            if fit >= 0.60 and attainability >= 0.55
+            else "high_potential"
+            if fit >= 0.30
+            else "stretch"
+        )
         transition_difficulty = "low" if entry_barrier < 0.25 else "moderate" if entry_barrier < 0.55 else "high"
         rationale = []
-        if exact:
-            rationale.append(f"{exact} direct skill matches")
-        if transferable:
-            rationale.append(f"{transferable} adjacent skills transfer")
+        if not has_candidate_data:
+            rationale.append("No parsed skills available for this resume; fit reflects job signals only")
+        elif not has_requirement_data:
+            rationale.append("No structured skill requirements in this posting; fit reflects job signals only")
+        elif exact_skills:
+            rationale.append(f"{exact} direct skill match" + ("es" if exact > 1 else ""))
+        else:
+            rationale.append("No direct skill match")
+        if comparable and transferable_skills:
+            rationale.append(f"{transferable} adjacent skill" + ("s" if transferable > 1 else "") + " transfer")
         if salary:
             rationale.append(f"Salary signal around SGD {salary:,.0f}")
         if market and market.occupation_family:
@@ -1816,6 +2063,10 @@ class JobPortalService:
             rationale=rationale,
             transition_difficulty=transition_difficulty,
             data_confidence=round(data_confidence, 3),
+            exact_skills=exact_skills,
+            transferable_skills=transferable_skills,
+            missing_skills=missing_skills,
+            required_skills=list(required_skills),
         )
 
     def _maybe_score_job_from_embeddings(self, job: Job) -> CandidateJobMatch | None:
@@ -1823,7 +2074,11 @@ class JobPortalService:
 
     def _heuristic_resume_analysis(self, cleaned_text: str) -> ResumeAnalysisResult:
         lowered = cleaned_text.lower()
-        skills = [skill for skill in sorted(SKILL_KEYWORDS) if skill in lowered]
+        skills = [
+            canonical_skill(skill)
+            for skill in sorted(SKILL_KEYWORDS)
+            if _skill_in_text(skill, lowered)
+        ]
         summary = self._derive_heuristic_summary(cleaned_text)
         evidence_text = cleaned_text[:400]
         return ResumeAnalysisResult(
@@ -1885,20 +2140,16 @@ class JobPortalService:
         }
 
     def _compute_transfer_notes(self, job: Job, resume: Resume, match: _OpportunityParts) -> list[str]:
-        resume_skills = set(resume.extracted_skills or [])
-        job_skills = set(job.skill_tags or [])
-        transferables = sorted(resume_skills & job_skills)
-        return [f"{skill} is already present in the resume" for skill in transferables[:3]] or [
-            "Existing experience can be reframed toward the target role."
-        ]
+        if match.transferable_skills:
+            return [f"{skill} (preferred) already in profile" for skill in match.transferable_skills[:3]]
+        return ["No preferred skills overlap with this profile."]
 
     def _compute_gap_notes(self, job: Job, resume: Resume, match: _OpportunityParts) -> list[str]:
-        job_skills = set(job.skill_tags or [])
-        resume_skills = set(resume.extracted_skills or [])
-        gaps = sorted(job_skills - resume_skills)
-        return [f"Consider evidence for {skill}" for skill in gaps[:3]] or [
-            "Core requirements appear covered by the current profile."
-        ]
+        if match.missing_skills:
+            return [f"Missing: {skill}" for skill in match.missing_skills[:3]]
+        if match.required_skills:
+            return ["Core requirements appear covered by this profile."]
+        return ["No structured skill requirements available to compare against."]
 
     def _salary_context(self, job: Job) -> dict[str, object]:
         annual = self._annualized_salary(job.mid_salary_sgd, job.pay_period)
@@ -1996,7 +2247,11 @@ class JobPortalService:
             "variant": self._serialize_resume_variant(
                 self.db.scalar(
                     select(ResumeVariant)
-                    .where(ResumeVariant.user_id == task.user_id, ResumeVariant.job_id == task.job_id)
+                    .where(
+                        ResumeVariant.user_id == task.user_id,
+                        ResumeVariant.resume_id == task.resume_id,
+                        ResumeVariant.job_id == task.job_id,
+                    )
                     .order_by(ResumeVariant.created_at.desc())
                 ),
                 include_source_file=True,
@@ -2089,7 +2344,9 @@ class JobPortalService:
         if include_source_file:
             resume = self.db.get(Resume, variant.resume_id) if variant.resume_id else None
             payload["source_file_name"] = resume.file_name if resume else None
-            payload["cached"] = True
+            # A freshly generated tailored resume is not a cached hit; only the
+            # synchronous rewrite path reuses a stored record as "cached".
+            payload["cached"] = False
         return payload
 
     def _get_candidate_graph(
