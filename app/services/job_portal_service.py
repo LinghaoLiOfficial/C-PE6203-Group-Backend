@@ -1942,6 +1942,19 @@ class JobPortalService:
         preferred_skills = {
             canonical_skill(skill) for skill in ((market.preferred_skills if market else None) or [])
         } - {""}
+        if not required_skills and not preferred_skills:
+            # The posting carries no persisted requirement data -- no canonical profile
+            # row and no skill tags (e.g. a job persisted before the extractor existed).
+            # Re-extract from the description itself, so the score compares the candidate
+            # against the job's actual skills instead of falling into the missing-
+            # requirements midpoint, which made every candidate score identically.
+            extracted = self._extract_job_requirements(job.job_title, job.job_description)
+            required_skills = {
+                canonical_skill(skill) for skill in (extracted.get("required_skills") or [])
+            } - {""}
+            preferred_skills = {
+                canonical_skill(skill) for skill in (extracted.get("preferred_skills") or [])
+            } - {""}
         exact_skills = sorted(candidate_skills & required_skills)
         transferable_skills = sorted(candidate_skills & preferred_skills)
         missing_skills = sorted(required_skills - candidate_skills)

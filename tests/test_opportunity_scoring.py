@@ -25,6 +25,7 @@ from __future__ import annotations
 
 from uuid import UUID
 
+from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models.career_intelligence import CandidateGraph, JobMarketProfile
@@ -295,3 +296,46 @@ def test_resume_without_a_candidate_graph_still_scores(db_session: Session, test
     assert match.exact_skills == ["javascript", "react", "rest"]
     assert match.vector.attainability == 0.75
     assert match.score > 0.6
+
+
+def test_job_without_profile_or_skill_tags_still_extracts_requirements(
+    db_session: Session, test_user
+) -> None:
+    """A persisted job with no JobMarketProfile row and null skill_tags must still
+    score against its description, not fall into the missing-requirements midpoint.
+
+    This is the tester's re-run case: the persisted T01 job has skill_tags = null and
+    no canonical profile, so both candidates hit attainability 0.5 -- identical
+    scores -- even though the extractor finds node.js/express/mongodb/redis in the JD.
+    """
+    svc = JobPortalService(db_session)
+    job = Job(
+        job_title="Node.js Developer",
+        job_description=NODE_JD,
+        company_name="HyperNova Consulting",
+        location="Singapore, Singapore",
+        source="csv",
+        external_id="t01-noprofile",
+        external_apply_url="https://example.com/jobs/x",
+        skill_tags=None,  # the persisted job carries no tags
+        is_active=True,
+    )
+    db_session.add(job)
+    db_session.flush()
+    # Confirm the pre-condition this test targets: no canonical profile row exists.
+    assert db_session.scalar(select(JobMarketProfile).where(JobMarketProfile.job_id == job.id)) is None
+
+    jordan = _make_resume(
+        db_session, test_user.id, "jordan",
+        ["Node.js", "Express.js", "MongoDB", "Redis", "React"],
+    )
+    clara = _make_resume(db_session, test_user.id, "clara", ["Bakery", "Customer Service"])
+
+    print("\n  --- Node.js Developer (no profile, null skill_tags) ---")
+    m_jordan = _report("Jordan (node.js/express/mongodb/redis)", svc, job, jordan, test_user.id)
+    m_clara = _report("Clara  (bakery/customer service)", svc, job, clara, test_user.id)
+
+    assert m_jordan.required_skills, "requirements must be extracted from the JD, not left empty"
+    assert m_jordan.vector.attainability > m_clara.vector.attainability
+    assert m_jordan.score > m_clara.score
+    assert m_clara.score == 0.0, "a zero-overlap candidate must still score zero"
